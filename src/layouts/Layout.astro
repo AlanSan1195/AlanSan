@@ -1,0 +1,41 @@
+---
+import Backgound from "../components/Backgound.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Alan San</title>
+  </head>
+  <body>
+    <Backgound />
+    <main
+      class="flex flex-col justify-between items-center content-center min-h-screen"
+    >
+      <slot />
+    </main>
+  </body>
+</html>
+<style>
+  @import "tailwindcss";
+  @theme {
+    --font-display: "qubiq", "sans-serif";
+  }
+  @font-face {
+    font-family: "qubiq";
+    src: url(/public/fonts/FRONTEND.woff2) format(woff2);
+  }
+  html,
+  body {
+    margin: 0px 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(22 22 22);
+    color: white;
+  }
+
+</style>

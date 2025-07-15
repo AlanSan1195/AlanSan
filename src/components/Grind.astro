@@ -1,0 +1,87 @@
+<div
+  class="grid grid-cols-14 mx-auto gap-4 text-left grid-rows-3 md:grid-rows-2 p-4 md:px-8 lg:px-12 max-w-8xl mt-24 mb-24"
+>
+  <!-- primer grid -->
+  <div class="box-gen text-xl border-[1.5px] col-span-14 md:col-span-7 h-80">
+    <div
+      class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
+    >
+      <div
+        class="bg-black/40 w-max px-4 py-1 rounded-full border border-gray-400/20 m-2"
+      >
+        <p>Último Post</p>
+      </div>
+      <div class="w-max h-max border-l-2 my-2 mx-4 px-2">
+        <p class="informative">15 de septiembre</p>
+      </div>
+      <h1 class="font-bold text-base px-3">
+        Aprendiendo a usar Grid y a usar estilos con Tailwind
+      </h1>
+    </div>
+  </div>
+
+  <!-- srgundo grid -->
+  <div class="box-gen text-xl border col-span-14 md:col-span-7 h-80 md:block">
+    <div
+      class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
+    >
+      segu cuadro
+    </div>
+  </div>
+  <!-- tercero grid -->
+  <div
+    class="box-gen text-xl p-4 border col-span-14 md:col-span-6 h-80 md:block"
+  >
+    <div
+      class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
+    >
+      tercero cuadro
+    </div>
+  </div>
+  <div
+    class="box-gen rounde text-xl p-4 border-2 col-span-14 md:col-span-2 hidden md:block h-80"
+  >
+    <div
+      class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
+    >
+      cuarto cuadro
+    </div>
+  </div>
+  <div
+    class="box-gen text-xl col-span-14 md:col-span-6 grid grid-rows-3 border border-gray-400/50"
+  >
+    <div class="box-gen border p-2 m-1">
+      <div
+        class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
+      >
+        sub cuadro 1
+      </div>
+    </div>
+    <div class="box-gen border p-2 m-1 row-span-3 shadow">
+      <div
+        class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
+      >
+        sub cuadro 2
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  p {
+    font-size: 16px;
+    opacity: 0.8;
+  }
+  .informative {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+  /* :is(.dark *) agregar esto al boxgen cuando hagamso el modo obscuro  */
+  .box-gen {
+    border-color: black;
+    background-color: rgba(24, 24, 27, 0.2);
+    border-radius: 24px;
+    padding: 6px 6px;
+  }
+</style>
