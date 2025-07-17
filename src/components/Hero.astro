@@ -1,28 +1,37 @@
 <!-- HERO-FULL -->
-<div class="w-[90%] h-auto flex flex-col mt-8 z-20">
+<div class="w-[90%] h-auto flex flex-col mt-8 z-20" aria-label="home">
   <!-- HERO SM -->
-  <div class="cursor-pointer md:hidden h-full">
+  <div class="cursor-pointer md:hidden h-full group">
     <h2 class="font-display text-[90px] line uppercase break-words my-0">
-      Front <span class="bg-pink-500 w-18 h-[2px] inline-block -translate-y-4"
-      ></span>End Developer
+      <span class="hover:text-orange-500">Front</span>
+      <span
+        class="bg-pink-500 w-18 h-[2px] inline-block -translate-y-4 hover:text-orange-500"
+      ></span>
+      <span class="hover:text-orange-500">End</span>
+      <span class="hover:text-orange-500">Developer</span>
     </h2>
     <!-- FOTO PERFIL -->
-    <div class="flex flex-row items-center gap-x-1 md:hidden">
-      <div class="rounded-full w-14 h-14 border-white/60 border-[1px]">
+    <div class="flex flex-col gap-x-1 md:hidden">
+      <div class="rounded-full w-14 h-14 my-3 border-white/60 border-[1px]">
         <img
           src="/imagenes/FotoPerfil.webp"
-          alt="Mi foto de perfil"
+          alt="Avatar Alan San "
           class="absolute w-14 h-14 rounded-full border-white/60 border-[1px] p-1"
         />
       </div>
-      <h1
-        id="my-name"
-        class="mt-0 mb-0 ml-2 font-display text-lg uppercase md:hidden"
-      >
+      <h1 id="my-name" class="mt-2 mb-0 font-static text-3xl md:hidden">
         Alan san
       </h1>
+      <span class="font-light opacity-90 text-sm">
+        Soy un desarrollador web con sede en Guadalajara. Trabajo de forma
+        independiente con las tecnologias que mas disfruto usar siempre con el
+        objetivo de crear una experiencia digital.</span
+      >
     </div>
   </div>
+
+
+
   <!-- HERO MD-->
   <div class="flex flex-col">
     <div class="cursor-pointer md:flex md:w-fit hidden md:flex-col h-full">
@@ -34,22 +43,22 @@
       </h2>
     </div>
     <!-- imgagen md  -->
-    <div class="hidden items-center gap-x-1 md:block">
-      <div
-        class="rounded-full w-18 h-18 border-white/60 border-[1px] flex-col ml-6"
-      >
+    <div class="hidden items-center gap-x-1 md:block w-xl">
+      <div class="rounded-full w-18 h-18 border-white/60 border-[1px] flex-col">
         <img
           src="/imagenes/FotoPerfil.webp"
           alt="Mi foto de perfil"
           class="absolute w-18 h-18 rounded-full border-white/60 border-[1px] p-1"
         />
       </div>
-      <h1
-        id="my-name"
-        class="mb-0 font-mono text-xl uppercase hidden md:flex mt-5 ml-4"
-      >
-        Alan san
+      <h1 id="my-name" class="mb-0 font-static hidden md:flex mt-5">
+        Alan San
       </h1>
+      <span class="font-light opacity-90">
+        Soy un desarrollador web con sede en Guadalajara. Trabajo de forma
+        independiente con las tecnologias que mas disfruto usar con el objetivo
+        de siempre crear una experiencia digital.</span
+      >
     </div>
   </div>
 </div>

@@ -24,11 +24,17 @@ import Backgound from "../components/Backgound.astro";
   @import "tailwindcss";
   @theme {
     --font-display: "frontend", "sans-serif";
+    --font-static: "static", "sans-serif";
   }
   @font-face {
     font-family: "frontend";
     src: url(/public/fonts/FRONTEND.woff2) format(woff2);
   }
+  @font-face {
+    font-family: "static";
+    src: url(/public/fonts/static.woff2) format(woff2);
+  }
+
   html,
   body {
     margin: 0px 0px;
@@ -37,5 +43,4 @@ import Backgound from "../components/Backgound.astro";
     background-color: rgb(22 22 22);
     color: white;
   }
-
 </style>
