@@ -1,46 +1,61 @@
-<!-- FRONT-END-SM-->
-<div
-  class="flex flex-col md:items-center md:justify-center max-w-5xl p-2 gap-y-2 font-display text-8xl md:text-9xl uppercase z-20 "
->
-  <div class="md:hidden flex flex-col w-fi mt-4">
-    <span class="hover:text-pink-400">Front</span>
-    <div class="flex items-end">
-      <div id="linea-sm" class="h-[2px] w-24 bg-white"></div>
-      <span class="hover:text-pink-400">End</span>
-    </div>
-
-    <!-- DEVEL OPER -->
-    <div class=" group">
-      <span class="group-hover:text-pink-400">Devel</span>
-      <span class="group-hover:text-pink-400">Oper</span>
-    </div>
-     <div class=" flex flex-row lg:my-5 items-center gap-x-1">
-      <div class=" rounded-full w-14 h-14   border-white/60 border-[1px] relative">
-        <img src="/imagenes/FotoPerfil.webp" alt="Mi foto de perfil" class=" absolute w-14 h-14 rounded-full border-white/60 border-[1px] p-1">
+<!-- HERO-FULL -->
+<div class="w-[90%] h-auto flex flex-col mt-8 z-20">
+  <!-- HERO SM -->
+  <div class="cursor-pointer md:hidden h-full">
+    <h2 class="font-display text-[90px] line uppercase break-words my-0">
+      Front <span class="bg-pink-500 w-18 h-[2px] inline-block -translate-y-4"
+      ></span>End Developer
+    </h2>
+    <!-- FOTO PERFIL -->
+    <div class="flex flex-row items-center gap-x-1 md:hidden">
+      <div class="rounded-full w-14 h-14 border-white/60 border-[1px]">
+        <img
+          src="/imagenes/FotoPerfil.webp"
+          alt="Mi foto de perfil"
+          class="absolute w-14 h-14 rounded-full border-white/60 border-[1px] p-1"
+        />
       </div>
-      <h1 id="my-name" class="mt-0 mb-0 ml-2 text-xl md:hidden">Alan san</h1>
+      <h1
+        id="my-name"
+        class="mt-0 mb-0 ml-2 font-display text-lg uppercase md:hidden"
+      >
+        Alan san
+      </h1>
+    </div>
+  </div>
+  <!-- HERO MD-->
+  <div class="flex flex-col">
+    <div class="cursor-pointer md:flex md:w-fit hidden md:flex-col h-full">
+      <h2 class="font-display text-3xl uppercase">
+        Front <span class="bg-pink-500 w-10 h-[2px] inline-block -translate-y-2"
+        ></span>End <br /><span class="inline-block translate-x-10"
+          >Developer</span
+        >
+      </h2>
+    </div>
+    <!-- imgagen md  -->
+    <div class="hidden items-center gap-x-1 md:block">
+      <div
+        class="rounded-full w-18 h-18 border-white/60 border-[1px] flex-col ml-6"
+      >
+        <img
+          src="/imagenes/FotoPerfil.webp"
+          alt="Mi foto de perfil"
+          class="absolute w-18 h-18 rounded-full border-white/60 border-[1px] p-1"
+        />
+      </div>
+      <h1
+        id="my-name"
+        class="mb-0 font-mono text-xl uppercase hidden md:flex mt-5 ml-4"
+      >
+        Alan san
+      </h1>
     </div>
   </div>
 </div>
 
-<!-- FRONT-END-MD -->
-<div
-  id="frontend-md "
-  class="hidden md:flex md:flex-col mt-32 md:pl-8 lg:pl-44 font-display  uppercase w-full z-20"
->
-  <div class="hidden md:flex md:flex-col w-fit ">
-    <div class=" lg:my-5">
-      <h1 id="my-name" class="mt-0 mb-0 md:text-xl lg:text-5xl md:block">Alan san</h1>
-    </div>
-    <div class="flex">
-      <span class=" md:text-5xl lg:text-8xl hover:text-pink-400">Front</span>
-      <div class="flex items-center">
-        <div id="linea-md" class="h-[2px] md:w-10 lg:w-54 bg-white mt-7"></div>
-        <span class=" md:text-5xl lg:text-9xl hover:text-pink-400"> End</span>
-      </div>
-    </div>
-    <div class=" hover:text-pink-400 ml-12 md:-translate-y-1 -translate-y-5 ">
-      <span class=" md:text-5xl lg:text-9xl ">Developer</span>
-    </div>
-  </div>
-</div>
+<style>
+  .line {
+    line-height: 95%;
+  }
+</style>
