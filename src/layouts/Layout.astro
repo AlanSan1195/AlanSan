@@ -17,12 +17,12 @@ import Footer from "../components/Footer.astro";
     <Header />
     <Backgound />
     <main
-    class="flex flex-col justify-between items-center content-center min-h-screen"
+      class="flex flex-col justify-between items-center content-center min-h-screen"
     >
-    <slot />
-  </main>
-  <Footer />
-</body>
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
 <style>
   @import "tailwindcss";
@@ -30,7 +30,7 @@ import Footer from "../components/Footer.astro";
     --font-display: "frontend", "sans-serif";
     --font-static: "static", "sans-serif";
     --font-pixel: "pixel", "sans-serif";
-    --font-jet: "jet",;
+    --font-jet: "jet";
   }
   @font-face {
     font-family: "frontend";
@@ -56,7 +56,8 @@ import Footer from "../components/Footer.astro";
     height: 100%;
     background-color: rgb(22 22 22);
     color: white;
-
+    color-scheme: light dark;
+    scrollbar-color: rgb(246, 97, 176)  hsl(0, 0%, 25%);
   }
-
 </style>
+  
