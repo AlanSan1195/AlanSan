@@ -1,5 +1,7 @@
 ---
 import Backgound from "../components/Backgound.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -12,19 +14,23 @@ import Backgound from "../components/Backgound.astro";
     <title>Alan San</title>
   </head>
   <body>
+    <Header />
     <Backgound />
     <main
-      class="flex flex-col justify-between items-center content-center min-h-screen"
+    class="flex flex-col justify-between items-center content-center min-h-screen"
     >
-      <slot />
-    </main>
-  </body>
+    <slot />
+  </main>
+  <Footer />
+</body>
 </html>
 <style>
   @import "tailwindcss";
   @theme {
     --font-display: "frontend", "sans-serif";
     --font-static: "static", "sans-serif";
+    --font-pixel: "pixel", "sans-serif";
+    --font-jet: "jet",;
   }
   @font-face {
     font-family: "frontend";
@@ -34,6 +40,14 @@ import Backgound from "../components/Backgound.astro";
     font-family: "static";
     src: url(/public/fonts/static.woff2) format(woff2);
   }
+  @font-face {
+    font-family: "pixel";
+    src: url(/public/fonts/pixel.woff2) format(woff2);
+  }
+  @font-face {
+    font-family: "jet";
+    src: url(/public/fonts/JetBrainsMono-Bold.ttf) format("truetype");
+  }
 
   html,
   body {
@@ -42,5 +56,7 @@ import Backgound from "../components/Backgound.astro";
     height: 100%;
     background-color: rgb(22 22 22);
     color: white;
+
   }
+
 </style>
