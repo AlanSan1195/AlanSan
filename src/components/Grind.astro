@@ -1,5 +1,5 @@
 <div
-  class="grid grid-cols-14 gap-2 text-left grid-rows-3  md:p-5 lg:px-12 max-w-8xl mt-24 mb-24 md:mx-16 rounded-3xl z-30"
+  class="grid grid-cols-14 gap-2 text-left grid-rows-2  md:p-5 lg:px-12 max-w-8xl mt-24 mb-24 md:mx-16 rounded-3xl z-30"
 >
   <!-- primer grid -->
   <div
@@ -25,22 +25,22 @@
   <!-- segundo grid -->
   <div class="box-gen text-xl border col-span-14 md:col-span-5 h-80 md:block flex justify-center items-center">
     <div
-      class="bg-black/30 flex flex-col backdrop-blur-9xl h-full w-full rounded-[20px] border border-gray-400/20  "
+      class="bg-black/30 relative flex flex-col backdrop-blur-9xl h-full w-full rounded-[20px] border border-gray-400/20  "
     >
       <video
-        autoplay
+      autoplay
         muted
         loop
-        class="w-full   h-[55%] object-cover rounded-[20px] "
+        class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-[90%]  h-[85%] object-cover flex justify-center items-center rounded-[20px] "
       >
         <source src="/public/imagenes/airpods.mp4" type="video/mp4" />
         Tu navegador no soporta el formato de video.
       </video>
-      <div class="mx-2  ">
+      <!-- <div class=" ">
 
         <p class=" font-bold ">proyecto de scroll</p>
         <p class=" ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus aspernatur quod corporis illum sequi </p>
-      </div>
+      </div> -->
     </div>
   </div>
   <!-- tercero grid -->
@@ -50,7 +50,7 @@
     <div
       class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20 flex items-center justify-center "
     >
-      tercero cuadro
+    <img src="/public/imagenes/suitch.webp" alt="imagen de proyecto de una app de stream tipo Twitch" class="w-[90%] h-[85%] object-cover flex justify-center items-center rounded-[20px]">
     </div>
   </div>
   <div
@@ -73,16 +73,22 @@
     </div>
   </div>
   <div
-    class="box-gen rounde text-xl p-4 border-2 col-span-14 md:col-span-5 hidden md:block h-80"
+    class="box-gen rounde text-xl p-4 border col-span-14 md:col-span-5 hidden md:block h-80"
   >
     <div
-      class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
-    >
-      cuarto cuadro
+      class="relative bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
+    >  <video
+      autoplay
+        muted
+        loop
+        class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-[90%]  h-[85%] object-cover flex justify-center items-center rounded-[20px] "
+      >
+        <source src="/imagenes/gta.mp4" type="video/mp4" />
+      </video>
     </div>
   </div>
   <div
-    class="box-gen rounde text-xl p-4 border-2 col-span-14 md:col-span-10 hidden md:block h-80"
+    class="box-gen rounde text-xl p-4 border-2 col-span-14 md:col-span-10 hidden  h-80"
   >
     <div
       class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
