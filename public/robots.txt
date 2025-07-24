@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://alansan.netlify.app/sitemap.xml
+
+
+# Permitir que todos los motores de búsqueda rastreen el sitio
+# Esto ayuda con el SEO y la visibilidad

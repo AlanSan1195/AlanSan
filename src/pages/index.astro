@@ -3,11 +3,15 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Grind from "../components/Grind.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const pageTitle = "Alan Sandoval - Desarrollador Frontend | Portafolio";
+const pageDescription = "Portafolio de Alan Sandoval, desarrollador frontend especializado en crear experiencias web modernas. Explora mis proyectos y habilidades en JavaScript, React, Astro y más.";
 ---
 
-<Layout>
+<Layout 
+  title={pageTitle}
+  description={pageDescription}
+  image="/imagenes/FotoPerfil.webp"
+>
   <Hero />
   <Grind />
 </Layout>

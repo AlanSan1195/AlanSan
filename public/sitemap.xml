@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://alansan.netlify.app/</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://alansan.netlify.app/projectos</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+
+
+<!-- 
+### ¿Por Qué SÍ Deberías Tenerlo? 
+-->
+<!-- 1. Indexación Más Rápida -->
+<!-- Google encuentra tus páginas más rápido -->
+<!-- Especialmente importante para sitios nuevos -->
+<!-- Tu sitio se indexa en días vs. semanas -->
+
+
+2. Control Total
+<!-- Tú decides qué páginas indexar -->
+<!-- Estableces prioridades -->
+<!-- Comunicas cambios efectivamente -->
+
+
+3. SEO Mejorado
+<!-- Mejor crawling de Google -->
+<!-- Indexación completa garantizada -->
+<!-- Datos estructurados para buscadores -->
+
+
+4. Monitoreo en Search Console
+<!-- Google te reporta errores -->
+<!-- Estadísticas de indexación -->
+<!-- Problemas de crawling detectados -->
+
+
+<!-- ### Tu Sitemap Está Excelente Porque:
+- ✅ Estructura XML correcta
+- ✅ URLs válidas y completas
+- ✅ Prioridades lógicas
+- ✅ Fechas actualizadas
+- ✅ Frecuencias realistas
+- ✅ Referenciado en robots.txt -->

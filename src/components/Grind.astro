@@ -1,8 +1,9 @@
-<div
+<section
   class="grid grid-cols-14 gap-2 text-left grid-rows-2 md:p-5 lg:px-12 max-w-8xl mt-24 mb-24 md:mx-16 rounded-3xl z-30"
+  aria-label="Proyectos y contenido destacado"
 >
   <!-- Actuality actions -->
-  <div
+  <article
     class="box-gen text-xl border-[1.5px] col-span-14 md:col-span-4 md:row-span-3"
   >
     <div
@@ -11,19 +12,19 @@
       <div
         class="bg-black/60 w-fit px-4 py-2 rounded-full border border-gray-400/20 mt-4 mx-4"
       >
-        <p class="m-0">Último Post</p>
+        <span class="m-0">Último Post</span>
       </div>
       <div class="w-max h-max border-l-2 my-2 mx-4 px-2">
-        <p class="informative">15 de septiembre</p>
+        <time class="informative" datetime="2024-09-15">15 de septiembre</time>
       </div>
-      <h1 class="font-bold text-base m-3">
+      <h3 class="font-bold text-base m-3">
         Aprendiendo a usar Grid y a usar estilos con Tailwind
-      </h1>
+      </h3>
     </div>
-  </div>
+  </article>
 
   <!-- Scroll projects-->
-  <div
+  <article
     class="box-gen text-xl relative border col-span-14 md:col-span-5 h-80 md:block flex justify-center items-center"
   >
     <div
@@ -32,16 +33,18 @@
       <div
         class="bg-black/60 w-fit px-4 py-2 rounded-full border border-gray-400/30 mt-4 mx-4"
       >
-        <p class="m-0 font-static">Proyectos Scroll</p>
+        <span class="m-0 font-static">Proyectos Scroll</span>
       </div>
       <!-- embuelve proyectos  -->
       <div class="w-full h-full scale-95 mb-8 group relative">
         <div
           class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[85%] bg-pink-400 rounded-2xl -rotate-8 transition-all duration-300 group-hover:blur-sm"
+          aria-hidden="true"
         >
         </div>
         <div
           class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[88%] bg-pink-100 rounded-2xl -rotate-4 transition-all duration-300 group-hover:blur-sm"
+          aria-hidden="true"
         >
         </div>
         <video
@@ -49,29 +52,40 @@
           muted
           loop
           class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[90%] object-cover flex justify-center items-center rounded-[20px] transition-all duration-300 group-hover:blur-sm"
+          aria-label="Video demostrativo de proyectos"
         >
           <source src="/imagenes/gta.mp4" type="video/mp4" />
+          Tu navegador no soporta el elemento video.
         </video>
         <a
           href="/projectos"
-          class="font-static absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center text-lg bg-black/60 px-4 py-2 rounded-2xl border border-gray-400/70 z-10 no-underline"
+          class="font-static absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center text-lg bg-black/60 px-4 py-2 rounded-2xl border border-gray-400/70 z-10 no-underline focus:outline-none focus:ring-2 focus:ring-white/50"
+          aria-label="Ver todos los proyectos"
         >
           Ver proyectos
         </a>
       </div>
     </div>
-  </div>
+  </article>
   <!--  Suitch project-->
-  <a
-    href="https://suitch.netlify.app/"
-    class="box-gen text-xl p-4 border col-span-14 md:col-span-5 h-80 md:block" target="_blank" rel="noopener noreferrer"
-  >
-    <img
-      src="/imagenes/suitchweb.webp"
-      alt="imagen de proyecto de una app de stream tipo Twitch"
-      class="w-full h-full object-fill flex justify-center items-center rounded-[20px]"
-    />
-  </a>
+  <article class="box-gen text-xl p-4 border col-span-14 md:col-span-5 h-80 md:block">
+    <a
+      href="https://suitch.netlify.app/"
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="block w-full h-full focus:outline-none focus:ring-2 focus:ring-white/50 rounded-[20px]"
+      aria-label="Ver proyecto Suitch - Aplicación de streaming"
+    >
+      <img
+        src="/imagenes/suitchweb.webp"
+        alt="Captura de pantalla del proyecto Suitch, una aplicación de streaming similar a Twitch"
+        class="w-full h-full object-fill flex justify-center items-center rounded-[20px]"
+        width="320"
+        height="240"
+        loading="lazy"
+      />
+    </a>
+  </article>
   <div
     class="box-gen text-xl col-span-14 md:col-span-5 grid grid-rows-3 border border-gray-400/50"
   >
@@ -93,31 +107,38 @@
   </div>
 
   <!-- matera landing  -->
-  <div
-    class="box-gen rounde text-xl p-4 border col-span-14 md:col-span-5  h-80"
+  <article
+    class="box-gen rounde text-xl p-4 border col-span-14 md:col-span-5 h-80"
   >
-  <div
-  class="relative bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20 "
-  >
-  <div class="flex items-center mt-2">
-
     <div
-      class="bg-black/60 relative w-fit px-4 py-2 rounded-full border border-gray-400/30 mt-1 mx-4 f text-wrap"
+      class="relative bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
     >
-      <p class="m-0 font-static text-xs ">Landing Page</p>
+      <div class="flex items-center mt-2">
+        <div
+          class="bg-black/60 relative w-fit px-4 py-2 rounded-full border border-gray-400/30 mt-1 mx-4 f text-wrap"
+        >
+          <span class="m-0 font-static text-xs">Landing Page</span>
+        </div>
+        <span class="m-0 informative break-words text-wrap">Restaurante-Menú</span>
+      </div>
+      <a 
+        href="https://www.lamatera.online/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="block focus:outline-none focus:ring-2 focus:ring-white/50 rounded-[20px]"
+        aria-label="Ver sitio web de La Matera - Restaurante"
+      >
+        <img 
+          src="/imagenes/matera3.webp"
+          alt="Captura de pantalla del sitio web de La Matera, una landing page para restaurante con menú digital"
+          class="w-[94%] h-[74%] md:h-[76%] object-fill flex rounded-[20px] my-1 absolute left-1/2 -translate-x-1/2"
+          width="300"
+          height="200"
+          loading="lazy"
+        />
+      </a>
     </div>
-    <p class="m-0 informative  break-words text-wrap"> Restaurante-Menú</p>
-  </div>
-  <a href="https://www.lamatera.online/" target="_blank" rel="noopener noreferrer">
-
-    <img 
-      src="/imagenes/matera3.webp"
-      alt=""
-      class="w-[94%] h-[74%] md:h-[76%]  object-fill flex rounded-[20px] my-1 absolute  left-1/2 -translate-x-1/2"
-    />
-  </a>
-    </div>
-  </div>
+  </article>
   <div
     class="box-gen rounde text-xl p-4 border-2 col-span-14 md:col-span-10 hidden h-80"
   >
@@ -127,7 +148,7 @@
       cuarto cuadro
     </div>
   </div>
-</div>
+</section>
 
 <style>
   p {

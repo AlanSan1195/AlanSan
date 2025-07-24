@@ -1,30 +1,36 @@
+---
+import SocialMedia from "../components/Social.astro";
+---
 <!-- HERO-FULL -->
-<div class="w-[90%] h-auto flex flex-col mt-8 z-20" aria-label="home">
+<section class="w-[90%] h-auto flex flex-col mt-8 z-20" aria-labelledby="hero-title">
   <!-- HERO SM -->
   <div class="cursor-pointer md:hidden h-full group">
-    <h2 class="font-display text-[90px] line uppercase break-words my-0">
+    <h2 id="hero-title" class="font-display text-[90px] line uppercase break-words my-0">
       <span class="hover:text-orange-400">Front</span>
-      <span class="bg-pink-500 w-18 h-[2px] inline-block -translate-y-4"></span>
+      <span class="bg-pink-500 w-18 h-[2px] inline-block -translate-y-4" aria-hidden="true"></span>
       <span class="hover:text-orange-400">End</span>
       <span class="hover:text-orange-400">Developer</span>
     </h2>
     <!-- FOTO PERFIL -->
     <div class="flex flex-col gap-x-1 md:hidden">
-      <div class="rounded-full w-14 h-14 my-3 border-white/60 border-[1px]">
+      <figure class="rounded-full w-14 h-14 my-3 border-white/60 border-[1px]">
         <img
           src="/imagenes/FotoPerfil.webp"
-          alt="Avatar Alan San "
+          alt="Foto de perfil de Alan Sandoval, desarrollador frontend"
           class="absolute w-14 h-14 rounded-full border-white/60 border-[1px] p-1"
+          width="56"
+          height="56"
+          loading="eager"
         />
-      </div>
+      </figure>
       <h1 id="my-name" class="mt-2 mb-0 font-static text-3xl md:hidden">
-        Alan san
+        Alan Sandoval
       </h1>
-      <span class="font-static opacity-80 text-sm">
+      <p class="font-static opacity-80 text-sm">
         Soy un desarrollador web con sede en Guadalajara. Trabajo de forma
-        independiente con las tecnologias que mas disfruto usar siempre con el
-        objetivo de crear una experiencia digital.</span
-      >
+        independiente con las tecnologías que más disfruto usar siempre con el
+        objetivo de crear una experiencia digital excepcional.
+      </p>
     </div>
   </div>
 
@@ -33,34 +39,36 @@
     <div class="md:flex md:w-fit hidden md:flex-col h-full">
       <h2 class="font-display text-3xl uppercase">
         <span class="hover:text-orange-400">Front</span>
-        <span class="bg-pink-500 w-10 h-[2px] inline-block -translate-y-2"
-        ></span>
+        <span class="bg-pink-500 w-10 h-[2px] inline-block -translate-y-2" aria-hidden="true"></span>
         <span class="hover:text-orange-400 inline-block">End</span>
-        <br /><span class="inline-block hover:text-orange-400 translate-x-10"
-          >Developer</span
-        >
+        <br /><span class="inline-block hover:text-orange-400 translate-x-10">Developer</span>
       </h2>
     </div>
-    <!-- imgagen md  -->
+    <!-- imagen md  -->
     <div class="hidden items-center gap-x-1 md:block w-xl">
-      <div class="rounded-full w-18 h-18 border-white/60 border-[1px] flex-col">
+      <figure class="rounded-full w-18 h-18 border-white/60 border-[1px] flex-col">
         <img
           src="/imagenes/FotoPerfil.webp"
-          alt="Mi foto de perfil"
-          class="absolute w-18 h-18 rounded-full border-white/60 border-[1px] p-1"
+          alt="Foto de perfil de Alan Sandoval, desarrollador frontend"
+          class="absolute rounded-full border-white/60 border-[1px] p-1"
+          width="72"
+          height="72"
+          loading="eager"
         />
-      </div>
-      <h1 id="my-name" class="mb-0 font-static hidden md:flex mt-5">
-        Alan San
+      </figure>
+      <h1 id="my-name-md" class="mb-0 font-static hidden md:flex mt-5">
+        Alan Sandoval
       </h1>
-      <span class="line opacity-80">
+      <p class="line opacity-80">
         Soy un desarrollador web con sede en Guadalajara. Trabajo de forma
-        independiente con las tecnologias que mas disfruto usar con el objetivo
-        de siempre crear una experiencia digital.</span
-      >
+        independiente con las tecnologías que más disfruto usar con el objetivo
+        de siempre crear una experiencia digital.
+      </p>
+      <!-- social-media -->
+      <SocialMedia />
     </div>
   </div>
-</div>
+</section>
 
 <style>
   .line {
