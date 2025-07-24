@@ -46,8 +46,12 @@
           Aprendiendo a usar Grid y a usar estilos con Tailwind
         </h3>
 
-        <section id="Post" class="mx-3" aria-label="Resumen del post">
-          <p class="informative text-sm opacity-70 text-pretty">
+        <section 
+          id="Post" 
+          class="mx-3 max-h-[350px] overflow-y-auto scrollbar-hidden" 
+          aria-label="Resumen del post"
+        >
+          <p class="informative text-sm opacity-70 text-pretty pb-2">
             Me encanta lo fácil que es usar Grid con Tailwind. Recordar cómo
             hacerlo con CSS me cuesta aún más y tengo que echar un vistazo
             rápido para ver cómo posicionar celdas y darles su fracción a cada
@@ -58,7 +62,7 @@
             >. Aquí te dejo un muy buen recurso si quieres implementar un bento
             grid superfácil en tu proyecto.
             <a
-              class="flex text-orange-400 underline text-xs font-static font-bold mt-4"
+              class="inline-block text-orange-400 underline text-xs font-static font-bold mt-2"
               href="https://cssgridgenerator.io/"
               target="_blank"
               rel="noopener noreferrer">CSS grid generator</a
@@ -66,7 +70,7 @@
           </p>
         </section>
         <footer class="mx-3 mb-3">
-          <div class="flex items-center gap-2">
+          <div class="flex items-center mt-2 gap-2 flex-wrap">
             <span class="informative text-xs opacity-60">Categoría:</span>
             <mark
               class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs border border-blue-400/30"
