@@ -12,12 +12,21 @@
       <div
         class="bg-black/60 w-fit px-4 py-2 rounded-full border border-gray-400/20 mt-4 mx-4"
       >
-        <span class="m-0">Último Post</span>
+        <span class="m-0 informative">Último Post</span>    
       </div>
+      {/* Using client:load to ensure reactivity */}
       <div class="w-max h-max border-l-2 my-2 mx-4 px-2">
-        <time class="informative" datetime="2024-09-15">15 de septiembre</time>
+        <time 
+          class="informative" 
+          datetime={new Date().toISOString()}
+        >
+          {new Date().toLocaleDateString('es-ES', {
+            day: 'numeric',
+            month: 'long'
+          })}
+        </time>
       </div>
-      <h3 class="font-bold text-base m-3">
+      <h3 class="font-static text-base m-3">
         Aprendiendo a usar Grid y a usar estilos con Tailwind
       </h3>
     </div>
@@ -33,7 +42,7 @@
       <div
         class="bg-black/60 w-fit px-4 py-2 rounded-full border border-gray-400/30 mt-4 mx-4"
       >
-        <span class="m-0 font-static">Proyectos Scroll</span>
+        <span class="m-0 font-static informative">Proyectos Scroll</span>
       </div>
       <!-- embuelve proyectos  -->
       <div class="w-full h-full scale-95 mb-8 group relative">
@@ -156,8 +165,10 @@
     opacity: 0.8;
   }
   .informative {
+    font-family: "static";
     font-size: 14px;
     opacity: 0.8;
+    
   }
 
   /* :is(.dark *) agregar esto al boxgen cuando hagamso el modo obscuro  */
