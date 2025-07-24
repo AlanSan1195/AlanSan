@@ -1,7 +1,7 @@
 <div
-  class="grid grid-cols-14 gap-2 text-left grid-rows-2  md:p-5 lg:px-12 max-w-8xl mt-24 mb-24 md:mx-16 rounded-3xl z-30"
+  class="grid grid-cols-14 gap-2 text-left grid-rows-2 md:p-5 lg:px-12 max-w-8xl mt-24 mb-24 md:mx-16 rounded-3xl z-30"
 >
-  <!-- primer grid -->
+  <!-- Actuality actions -->
   <div
     class="box-gen text-xl border-[1.5px] col-span-14 md:col-span-4 md:row-span-3"
   >
@@ -9,50 +9,69 @@
       class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
     >
       <div
-        class="bg-black/40 w-max px-4 py-1 rounded-full border border-gray-400/20 m-2"
+        class="bg-black/60 w-fit px-4 py-2 rounded-full border border-gray-400/20 mt-4 mx-4"
       >
-        <p>Último Post</p>
+        <p class="m-0">Último Post</p>
       </div>
       <div class="w-max h-max border-l-2 my-2 mx-4 px-2">
         <p class="informative">15 de septiembre</p>
       </div>
-      <h1 class="font-bold text-base px-3">
+      <h1 class="font-bold text-base m-3">
         Aprendiendo a usar Grid y a usar estilos con Tailwind
       </h1>
     </div>
   </div>
 
-  <!-- segundo grid -->
-  <div class="box-gen text-xl border col-span-14 md:col-span-5 h-80 md:block flex justify-center items-center">
-    <div
-      class="bg-black/30 relative flex flex-col backdrop-blur-9xl h-full w-full rounded-[20px] border border-gray-400/20  "
-    >
-      <video
-      autoplay
-        muted
-        loop
-        class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-[90%]  h-[85%] object-cover flex justify-center items-center rounded-[20px] "
-      >
-        <source src="/public/imagenes/airpods.mp4" type="video/mp4" />
-        Tu navegador no soporta el formato de video.
-      </video>
-      <!-- <div class=" ">
-
-        <p class=" font-bold ">proyecto de scroll</p>
-        <p class=" ">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus aspernatur quod corporis illum sequi </p>
-      </div> -->
-    </div>
-  </div>
-  <!-- tercero grid -->
+  <!-- Scroll projects-->
   <div
-    class="box-gen text-xl p-4 border col-span-14 md:col-span-5 h-80 md:block"
+    class="box-gen text-xl relative border col-span-14 md:col-span-5 h-80 md:block flex justify-center items-center"
   >
     <div
-      class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20 flex items-center justify-center "
+      class="bg-black/30 flex flex-col backdrop-blur-9xl h-full w-full rounded-[20px] border border-gray-400/20"
     >
-    <img src="/public/imagenes/suitch.webp" alt="imagen de proyecto de una app de stream tipo Twitch" class="w-[90%] h-[85%] object-cover flex justify-center items-center rounded-[20px]">
+      <div
+        class="bg-black/60 w-fit px-4 py-2 rounded-full border border-gray-400/30 mt-4 mx-4"
+      >
+        <p class="m-0 font-static">Proyectos Scroll</p>
+      </div>
+      <!-- embuelve proyectos  -->
+      <div class="w-full h-full scale-95 mb-8 group relative">
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[85%] bg-pink-400 rounded-2xl -rotate-8 transition-all duration-300 group-hover:blur-sm"
+        >
+        </div>
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[88%] bg-pink-100 rounded-2xl -rotate-4 transition-all duration-300 group-hover:blur-sm"
+        >
+        </div>
+        <video
+          autoplay
+          muted
+          loop
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[90%] object-cover flex justify-center items-center rounded-[20px] transition-all duration-300 group-hover:blur-sm"
+        >
+          <source src="/public/imagenes/gta.mp4" type="video/mp4" />
+        </video>
+        <a
+          href="/projectos"
+          class="font-static absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center text-lg bg-black/60 px-4 py-2 rounded-2xl border border-gray-400/70 z-10 no-underline"
+        >
+          Ver proyectos
+        </a>
+      </div>
     </div>
   </div>
+  <!--  Suitch project-->
+  <a
+    href="https://suitch.netlify.app/"
+    class="box-gen text-xl p-4 border col-span-14 md:col-span-5 h-80 md:block" target="_blank" rel="noopener noreferrer"
+  >
+    <img
+      src="/public/imagenes/suitchweb.webp"
+      alt="imagen de proyecto de una app de stream tipo Twitch"
+      class="w-full h-full object-fill flex justify-center items-center rounded-[20px]"
+    />
+  </a>
   <div
     class="box-gen text-xl col-span-14 md:col-span-5 grid grid-rows-3 border border-gray-400/50"
   >
@@ -72,23 +91,35 @@
       </div>
     </div>
   </div>
+
+  <!-- matera landing  -->
   <div
-    class="box-gen rounde text-xl p-4 border col-span-14 md:col-span-5 hidden md:block h-80"
+    class="box-gen rounde text-xl p-4 border col-span-14 md:col-span-5  h-80"
   >
+  <div
+  class="relative bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20 "
+  >
+  <div class="flex items-center mt-2">
+
     <div
-      class="relative bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
-    >  <video
-      autoplay
-        muted
-        loop
-        class=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-[90%]  h-[85%] object-cover flex justify-center items-center rounded-[20px] "
-      >
-        <source src="/imagenes/gta.mp4" type="video/mp4" />
-      </video>
+      class="bg-black/60 relative w-fit px-4 py-2 rounded-full border border-gray-400/30 mt-1 mx-4 f text-wrap"
+    >
+      <p class="m-0 font-static text-xs ">Landing Page</p>
+    </div>
+    <p class="m-0 informative  break-words text-wrap"> Restaurante-Menú</p>
+  </div>
+  <a href="https://www.lamatera.online/" target="_blank" rel="noopener noreferrer">
+
+    <img 
+      src="/imagenes/matera3.webp"
+      alt=""
+      class="w-[94%] md:h-[76%]  object-fill flex rounded-[20px] my-1 absolute  left-1/2 -translate-x-1/2"
+    />
+  </a>
     </div>
   </div>
   <div
-    class="box-gen rounde text-xl p-4 border-2 col-span-14 md:col-span-10 hidden  h-80"
+    class="box-gen rounde text-xl p-4 border-2 col-span-14 md:col-span-10 hidden h-80"
   >
     <div
       class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
