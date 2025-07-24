@@ -1,10 +1,14 @@
+---
+import Email from "../assets/mail.svg";
+---
+
 <section
-  class="grid grid-cols-14 gap-2 text-left grid-rows-2 md:p-5 lg:px-12 max-w-8xl mt-24 mb-24 md:mx-16 rounded-3xl z-30"
+  class="grid grid-cols-14 gap-2 text-left grid-rows-2 md:grid-rows-2  md:p-5 lg:px-12 max-w-8xl mt-24 mb-24 md:mx-16 rounded-3xl mx-1 z-30"
   aria-label="Proyectos y contenido destacado"
 >
   <!-- Blog post section with semantic structure -->
   <article
-    class="box-gen text-xl border-[1.5px] col-span-14 md:col-span-4 md:row-span-3"
+    class="box-gen text-xl col-span-14 md:col-span-4 md:row-span-3"
     role="article"
     aria-labelledby="latest-post-title"
   >
@@ -12,7 +16,7 @@
       class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
     >
       <header
-        class="bg-black/60 w-fit px-4 py-2 rounded-full border border-gray-400/20 mt-4 mx-4"
+        class="bg-black/10 w-fit px-4 py-2 rounded-full border border-gray-400/20 mt-4 mx-4"
       >
         <span class="m-0 informative" role="banner">Último Post</span>
       </header>
@@ -46,9 +50,9 @@
           Aprendiendo a usar Grid y a usar estilos con Tailwind
         </h3>
 
-        <section 
-          id="Post" 
-          class="mx-3 max-h-[350px] overflow-y-auto scrollbar-hidden" 
+        <section
+          id="Post"
+          class="mx-3 max-h-[350px] overflow-y-auto scrollbar-hidden"
           aria-label="Resumen del post"
         >
           <p class="informative text-sm opacity-70 text-pretty pb-2">
@@ -73,7 +77,7 @@
           <div class="flex items-center mt-2 gap-2 flex-wrap">
             <span class="informative text-xs opacity-60">Categoría:</span>
             <mark
-              class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs border border-blue-400/30"
+              class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs border border-blue-400/20"
             >
               Frontend
             </mark>
@@ -85,13 +89,13 @@
 
   <!-- Scroll projects-->
   <article
-    class="box-gen text-xl relative border col-span-14 md:col-span-5  md:block flex justify-center items-center"
+    class="box-gen text-xl relative border col-span-14 md:col-span-5 md:block flex justify-center items-center"
   >
     <div
       class="bg-black/30 flex flex-col backdrop-blur-9xl h-full w-full rounded-[20px] border border-gray-400/20"
     >
       <div
-        class="bg-black/60 w-fit px-4 py-2 flex rounded-full border border-gray-400/30 mt-4 mx-4"
+        class="bg-black/10 w-fit px-4 py-2 flex rounded-full border border-gray-400/20 mt-4 mx-4"
       >
         <span class="m-0 font-static informative">Proyectos Scroll</span>
       </div>
@@ -111,15 +115,15 @@
           autoplay
           muted
           loop
+          playsinline
           class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[90%] object-cover flex justify-center items-center rounded-[20px] transition-all duration-300 group-hover:blur-sm"
-          aria-label="Video demostrativo de proyectos"
+          aria-label="Video demostrativo de proyectos de Alan San"
         >
           <source src="/imagenes/gta.mp4" type="video/mp4" />
-          Tu navegador no soporta el elemento video.
         </video>
         <a
           href="/projectos"
-          class="font-static absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center text-lg bg-black/60 px-4 py-2 rounded-2xl border border-gray-400/70 z-10 no-underline focus:outline-none focus:ring-2 focus:ring-white/50"
+          class="font-static absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center text-lg bg-black/10 px-4 py-2 rounded-2xl border border-gray-400/70 z-10 no-underline focus:outline-none focus:ring-2 focus:ring-white/50"
           aria-label="Ver todos los proyectos"
         >
           Ver proyectos
@@ -129,18 +133,18 @@
   </article>
   <!--  Suitch project-->
   <article
-    class="box-gen text-xl p-4 border col-span-14 md:col-span-5 h-80 md:block"
+    class="box-gen text-xl p-4 border col-span-14 md:col-span-5 h-80 md:h-auto"
   >
     <a
       href="https://suitch.netlify.app/"
       target="_blank"
       rel="noopener noreferrer"
       class="block w-full h-full focus:outline-none focus:ring-2 focus:ring-white/50 rounded-[20px]"
-      aria-label="Ver proyecto Suitch - Aplicación de streaming"
+      aria-label="Ver proyecto Suitch desarrollado por Alan San"
     >
       <img
         src="/imagenes/suitchweb.webp"
-        alt="Captura de pantalla del proyecto Suitch, una aplicación de streaming similar a Twitch"
+        alt="Proyecto Suitch por Alan San - Aplicación de streaming similar a Twitch"
         class="w-full h-full object-fill flex justify-center items-center rounded-[20px]"
         width="320"
         height="240"
@@ -149,35 +153,61 @@
     </a>
   </article>
   <div
-    class="box-gen text-xl col-span-14 md:col-span-5 grid grid-rows-3 border border-gray-400/50"
+    class="box-gen text-xl col-span-14 md:col-span-5 grid grid-rows-3 border border-gray-400/50 md:h-auto"
   >
     <!-- sub-cuadros -->
-    <div class="box-gen border p-2 m-1">
+    <div class="">
       <div
         class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
       >
         sub cuadro 1
       </div>
     </div>
-    <div class="box-gen border p-2 m-1 row-span-3 shadow">
+    <div class="my-2 row-span-3 shadow">
+      <!-- contactame  -->
       <div
-        class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
+        class="bg-black/30 backdrop-blur-9xl w-full h-full rounded-[20px] border border-gray-400/20"
       >
-        sub cuadro 2
+        <div
+          class="bg-black/10 w-fit px-2 py-1 md:px-4 md:py-2 flex rounded-full border border-gray-400/20 mt-2 md:mt-4 mx-4"
+        >
+          <p class="m-0 font-static informative">Contactame</p>
+        </div>
+        <div class="flex justify-between items-center my-3 px-5 md:flex-col">
+          <div class="flex flex-col w-full mt-3 ">
+            <p class="m-0 font-static informative">
+              ¿Tienes un proyecto del que quieras hablarme?
+            </p>
+            <p class="m-0 font-static informative">
+              Transformemos juntos esa visión y de froma eficiente. ⚡️
+            </p>
+            
+          </div>
+          <!-- mail sm -->
+          <a
+            href="mailto:alansandovalt1@gmail.com"
+            class="text-white/50 hover:text-white/70 transition-colors duration-200  mt-4   "
+            aria-label="Enviar email a Alan San"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Email class="w-8 h-8 mx-2  md:mx-auto" />
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- matera landing  -->
   <article
-    class="box-gen rounde text-xl p-4 border col-span-14 md:col-span-5 h-80"
+    class="box-gen rounde text-xl p-4 border col-span-14 md:col-span-5 h-80 md:h-auto"
   >
     <div
       class="relative bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
     >
       <div class="flex items-center mt-2">
         <div
-          class="bg-black/60 relative w-fit px-4 py-2 flex rounded-full border border-gray-400/30 mt-1 mx-4  text-wrap"
+          class="bg-black/10 relative w-fit px-4 py-2 flex rounded-full border border-gray-400/20 mt-1 mx-4 text-wrap"
         >
           <span class="m-0 informative text-xs text-center">Landing Page</span>
         </div>
@@ -190,12 +220,12 @@
         target="_blank"
         rel="noopener noreferrer"
         class="block focus:outline-none focus:ring-2 focus:ring-white/50 rounded-[20px]"
-        aria-label="Ver sitio web de La Matera - Restaurante"
+        aria-label="Ver sitio web de La Matera - Restaurante - Guadalajara"
       >
         <img
           src="/imagenes/matera3.webp"
-          alt="Captura de pantalla del sitio web de La Matera, una landing page para restaurante con menú digital"
-          class="w-[94%] h-[74%] md:h-[76%] object-fill flex rounded-[20px] my-1 absolute left-1/2 -translate-x-1/2"
+          alt="Landing page La Matera desarrollada por Alan San - Restaurante con menú digital"
+          class="w-[94%] h-[78%] md:h-[76%] object-fill flex rounded-[20px] my-1 absolute left-1/2 -translate-x-1/2"
           width="300"
           height="200"
           loading="lazy"
