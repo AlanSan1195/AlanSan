@@ -2,33 +2,80 @@
   class="grid grid-cols-14 gap-2 text-left grid-rows-2 md:p-5 lg:px-12 max-w-8xl mt-24 mb-24 md:mx-16 rounded-3xl z-30"
   aria-label="Proyectos y contenido destacado"
 >
-  <!-- Actuality actions -->
+  <!-- Blog post section with semantic structure -->
   <article
     class="box-gen text-xl border-[1.5px] col-span-14 md:col-span-4 md:row-span-3"
+    role="article"
+    aria-labelledby="latest-post-title"
   >
     <div
       class="bg-black/30 backdrop-blur-9xl h-full rounded-[20px] border border-gray-400/20"
     >
-      <div
+      <header
         class="bg-black/60 w-fit px-4 py-2 rounded-full border border-gray-400/20 mt-4 mx-4"
       >
-        <span class="m-0 informative">Último Post</span>    
-      </div>
-      {/* Using client:load to ensure reactivity */}
-      <div class="w-max h-max border-l-2 my-2 mx-4 px-2">
-        <time 
-          class="informative" 
+        <span class="m-0 informative" role="banner">Último Post</span>
+      </header>
+
+      <aside class="w-max h-max border-l-2 my-2 mx-4 px-2" role="complementary">
+        <time
+          class="informative"
           datetime={new Date().toISOString()}
+          aria-label={`Publicado el ${new Date().toLocaleDateString("es-ES", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })}`}
         >
-          {new Date().toLocaleDateString('es-ES', {
-            day: 'numeric',
-            month: 'long'
-          })}
+          {
+            new Date().toLocaleDateString("es-ES", {
+              day: "numeric",
+              month: "long",
+            })
+          }
         </time>
-      </div>
-      <h3 class="font-static text-base m-3">
-        Aprendiendo a usar Grid y a usar estilos con Tailwind
-      </h3>
+      </aside>
+
+      <main>
+        <h3
+          id="latest-post-title"
+          class="font-static text-base m-3"
+          role="heading"
+          aria-level="3"
+        >
+          Aprendiendo a usar Grid y a usar estilos con Tailwind
+        </h3>
+
+        <section id="Post" class="mx-3" aria-label="Resumen del post">
+          <p class="informative text-sm opacity-70 text-pretty">
+            Me encanta lo fácil que es usar Grid con Tailwind. Recordar cómo
+            hacerlo con CSS me cuesta aún más y tengo que echar un vistazo
+            rápido para ver cómo posicionar celdas y darles su fracción a cada
+            columna y fila. Aun así, lo que yo hago es a veces ayudarme del
+            autocompletado y ver cómo funcionan los parámetros de <span
+              class="font-bold text-blue-300"
+              >grid-template-areas y grid-template-columns</span
+            >. Aquí te dejo un muy buen recurso si quieres implementar un bento
+            grid superfácil en tu proyecto.
+            <a
+              class="flex text-orange-400 underline text-xs font-static font-bold mt-4"
+              href="https://cssgridgenerator.io/"
+              target="_blank"
+              rel="noopener noreferrer">CSS grid generator</a
+            >
+          </p>
+        </section>
+        <footer class="mx-3 mb-3">
+          <div class="flex items-center gap-2">
+            <span class="informative text-xs opacity-60">Categoría:</span>
+            <mark
+              class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs border border-blue-400/30"
+            >
+              Frontend
+            </mark>
+          </div>
+        </footer>
+      </main>
     </div>
   </article>
 
@@ -77,10 +124,12 @@
     </div>
   </article>
   <!--  Suitch project-->
-  <article class="box-gen text-xl p-4 border col-span-14 md:col-span-5 h-80 md:block">
+  <article
+    class="box-gen text-xl p-4 border col-span-14 md:col-span-5 h-80 md:block"
+  >
     <a
       href="https://suitch.netlify.app/"
-      target="_blank" 
+      target="_blank"
       rel="noopener noreferrer"
       class="block w-full h-full focus:outline-none focus:ring-2 focus:ring-white/50 rounded-[20px]"
       aria-label="Ver proyecto Suitch - Aplicación de streaming"
@@ -128,16 +177,18 @@
         >
           <span class="m-0 font-static text-xs">Landing Page</span>
         </div>
-        <span class="m-0 informative break-words text-wrap">Restaurante-Menú</span>
+        <span class="m-0 informative break-words text-wrap"
+          >Restaurante-Menú</span
+        >
       </div>
-      <a 
-        href="https://www.lamatera.online/" 
-        target="_blank" 
+      <a
+        href="https://www.lamatera.online/"
+        target="_blank"
         rel="noopener noreferrer"
         class="block focus:outline-none focus:ring-2 focus:ring-white/50 rounded-[20px]"
         aria-label="Ver sitio web de La Matera - Restaurante"
       >
-        <img 
+        <img
           src="/imagenes/matera3.webp"
           alt="Captura de pantalla del sitio web de La Matera, una landing page para restaurante con menú digital"
           class="w-[94%] h-[74%] md:h-[76%] object-fill flex rounded-[20px] my-1 absolute left-1/2 -translate-x-1/2"
@@ -168,7 +219,6 @@
     font-family: "static";
     font-size: 14px;
     opacity: 0.8;
-    
   }
 
   /* :is(.dark *) agregar esto al boxgen cuando hagamso el modo obscuro  */
