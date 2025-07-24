@@ -1,4 +1,4 @@
-# 🌌 Portfolio Alan Sandoval - Inspirado en Auroras Boreales
+# 🌌 Portfolio Alan San - Inspirado en Auroras Boreales
 
 > Un portfolio personal que combina diseño moderno, buenas prácticas de desarrollo y efectos visuales inspirados en la naturaleza.
 
@@ -286,6 +286,6 @@ pnpm preview
 
 ---
 
-**Desarrollado con ❤️ por Alan Sandoval**
+**Desarrollado con ❤️ por Alan San**
 
 *Un portfolio que no solo muestra proyectos, sino que demuestra dominio de las tecnologías web modernas y atención al detalle en cada aspecto del desarrollo.*
