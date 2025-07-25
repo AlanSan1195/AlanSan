@@ -1,0 +1,356 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Proyecto Matera - Alan San ">
+  <!-- Back to Portfolio -->
+
+  <section class="relative overflow-hidden pt-20 pb-16 z-10">
+    <div class="relative max-w-4xl md:max-w-7xl sm:px-6">
+      <div class="">
+        <div class="mx-auto mt-2">
+          <a
+            href="/"
+            class="px-4 py-2 w-fit bg-black/30 border-gray-400/20 rounded-xl text-sm border text-white/70 hover:text-white justify-center flex"
+          >
+            <svg
+              class="mr-2 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+          </a>
+        </div>
+        <!-- Hero Section -->
+
+        <h1 class="text-3xl md:text-6xl font-static text-white mb-6">
+           Landing page - La Matera
+        </h1>
+        <p class="font-static informative mb-4 max-w-3xl mx-auto">
+          Rediseño completo de la web de un restaurante argentino en la ciduad de Guadalajara
+        </p>
+        <div class="flex ">
+          <a
+            href="https://www.lamatera.online/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-static bg-black/30 border-gray-400/20 rounded-xl px-4 py-2 w-fit text-white/70 hover:text-white no-underline"
+          >
+            Ver Sitio Web
+            <svg
+              class="ml-2 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              ></path>
+            </svg>
+          </a>
+
+          <!-- <div class="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20  mb-6">
+            <span class="text-orange-400 text-sm font-medium ">#Frontend #Maquetación #UI</span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Demo Section -->
+  <section id="demo" class="z-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="relative aspect-video rounded-xl overflow-hidden w-4xs md:w-2xl lg:w-4xl mx-auto"
+      >
+        <video
+          autoplay
+          playsinline
+          muted
+          loop
+          controls
+          class="w-full h-full object-cover"
+          poster="/imagenes/matera3.webp"
+        >
+          <source src="/imagenes/materashort.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="py-16 z-10">
+    <div class="max-w-3xl md:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="justify-center mx-auto">
+        <div class="flex justify-center items-center flex-col">
+          <h2 class="text-6xl font-bold text-white mb-6">
+            Descripción General del Proyecto
+          </h2>
+          <p class="font-static informative">
+            La Matera es una landing page desarrollada para un restaurante
+            argentino en Guadalajara, diseñada para ofrecer una experiencia
+            digital inmersiva que refleje la calidez y autenticidad de la cocina
+            argentina.
+          </p>
+          <p class="font-static informative">
+            El proyecto se enfoca en crear una interfaz intuitiva que permita a
+            los comensales explorar el menú de manera interactiva, con efectos
+            visuales que evocan la atmósfera del restaurante.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="px-3 py-1 bg-black/30 border-gray-400/20 rounded-full text-sm border"
+              >Astro</span
+            >
+            <span
+              class="px-3 py-1 bg-black/30 border-gray-400/20 rounded-full text-sm border"
+              >Three.js</span
+            >
+            <span
+              class="px-3 py-1 bg-black/30 border-gray-400/20 rounded-full text-sm border"
+              >Tailwind CSS</span
+            >
+            <span
+              class="px-3 py-1 bg-black/30 border-gray-400/20 rounded-full text-sm border"
+              >Responsive Design</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Features -->
+  <section class="py-16 z-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-white mb-12 text-center">
+        Características Técnicas
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Astro Framework -->
+        <div
+          class="bg-black/10 backdrop-blur-3xl rounded-xl border border-gray-400/20 p-6"
+        >
+          <div
+            class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-orange-400"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">Astro Framework</h3>
+          <p class="font-static infromative opacity-70">
+            Utilización de Astro para crear una aplicación web estática
+            optimizada, aprovechando la hidratación parcial para mejorar el
+            rendimiento y la experiencia del usuario.
+          </p>
+        </div>
+
+        <!-- Three.js Effects -->
+        <div
+          class="bg-black/30 backdrop-blur-3xl rounded-xl border border-gray-400/20 p-6"
+        >
+          <div
+            class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-blue-400"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">
+            Efectos de Humo 3D
+          </h3>
+          <p class="font-static infromative opacity-70">
+            Implementación de efectos de humo realistas usando Three.js con
+            partículas animadas que crean una atmósfera inmersiva y evocan la
+            experiencia de una parrilla argentina.
+          </p>
+        </div>
+
+        <!-- Responsive Design -->
+        <div
+          class="bg-black/30 backdrop-blur-3xl rounded-xl border border-gray-400/20 p-6"
+        >
+          <div
+            class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-green-400"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M17 1H7c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-2-2-2zM7 4V3h10v1H7zm0 14V6h10v12H7z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3">
+            Diseño Responsivo
+          </h3>
+          <p class="font-static opacity-70">
+            Interfaz completamente adaptable que garantiza una experiencia
+            óptima en dispositivos móviles, tablets y escritorio, con
+            optimizaciones específicas para cada formato.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Outcomes -->
+  <section class="py-16 z-10">
+    <div class="max-w-4xl md:max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="bg-black/30 backdrop-blur-3xl rounded-xl border border-gray-400/20 p-8"
+      >
+        <h2 class="font-static text-3xl text-center">Lo que Aprendí</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-static text-pink-400 mb-4 text-center">
+              Desarrollo Frontend
+            </h3>
+            <ul class="space-y-3 text-gray-300">
+              <li class="flex items-start">
+                <span class="text-pink-400 mr-2">•</span>
+                Implementación avanzada de Astro para sitios estáticos optimizados
+              </li>
+              <li class="flex items-start">
+                <span class="text-pink-500 mr-2">•</span>
+                Integración de Three.js para efectos 3D en aplicaciones web
+              </li>
+              <li class="flex items-start">
+                <span class="text-pink-500 mr-2">•</span>
+                Optimización de rendimiento con lazy loading y compresión de assets
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-static text-pink-400 mb-4 text-center">
+              UX/UI Design
+            </h3>
+            <ul class="space-y-3 text-gray-300">
+              <li class="flex items-start">
+                <span class="text-pink-500 mr-2">•</span>
+                Diseño de interfaces que reflejan la identidad de marca del restaurante
+              </li>
+              <li class="flex items-start">
+                <span class="text-pink-500 mr-2">•</span>
+                Creación de experiencias inmersivas con efectos visuales sutiles
+              </li>
+              <li class="flex items-start">
+                <span class="text-pink-500 mr-2">•</span>
+                Implementación de navegación intuitiva para menús digitales
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Implementation -->
+  <section class="py-16 z-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-static mb-12 text-center">
+        Implementación Técnica
+      </h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div
+          class="bg-black/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-6"
+        >
+          <h3 class="text-xl font-static text-white mb-4">
+            Efecto de Humo con Three.js
+          </h3>
+          <p class="font-static opacity-70 mb-4">
+            El efecto de humo se implementó utilizando un sistema de partículas
+            en Three.js, creando 100 partículas que se mueven de forma aleatoria
+            para simular humo real.
+          </p>
+          <div class="bg-gray-900/50 rounded-lg p-4 text-sm">
+            <pre
+              class="text-green-400 text-xs overflow-x-auto">
+                <code>
+{`// Creación de partículas de humo
+const smokeParticles = [];
+const NUM_OF_PARTICLES = 100;
+
+for (let p = 0; p < NUM_OF_PARTICLES; p++) {
+  const particle = new THREE.Mesh(smokeGeo, smokeMaterial);
+  particle.position.set(
+    Math.random() * 500 - 250,
+    Math.random() * 500 - 250,
+    Math.random() * 1100 - 90
+  );
+}`}
+                </code>
+              </pre>
+          </div>
+        </div>
+
+        <div
+          class="bg-black/30 backdrop-blur-sm rounded-xl border border-gray-700/50 p-6"
+        >
+          <h3 class="font-static text-white mb-4">Optimización Astro</h3>
+          <p class="font-static opacity-70 mb-4">
+            Astro permite generar sitios estáticos con hidratación selectiva,
+            mejorando significativamente los tiempos de carga y la experiencia
+            del usuario.
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-center text-sm">
+              <span class="w-3 h-3 bg-green-500 rounded-full mr-3 opacity-70"
+              ></span>
+              <span class="font-static opacity-70"
+                >Carga inicial optimizada</span
+              >
+            </div>
+            <div class="flex items-center text-sm">
+              <span class="w-3 h-3 bg-green-500 rounded-full mr-3 opacity-70"
+              ></span>
+              <span class="font-static opacity-70"
+                >JavaScript mínimo en el cliente</span
+              >
+            </div>
+            <div class="flex items-center text-sm">
+              <span class="w-3 h-3 bg-green-500 rounded-full mr-3 opacity-70"
+              ></span>
+              <span class="font-static opacity-70">SEO optimizado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  code {
+    font-family: "Courier New", monospace;
+    line-height: 1.4;
+  }
+  .informative {
+    font-family: "static";
+    font-size: 20px;
+    opacity: 0.8;
+  }
+</style>
