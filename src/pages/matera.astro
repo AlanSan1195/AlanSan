@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SocialMedia from "../components/Social.astro";
 ---
 
 <Layout title="Proyecto Matera - Alan San ">
@@ -30,12 +31,13 @@ import Layout from "../layouts/Layout.astro";
         <!-- Hero Section -->
 
         <h1 class="text-3xl md:text-6xl font-static text-white mb-6">
-           Landing page - La Matera
+          Landing page - La Matera
         </h1>
         <p class="font-static informative mb-4 max-w-3xl mx-auto">
-          Rediseño completo de la web de un restaurante argentino en la ciduad de Guadalajara
+          Rediseño completo de la web de un restaurante argentino en la ciduad
+          de Guadalajara
         </p>
-        <div class="flex ">
+        <div class="flex">
           <a
             href="https://www.lamatera.online/"
             target="_blank"
@@ -339,6 +341,37 @@ for (let p = 0; p < NUM_OF_PARTICLES; p++) {
           </div>
         </div>
       </div>
+    </div>
+    <div class="hidden justify-center items-center md:flex my-16 md:flex-col">
+      <footer
+        class="w-full flex z-10 justify-center items-center"
+        role="contentinfo"
+        aria-label="Site footer"
+      >
+        <div class="flex-col justify-center items-center">
+          <figure
+            class="rounded-full w-10 h-10 border-white/60 border-[1px] mx-auto"
+          >
+            <img
+              src="/imagenes/FotoPerfil.webp"
+              alt="Foto de perfil de Alan San, desarrollador frontend"
+              class="absolute w-10 h-10 rounded-full border-white/60 border-[1px] p-1"
+              width="56"
+              height="56"
+              loading="lazy"
+            />
+          </figure>
+          <p class="font-static font-bold opacity-80 mx-6 mt-5">
+            Made by <a
+              href="https://github.com/AlanSan1195"
+              class="text-white hover:cursor-pointer no-underline"
+              rel="author"
+              title="Visit Alan San profile">Alan San</a
+            >
+          </p>
+          <SocialMedia />
+        </div>
+      </footer>
     </div>
   </section>
 </Layout>
