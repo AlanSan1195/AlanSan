@@ -3,13 +3,9 @@ import Layout from "../layouts/Layout.astro";
 import SocialMedia from "../components/Social.astro";
 ---
 
-<Layout title="Proyecto Matera - Alan San ">
-  
-  <!-- Back to Portfolio -->
-  <section
-    class="relative max-w-4xl md:max-w-7xl mx-auto overflow-hidden pt-20 pb-16 z-10"
-  >
-    <div class="relative sm:px-4  mb-6 ">
+<Layout title="Proyecto Suitch - Alan San ">
+  <section class="relative max-w-3xl mx-auto overflow-hidden pt-20 pb-16 z-10">
+    <div class="relative mb-6">
       <div class="mx-auto mt-2">
         <a
           href="/"
@@ -32,17 +28,16 @@ import SocialMedia from "../components/Social.astro";
       <!-- Hero -->
 
       <h1 class="text-4xl md:text-6xl font-static text-white mb-6">
-        Landing page - La Matera
+        Plataforma de Streaming - Suitch
       </h1>
       <p
-        class="font-static text-sm md:text-medium md:text-xl text-white/70 mb-4 max-w-3xl mx-auto"
+        class="font-static text-sm md:text-medium md:text-xl text-white/70 mb-4 max-w-3xl"
       >
-        Rediseño completo de la web de un restaurante argentino en la ciduad de
-        Guadalajara
+        Simulación de Twitch desarrollada con React, y la API oficial de Twitch
       </p>
       <div class="flex w-fit items-center">
         <a
-          href="https://www.lamatera.online/"
+          href="https://suitch.netlify.app/"
           target="_blank"
           rel="noopener noreferrer"
           class="font-static text-xs md:text-medium bg-black/30 border-[1.5px] border-gray-400/20 rounded-xl px-4 py-2 w-fit text-white/70 hover:text-white no-underline"
@@ -66,22 +61,13 @@ import SocialMedia from "../components/Social.astro";
     </div>
     <!-- Img Demo -->
 
-    <div class="max-w-4xl md:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div
-        class="relative aspect-video rounded-xl overflow-hidden w-4xs md:w-2xl lg:w-3xl mx-auto"
-      >
-        <video
-          autoplay
-          playsinline
-          muted
-          loop
-          controls
-          class="w-full h-full object-cover"
-          poster="/imagenes/matera3.webp"
-        >
-          <source src="/imagenes/materashort.mp4" type="video/mp4" />
-        </video>
-      </div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <img
+        src="/imagenes/suitch2ble.webp"
+        alt="Captura de pantalla de Suitch - Plataforma de streaming"
+        class="w-full h-auto object-cover rounded-2xl"
+        loading="lazy"
+      />
     </div>
   </section>
 
@@ -93,35 +79,17 @@ import SocialMedia from "../components/Social.astro";
           <h2 class="text-2xl md:text-5xl font-static text-white mb-6">
             Descripción General del Proyecto
           </h2>
-          <p
-            class="font-static text-sm md:text-medium md:text-xl text-white/70"
-          >
-            La Matera es una landing page desarrollada para un restaurante
-            argentino en Guadalajara, diseñada para ofrecer una experiencia
-            digital inmersiva que refleje la calidez y autenticidad de la cocina
-            argentina.
+          <p class="font-static informative text-lg leading-relaxed">
+            <strong class="text-white">Suitch</strong> es una simulación completa
+            de la plataforma Twitch que desarrollé para practicar y perfeccionar
+            mis habilidades en React. El proyecto permite buscar streamers reales
+            y ver su contenido en vivo, replicando la experiencia de usuario de la
+            plataforma original.
           </p>
-
-          <p
-            class="font-static text-sm md:text-medium md:text-xl text-white/70"
-          >
-            Este fue mi primer proyecto utilizando un Framework de Frontend. Lo
-            desarrollé con mucha dedicación y esfuerzo, sirviendo como base para
-            explorar y fortalecer mis conocimientos básicos de <strong
-              >HTML, CSS y JavaScript</strong
-            >. Durante el desarrollo, me enfrenté a diversos desafíos de
-            responsividad, mientras que el diseño fue evolucionando
-            orgánicamente sin una planificación previa - una lección importante
-            sobre la necesidad de planear adecuadamente. De igual forma nacio
-            con el deseo de aportar valor al establecimiento donde he colaborado
-            localmente y al cual le tengo mucho aprecio.
-          </p>
-
-          <p
-            class="font-static text-sm md:text-medium md:text-xl text-white/70"
-          >
-            El proyecto se enfoca en crear una interfaz intuitiva y ha
-            demostrado ser una herramienta valiosa para el personal.
+          <p class="font-static informative text-lg leading-relaxed">
+            Este proyecto me permitió enfrentarme a desafíos reales como el
+            manejo de APIs externas, la gestión de estados y la implementación
+            de páginas dinámicas con Astro.
           </p>
           <div class="flex flex-wrap w-full gap-2 justify-center">
             <span
@@ -130,15 +98,11 @@ import SocialMedia from "../components/Social.astro";
             >
             <span
               class="px-3 py-1 bg-black/30 border-[1.5px] border-gray-400/20 rounded-full text-sm"
-              >Three.js</span
+              >React</span
             >
             <span
               class="px-3 py-1 bg-black/30 border-[1.5px] border-gray-400/20 rounded-full text-sm"
               >Tailwind CSS</span
-            >
-            <span
-              class="px-3 py-1 bg-black/30 border-gray-400/20 rounded-full text-sm border"
-              >Responsive Design</span
             >
           </div>
         </div>
@@ -178,27 +142,16 @@ import SocialMedia from "../components/Social.astro";
           <p
             class="font-static text-sm md:text-medium md:text-xl text-white/70"
           >
-            <strong class="text-white">Three.js:</strong> Biblioteca de JavaScript
-            para la creación de gráficos 3D en el navegador. Utilizada para implementar
-            los efectos de humo y la atmósfera en la landing page.
-          </p>
-        </li>
-
-        <li class="">
-          <p
-            class="font-static text-sm md:text-medium md:text-xl text-white/70"
-          >
-            <strong class="text-white">Diseño Responsivo:</strong> Implementación
-            de una interfaz adaptable que garantiza una experiencia óptima en todos
-            los dispositivos, desde móviles hasta pantallas de escritorio, adaptando
-            un diseño diferente para cada uno de ellos.
+            <strong class="text-white">React:</strong> Implementación de useState
+            para manejo de estado local y useContext para compartir estado entre
+            componentes, especialmente para el colapso de la barra lateral.
           </p>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- Lo que Aprendí -->
+  <!-- Lo que aprendi -->
   <section class="py-16 z-10 max-w-4xl mx-auto">
     <div class="px-4 sm:px-6 lg:px-8">
       <div
@@ -207,46 +160,41 @@ import SocialMedia from "../components/Social.astro";
         <h2 class="font-static text-2xl md:text-3xl text-center">
           Lo que Aprendí
         </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:mr-8">
+        <div class="grid grid-cols-1 gap-y-4 md:mr-8">
           <div class="">
             <h3
               class="font-static text-sm md:text-lg text-pink-400 mb-4 text-center"
             >
-              Desarrollo Frontend
+              Desarrollo
             </h3>
             <ul class="space-y-3 text-gray-300 font-static">
               <li class="flex items-start text-xs md:text-lg">
+                <span class="text-pink-500 mr-2">•</span>
+                Uso de los hooks useState y useContext para el manejo de estado y
+                la compartición de datos entre componentes.
+              </li>
+              <li class="flex items-start text-xs md:text-lg">
+                <span class="text-pink-500 mr-2">•</span>
+                Implementación de rutas dinámicas en Astro para generar perfiles
+                únicos de cada streamer con pre-renderizado.
+              </li>
+              <li class="flex items-start text-xs md:text-lg">
+                <span class="text-pink-500 mr-2">•</span>
+
+                Dominar useContext() para crear un componente padre que envuelve
+                children y comparte interactividad entre componentes.
+                Especialmente útil para el colapso de la barra lateral que
+                afecta a múltiples componentes.
+              </li>
+              <li class="flex items-start text-xs md:text-lg">
+                <span class="text-pink-500 mr-2">•</span>
+
+                Resolver restricciones CORS para iframes de Twitch,
+              </li>
+              <li class="flex items-start text-xs md:text-lg">
                 <span class="text-pink-400 mr-2">•</span>
-                Uso de Astro para implementación de una landing page estatica
-              </li>
-              <li class="flex items-start text-xs md:text-lg">
-                <span class="text-pink-500 mr-2">•</span>
-                Introduccion a Three.js para efectos 3D en aplicaciones web
-              </li>
-              <li class="flex items-start text-xs md:text-lg">
-                <span class="text-pink-500 mr-2">•</span>
-                Estilos dinamicos y Responsive
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3
-              class="font-static text-sm md:text-lg text-pink-400 mb-4 text-center"
-            >
-              UX/UI Design
-            </h3>
-            <ul class="space-y-3 text-gray-300">
-              <li class="flex items-start text-xs md:text-lg">
-                <span class="text-pink-500 mr-2">•</span>
-                Diseño de interfaces que reflejan la identidad de marca del restaurante
-              </li>
-              <li class="flex items-start text-xs md:text-lg">
-                <span class="text-pink-500 mr-2">•</span>
-                Creación de experiencias inmersivas con efectos visuales sutiles
-              </li>
-              <li class="flex items-start text-xs md:text-lg">
-                <span class="text-pink-500 mr-2">•</span>
-                Implementación de navegación intuitiva para menús digitales
+                Uso seguro de la API de Twitch con variables de entorno para tokens
+                y despliegue en Netlify.
               </li>
             </ul>
           </div>
@@ -255,7 +203,7 @@ import SocialMedia from "../components/Social.astro";
     </div>
   </section>
 
-  <!-- Implementación Técnica -->
+  <!-- Implementacion tecnica -->
   <section class="py-16 z-10 max-w-4xl mx-auto">
     <div class="px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-static mb-12 text-center">
@@ -266,39 +214,55 @@ import SocialMedia from "../components/Social.astro";
           class="bg-black/30 backdrop-blur-sm rounded-xl border-[1.5px] border-gray-700/50 p-6"
         >
           <h3 class="text-xl font-static text-white mb-4">
-            Efecto de Humo con Three.js
+            UseContext y createContext para el manejo de estado
           </h3>
           <p class="font-static opacity-70 mb-4">
-            El efecto de humo se implementó utilizando un sistema de partículas
-            en Three.js, creando 100 partículas que se mueven de forma aleatoria
-            para simular humo real.
+            Mientras avanzaba en mi proyecto, descubrí que necesitábamos una
+            forma de compartir el estado entre componentes sin tener que pasar
+            props a través de cada nivel. Así fue como encontré el uso de <strong
+              class="text-white">createContext</strong
+            >. Aunque no lo conocía al iniciar el proyecto, esta experiencia me
+            enseñó la importancia de investigar y consultar la documentación
+            cuando me encuentro con nuevos desafíos técnicos.
           </p>
           <div class="bg-zinc-900 rounded-lg p-4 text-sm">
             <pre
               class="text-green-400 text-xs overflow-x-auto">
-  <code>{`//   const NUM_OF_PARTICLES = 100;
+  <code>{`//  import { createContext, useContext, useState } from "react";
+//aprendimos **createContext()**
+const initialContext = createContext(true)
+//Basicamente es un componente que comparte un estado inicial y que le dices que renderizara lo que yo ponga dentro de el {{children}}
 
-    for (let p = 0; p < NUM_OF_PARTICLES; p++) {
-      const particle = new THREE.Mesh(smokeGeo, smikeMaterial);
+export function SanstreamLyout({children}) {
 
-      particle.position.set(
-        Math.random() * 500 - 250,
-        Math.random() * 500 - 250,
-        // REDUCIR LAS PARTICULAS O AUMENTAR LA CANTIDAD 
-        Math.random() * 1100 - 90
-      );
+  const [context, setContext] = useState(true); // Estado compartido
 
-      particle.rotation.z = Math.random() * 60;
-      scene.add(particle);
-      smokeParticles.push(particle);
-      function animateSmoke(){
-          requestAnimationFrame(animateSmoke);
-          particle.rotation.z += 0.008;
-           particle.position.y += 0.001;
-           particle.position.x += 0.001;
-      } 
-      animateSmoke();
-    }
+  return (
+    <>
+     <initialContext.Provider value = {{context, setContext}}>
+      {children}
+     </initialContext.Provider>
+    </>
+  );
+}
+
+//  ESTE WRAPER MODIFICA EL RENDERIZADO DEL RECOMMENDEDCHANNELS Y EL PERFIL DEL USUARIO  D
+export function SanstreamLyoutPerfil({children}) {
+
+  const [context, setContext] = useState(false); // Estado compartido
+
+  return (
+    <>
+     <initialContext.Provider value = {{context, setContext}}>
+      {children}
+     </initialContext.Provider>
+    </>
+  );
+}
+export function useInitialContext(){
+  return useContext(initialContext)
+}
+
 `}</code>
 </pre>
           </div>
@@ -344,16 +308,16 @@ import SocialMedia from "../components/Social.astro";
       </footer>
     </div>
   </section>
-
-  <style>
-    code {
-      font-family: "Courier New", monospace;
-      line-height: 1.4;
-    }
-    .informative {
-      font-family: "static";
-      font-size: 20px;
-      opacity: 0.8;
-    }
-  </style>
 </Layout>
+
+<style>
+  code {
+    font-family: "Courier New", monospace;
+    line-height: 1.4;
+  }
+  .informative {
+    font-family: "static";
+    font-size: 20px;
+    opacity: 0.8;
+  }
+</style>
