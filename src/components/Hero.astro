@@ -1,23 +1,43 @@
 ---
 import SocialMedia from "../components/Social.astro";
 ---
+
 <!-- HERO-FULL -->
-<section class="w-[90%] h-auto flex flex-col mt-8 z-20" aria-labelledby="hero-title">
+<section
+  class="w-[90%] h-auto flex flex-col mt-8 z-20"
+  aria-labelledby="hero-title"
+>
   <!-- HERO SM -->
   <div class="cursor-pointer md:hidden h-full group">
-    <h2 id="hero-title" class="font-display text-[90px] line uppercase break-words my-0">
-      <span class="hover:text-orange-400">Front</span>
-      <span class="bg-pink-500 w-18 h-[2px] inline-block -translate-y-4" aria-hidden="true"></span>
-      <span class="hover:text-orange-400">End</span>
-      <span class="hover:text-orange-400">Developer</span>
+    <h2
+      id="hero-title"
+      class="font-display text-[90px] line uppercase break-words my-0"
+    >
+      <span
+        class="hover:text-orange-400 focus:text-orange-400 active:text-orange-400"
+        >Front</span
+      >
+      <span
+        class="bg-pink-500 w-18 h-[2px] inline-block -translate-y-4"
+        aria-hidden="true"></span>
+      <span
+        class="hover:text-orange-400 focus:text-orange-400 active:text-orange-400"
+        >End</span
+      >
+      <span
+        class="hover:text-orange-400 focus:text-orange-400 active:text-orange-400"
+        >Developer</span
+      >
     </h2>
     <!-- FOTO PERFIL -->
-    <div class="flex flex-col md:hidden ">
-      <figure class="rounded-full w-14 h-14 my-3 border-white/60 border-[1px] m-0">
+    <div class="flex flex-col md:hidden">
+      <figure
+        class="rounded-full w-14 h-14 my-3 border-white/60 border-[1px] m-0"
+      >
         <img
           src="/imagenes/FotoPerfil.webp"
           alt="Foto de perfil de Alan San, desarrollador frontend"
-          class=" absolute w-14 h-14 rounded-full border-white/60 border-[1px] p-1"
+          class="absolute w-14 h-14 rounded-full border-white/60 border-[1px] p-1"
           width="56"
           height="56"
           loading="eager"
@@ -39,14 +59,20 @@ import SocialMedia from "../components/Social.astro";
     <div class="md:flex md:w-fit hidden md:flex-col h-full">
       <h2 class="font-display text-3xl uppercase">
         <span class="hover:text-orange-400">Front</span>
-        <span class="bg-pink-500 w-10 h-[2px] inline-block -translate-y-2" aria-hidden="true"></span>
+        <span
+          class="bg-pink-500 w-10 h-[2px] inline-block -translate-y-2"
+          aria-hidden="true"></span>
         <span class="hover:text-orange-400 inline-block">End</span>
-        <br /><span class="inline-block hover:text-orange-400 translate-x-10">Developer</span>
+        <br /><span class="inline-block hover:text-orange-400 translate-x-10"
+          >Developer</span
+        >
       </h2>
     </div>
     <!-- imagen md  -->
     <div class="hidden items-center gap-x-1 md:block w-xl">
-      <figure class="rounded-full w-18 h-18 border-white/60 border-[1px] flex-col m-0">
+      <figure
+        class="rounded-full w-18 h-18 border-white/60 border-[1px] flex-col m-0"
+      >
         <img
           src="/imagenes/FotoPerfil.webp"
           alt="Foto de perfil de Alan San, desarrollador frontend"
@@ -59,7 +85,7 @@ import SocialMedia from "../components/Social.astro";
       <h1 id="my-name-md" class="mb-0 font-static text-3xl hidden md:flex mt-5">
         Alan San
       </h1>
-      <p class=" font-static opacity-80 my-2">
+      <p class="font-static opacity-80 my-2">
         Soy un desarrollador web con sede en Guadalajara. Trabajo de forma
         independiente con las tecnologías que más disfruto usar con el objetivo
         de siempre crear una experiencia digital.
