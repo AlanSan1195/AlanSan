@@ -9,7 +9,7 @@ import SocialMedia from "../components/Social.astro";
       <div class="mx-auto mt-2">
         <a
           href="/"
-          class="px-4 py-2 w-fit bg-black/30 border-[1.5px] border-gray-400/20 rounded-xl text-sm text-white/70 hover:text-white justify-center flex"
+          class="p-3 w-fit bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-full text-sm text-white/70 hover:text-white justify-center flex"
         >
           <svg
             class="w-4 h-4"
@@ -40,10 +40,10 @@ import SocialMedia from "../components/Social.astro";
           href="https://suitch.netlify.app/"
           target="_blank"
           rel="noopener noreferrer"
-          class="font-static text-xs md:text-medium bg-black/30 border-[1.5px] border-gray-400/20 rounded-xl px-4 py-2 w-fit text-white/70 hover:text-white no-underline"
+          class="font-static text-xs md:text-medium bg-black/40 border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-xl px-4 py-2 w-fit text-white/70 hover:text-white no-underline"
         >
           Ver Sitio Web
-          <svg
+          <svg  
             class="ml-2 w-3 h-3 md:w-4 md:h-4"
             fill="none"
             stroke="currentColor"
@@ -65,7 +65,7 @@ import SocialMedia from "../components/Social.astro";
       <img
         src="/imagenes/suitch2ble.webp"
         alt="Captura de pantalla de Suitch - Plataforma de streaming"
-        class="w-full h-auto object-cover rounded-2xl"
+        class="w-full h-auto object-cover border-[1.5px] border-white/20 outline outline-offset-[1.5px] outline-black rounded-2xl"
         loading="lazy"
       />
     </div>
@@ -80,7 +80,7 @@ import SocialMedia from "../components/Social.astro";
             Descripción General del Proyecto
           </h2>
           <p class="font-static text-sm md:text-medium md:text-xl text-white/70">
-            <strong class="text-white">Suitch</strong> es una simulación
+            <strong class="text-white ">Suitch</strong> es una simulación
             de la plataforma Twitch que desarrollé para practicar y perfeccionar
             mis habilidades en React. El proyecto permite buscar streamers reales
             y ver su contenido en vivo, replicando la experiencia de usuario de la
@@ -93,15 +93,15 @@ import SocialMedia from "../components/Social.astro";
           </p>
           <div class="flex flex-wrap w-full gap-2 justify-center">
             <span
-              class="px-3 py-1 bg-black/30 border-[1.5px] border-gray-400/20 rounded-full text-sm"
+              class="px-3 py-1 bg-black/30  backdrop-blur-3xl  border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-full text-sm"
               >Astro</span
             >
             <span
-              class="px-3 py-1 bg-black/30 border-[1.5px] border-gray-400/20 rounded-full text-sm"
+              class="px-3 py-1 bg-black/30 backdrop-blur-3xl  border-[1.5px] border-white/10 outline outline-offset-[o.5px] outline-black rounded-full text-sm"
               >React</span
             >
             <span
-              class="px-3 py-1 bg-black/30 border-[1.5px] border-gray-400/20 rounded-full text-sm"
+              class="px-3 py-1 bg-black/30  backdrop-blur-3xl border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-full text-sm"
               >Tailwind CSS</span
             >
           </div>
@@ -152,11 +152,9 @@ import SocialMedia from "../components/Social.astro";
   </section>
 
   <!-- Lo que aprendi -->
-  <section class="py-14 z-10 max-w-4xl mx-auto">
-    <div class="px-4  lg:px-8">
-      <div
-        class="backdrop-blur-3xl rounded-xl border-[1.5px] bg-black/30 border-gray-400/20 py-8 px-2"
-      >
+  <section class="py-8 z-10 max-w-4xl mx-auto">
+    <div class="px-4  md:px-20">
+
         <h2 class="font-static text-2xl md:text-3xl text-center">
           Lo que Aprendí
         </h2>
@@ -168,17 +166,17 @@ import SocialMedia from "../components/Social.astro";
               Desarrollo
             </h3>
             <ul class="space-y-3 text-gray-300 font-static">
-              <li class="flex items-start text-xs md:text-lg">
+              <li class="flex items-start text-sm md:text-lg">
                 <span class="text-pink-500 mr-2">•</span>
                 Uso de los hooks useState y useContext para el manejo de estado y
                 la compartición de datos entre componentes.
               </li>
-              <li class="flex items-start text-xs md:text-lg">
+              <li class="flex items-start text-sm md:text-lg">
                 <span class="text-pink-500 mr-2">•</span>
                 Implementación de rutas dinámicas en Astro para generar perfiles
                 únicos de cada streamer con pre-renderizado.
               </li>
-              <li class="flex items-start text-xs md:text-lg">
+              <li class="flex items-start text-sm md:text-lg">
                 <span class="text-pink-500 mr-2">•</span>
 
                 Dominar useContext() para crear un componente padre que envuelve
@@ -186,7 +184,7 @@ import SocialMedia from "../components/Social.astro";
                 Especialmente útil para el colapso de la barra lateral que
                 afecta a múltiples componentes.
               </li>
-              <li class="flex items-start text-xs md:text-lg">
+              <li class="flex items-start text-sm md:text-lg">
                 <span class="text-pink-500 mr-2">•</span>
 
                 Resolver restricciones CORS para iframes de Twitch,
@@ -199,24 +197,22 @@ import SocialMedia from "../components/Social.astro";
             </ul>
           </div>
         </div>
-      </div>
+
     </div>
   </section>
 
   <!-- Implementacion tecnica -->
-  <section class="py-14 z-10 max-w-4xl mx-auto">
-    <div class="px-4  lg:px-8">
-      <h2 class="text-3xl font-static mb-12 text-center">
+  <section class="py-24 z-10 max-w-4xl mx-auto">
+    <div class="px-10 md:px-24">
+      <h2 class="text-2xl md:text-5xl font-static m-0 ">
         Implementación Técnica
       </h2>
-      <div class="grid grid-cols-1 gap-12">
-        <div
-          class="bg-black/30 backdrop-blur-sm rounded-xl border-[1.5px] border-gray-700/50 p-6"
-        >
-          <h3 class="text-xl font-static text-white mb-4">
+      <div class="grid grid-cols-1">
+      
+          <h3 class="text-sm md:text-xl font-static text-white">
             UseContext y createContext para el manejo de estado
           </h3>
-          <p class=" font-static text-sm  md:text-lg text-white/70">
+          <p class=" font-static text-sm  md:text-lg text-white/70 m-0">
             Mientras avanzaba en mi proyecto, descubrí que necesitábamos una
             forma de compartir el estado entre componentes sin tener que pasar
             props a través de cada nivel. Así fue como encontré el uso de <strong
@@ -265,7 +261,7 @@ export function useInitialContext(){
 `}</code>
 </pre>
           </div>
-        </div>
+
       </div>
     </div>
     <div
