@@ -12,12 +12,12 @@ import SocialMedia from "../components/Social.astro";
       <span class="hover:text-orange-400">Developer</span>
     </h2>
     <!-- FOTO PERFIL -->
-    <div class="flex flex-col gap-x-1 md:hidden">
-      <figure class="rounded-full w-14 h-14 my-3 border-white/60 border-[1px]">
+    <div class="flex flex-col md:hidden ">
+      <figure class="rounded-full w-14 h-14 my-3 border-white/60 border-[1px] m-0">
         <img
           src="/imagenes/FotoPerfil.webp"
           alt="Foto de perfil de Alan San, desarrollador frontend"
-          class="absolute w-14 h-14 rounded-full border-white/60 border-[1px] p-1"
+          class=" absolute w-14 h-14 rounded-full border-white/60 border-[1px] p-1"
           width="56"
           height="56"
           loading="eager"
@@ -46,7 +46,7 @@ import SocialMedia from "../components/Social.astro";
     </div>
     <!-- imagen md  -->
     <div class="hidden items-center gap-x-1 md:block w-xl">
-      <figure class="rounded-full w-18 h-18 border-white/60 border-[1px] flex-col">
+      <figure class="rounded-full w-18 h-18 border-white/60 border-[1px] flex-col m-0">
         <img
           src="/imagenes/FotoPerfil.webp"
           alt="Foto de perfil de Alan San, desarrollador frontend"
@@ -56,10 +56,10 @@ import SocialMedia from "../components/Social.astro";
           loading="eager"
         />
       </figure>
-      <h1 id="my-name-md" class="mb-0 font-static hidden md:flex mt-5">
+      <h1 id="my-name-md" class="mb-0 font-static text-3xl hidden md:flex mt-5">
         Alan San
       </h1>
-      <p class=" font-static opacity-80">
+      <p class=" font-static opacity-80 my-2">
         Soy un desarrollador web con sede en Guadalajara. Trabajo de forma
         independiente con las tecnologías que más disfruto usar con el objetivo
         de siempre crear una experiencia digital.
