@@ -3,20 +3,18 @@ import Email from "../assets/mail.svg";
 ---
 
 <section
-  class="grid grid-cols-14 gap-2 text-left grid-rows-2 md:grid-rows-2  md:p-5 lg:px-12 max-w-8xl mt-24 mb-24 md:mx-16 rounded-3xl mx-1 z-30"
+  class="grid grid-cols-14 gap-2 text-left grid-rows-2 md:grid-rows-2  md:p-5 lg:px-12 max-w-8xl mt-24 mb-24 md:mx-16  mx-1 z-30"
   aria-label="Proyectos y contenido destacado"
 >
   <!-- Blog post section with semantic structure -->
   <article
-    class="box-gen border text-xl col-span-14 md:col-span-4 md:row-span-3"
+    class="border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl  bg-black/30 backdrop-blur-5xl text-xl col-span-14 md:col-span-4 md:row-span-3"
     role="article"
     aria-labelledby="latest-post-title"
   >
-    <div
-      class="bg-black/30 backdrop-blur-3xl h-full rounded-[20px] border border-gray-400/20"
-    >
+
       <header
-        class="bg-black/10 w-fit px-4 py-2 rounded-full border border-gray-400/20 mt-4 mx-4"
+        class="bg-black/40 w-fit px-4 py-2 flex rounded-full border border-gray-400/20 mt-4 mx-4"
       >
         <span class="m-0 informative" role="banner">Último Post</span>
       </header>
@@ -84,18 +82,18 @@ import Email from "../assets/mail.svg";
           </div>
         </footer>
       </main>
-    </div>
+
   </article>
 
   <!-- Scroll projects-->
   <article
-    class="box-gen text-xl relative border col-span-14 md:col-span-5 md:block flex justify-center items-center"
+    class="border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl text-xl col-span-14 md:col-span-5 md:block flex justify-center items-center"
   >
     <div
-      class="bg-black/30 border border-gray-400/20 flex flex-col backdrop-blur-3xl h-full w-full rounded-[20px] "
+      class="bg-black/30 rounded-3xl flex flex-col h-full w-full  "
     >
       <div
-        class="bg-black/10 w-fit px-4 py-2 flex rounded-full border border-gray-400/20 mt-4 mx-4"
+        class="bg-black/40 w-fit px-4 py-2 flex rounded-full border border-gray-400/20 mt-4 mx-4"
       >
         <span class="m-0 font-static informative">Proyectos Scroll</span>
       </div>
@@ -123,7 +121,7 @@ import Email from "../assets/mail.svg";
         </video>
         <a
           href="/projectos"
-          class="font-static absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center text-lg bg-black/10 px-4 py-2 rounded-2xl border border-gray-400/70 z-10 no-underline focus:outline-none focus:ring-2 focus:ring-white/50"
+          class="font-static absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center text-lg bg-black/40 px-4 py-2 rounded-2xl border border-gray-400/70 z-10 no-underline focus:outline-none "
           aria-label="Ver todos los proyectos"
         >
           Ver proyectos
@@ -133,11 +131,11 @@ import Email from "../assets/mail.svg";
   </article>
   <!--  Suitch project-->
   <article
-    class="box-gen text-xl p-4 border col-span-14 md:col-span-5 h-80 md:h-auto"
+    class=" text-xl p-4 border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl  bg-black/30 backdrop-blur-5xl col-span-14 md:col-span-5 h-80 md:h-auto"
   >
     <a
       href="/suitch"
-      class="block w-full h-full focus:outline-none focus:ring-2 focus:ring-white/50 rounded-[20px]"
+      class="block w-full h-full focus:outline-none  rounded-[20px]"
       aria-label="Ver detalles del proyecto Suitch desarrollado por Alan San"
     >
       <img
@@ -150,28 +148,31 @@ import Email from "../assets/mail.svg";
       />
     </a>
   </article>
-  <div
-    class="box-gen text-xl col-span-14 md:col-span-5 grid grid-rows-3 border border-gray-400/50 md:h-auto"
+
+
+  <!-- proximo  -->
+  <article
+    class=" grid col-span-14 md:col-span-5  md:grid-rows-1 border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl text-xl  "
   >
     <!-- sub-cuadros -->
-    <div class="">
+    <div class="  ">
       <div
-        class="bg-black/30 backdrop-blur-3xl h-full rounded-[20px] border border-gray-400/20 text-center items-center flex justify-center"
+        class="bg-black/30 backdrop-blur-5xl h-full rounded-[20px] m-1 text-center items-center flex justify-center "
       >
         proximo
       </div>
     </div>
-    <div class="my-2 row-span-3 shadow">
+    <div class=" my-1   ">
       <!-- contactame  -->
       <div
-        class="bg-black/30 backdrop-blur-3xl w-full h-full rounded-[20px] border border-gray-400/20"
+        class="bg-black/30 backdrop-blur-5xl w-auto h-auto  m-1 py-1 rounded-[20px] "
       >
         <div
-          class="bg-black/10 w-fit px-2 py-1 md:px-4 md:py-2 flex rounded-full border border-gray-400/20 mt-2 md:mt-4 mx-4"
+          class="bg-black/10 w-fit  px-2 py-1  md:px-4 md:py-2 flex rounded-full border border-gray-400/20 mt-2  mx-4"
         >
           <p class="m-0 font-static informative">Contactame</p>
         </div>
-        <div class="flex justify-between items-center my-3 px-5 md:flex-col">
+        <div class="flex justify-between items-center px-5 md:flex-col">
           <div class="flex flex-col w-full mt-3 ">
             <p class="m-0 font-static informative">
               ¿Tienes un proyecto del que quieras hablarme?
@@ -194,18 +195,16 @@ import Email from "../assets/mail.svg";
         </div>
       </div>
     </div>
-  </div>
+  </article>
 
   <!-- matera landing  -->
   <article
-    class="box-gen rounde text-xl p-4 border col-span-14 md:col-span-5 h-80 md:h-auto"
+    class=" relative flex flex-col h-80 border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black bg-black/30 backdrop-blur-3xl  rounded-3xl text-xl p-4 lg:p-4 md:p-0  col-span-14 md:col-span-5  md:h-auto gap-y-2  "
   >
-    <div
-      class="relative bg-black/30 backdrop-blur-3xl h-full rounded-[20px] border border-gray-400/20"
-    >
-      <div class="flex items-center mt-2">
+
+      <div class="flex items-center  ">
         <div
-          class="bg-black/10 relative w-fit px-4 py-2 flex rounded-full border border-gray-400/20 mt-1 mx-4 text-wrap"
+          class="bg-black/10 relative w-fit px-4 py-2 flex rounded-full border border-gray-400/20 my-1 mx-4 text-wrap"
         >
           <span class="m-0 informative text-xs text-center">Landing Page</span>
         </div>
@@ -215,17 +214,17 @@ import Email from "../assets/mail.svg";
       </div>
       <a
         href="/matera"
-        class="block focus:outline-none focus:ring-2 focus:ring-white/50 rounded-[20px]"
+        class="block focus:outline-none  rounded-[20px]"
         aria-label="Ver detalles del proyecto La Matera"
       >
         <img
           src="/imagenes/matera3.webp"
           alt="Landing page La Matera desarrollada por Alan San - Restaurante con menú digital"
-          class="w-[94%] h-[78%] md:h-[76%] object-fill flex rounded-[20px] my-1 absolute left-1/2 -translate-x-1/2"
+          class="w-[94%] h-[78%] md:h-[70%]  object-fill flex rounded-[20px] my-1 absolute left-1/2 -translate-x-1/2"
           loading="lazy"
         />
       </a>
-    </div>
+
   </article>
   <div
     class="box-gen rounde text-xl p-4 border-2 col-span-14 md:col-span-10 hidden h-80"
@@ -250,10 +249,5 @@ import Email from "../assets/mail.svg";
   }
 
   /* :is(.dark *) agregar esto al boxgen cuando hagamso el modo obscuro  */
-  .box-gen {
-    border-color: black;
-    background-color: rgba(24, 24, 27, 0.2);
-    border-radius: 24px;
-    padding: 6px 6px;
-  }
+
 </style>
