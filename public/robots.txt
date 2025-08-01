@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://alansan.netlify.app/sitemap.xml
+Sitemap: https://alansan.dev/sitemap.xml
 
 
 # Permitir que todos los motores de búsqueda rastreen el sitio
