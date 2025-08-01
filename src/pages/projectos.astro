@@ -6,13 +6,13 @@ import SocialMedia from "../components/Social.astro";
 <Layout title="Proyectos de Scroll - Alan San">
   <!-- Back to Portfolio -->
   <section
-    class="relative max-w-3xl md:max-w-3xl mx-auto overflow-hidden py-14 z-10 "
+    class="relative  max-w-3xl md:max-w-4xl mx-auto overflow-hidden py-14 z-10"
   >
-    <div class="relative px-4  mb-6">
+    <div class="relative px-4 mb-6 ">
       <div class="mx-auto mt-2">
         <a
           href="/"
-          class="p-3 w-fit bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-full text-sm text-white/80 hover:text-white justify-center flex"
+          class="p-3 w-fit bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-full text-sm text-gray-300 hover:text-white justify-center flex"
         >
           <svg
             class="w-4 h-4"
@@ -34,255 +34,263 @@ import SocialMedia from "../components/Social.astro";
         Proyectos de Scroll Animado
       </h1>
       <p
-        class="font-static text-sm md:text-medium md:text-xl text-white/80 mb-4 max-w-3xl mx-auto"
+        class="font-static text-sm md:text-medium md:text-xl text-gray-300 mb-4 max-w-3xl "
       >
-        Exploración de animaciones avanzadas con GSAP y técnicas de scroll interactivo
+        Exploración de animaciones avanzadas con GSAP y técnicas de scroll
+        interactivo
       </p>
     </div>
 
-    <!-- Videos Demo Grid -->
-    <div class="max-w-4xl md:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- imagenes Demo Grid -->
+    <div
+      class="max-w-3xl md:max-w-4xl mx-auto px-4  "
+      >
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
         <!-- GTA-6 Project -->
-        <a href="https://webgta6-alan-sans-projects.vercel.app/" target="_blank" rel="noopener noreferrer" class="block transition-transform hover:scale-[1.04]">
-          <div
-            class="relative aspect-video border-[1.5px] border-white/30 outline outline-offset-[0.5px] outline-black rounded-xl overflow-hidden"
+        <div class="col-span-1 sm:col-span-2 md:col-span-4">
+          <a
+            href="https://webgta6-alan-sans-projects.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block transition-transform hover:scale-[1.02] relative border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl overflow-hidden h-48 sm:h-64 md:h-80"
           >
-            <video
-              autoplay
-              playsinline
-              muted
-              loop
-              class="w-full h-full object-cover"
-            >
-              <source src="/imagenes/gta.mp4" type="video/mp4" />
-            </video>
-
-          </div>
-        </a>
+            <img
+              src="/imagenes/gta-foto.webp"
+              alt="GTA-6 Scroll Project"
+              class="w-full h-full rounded-xl object-cover"
+            />
+          </a>
+        </div>
 
         <!-- AirPods Project -->
-        <a href="https://airpods-scroll-swart.vercel.app/" target="_blank" rel="noopener noreferrer" class="block transition-transform hover:scale-[1.04]">
-          <div
-            class="relative aspect-video border-[1.5px] border-white/30 outline outline-offset-[0.5px] outline-black rounded-xl overflow-hidden"
+        <div class="col-span-1 sm:col-span-1 md:col-span-2">
+          <a
+            href="https://airpods-scroll-swart.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block transition-transform hover:scale-[1.02] relative border-[1.5px] border-white/30 outline outline-offset-[0.5px] outline-black rounded-xl overflow-hidden h-48 sm:h-56 md:h-64"
           >
-            <video
-              autoplay
-              playsinline
-              muted
-              loop
-              class="w-full h-full object-cover"
-            >
-              <source src="/imagenes/airpods.mp4" type="video/mp4" />
-            </video>
-           
-          </div>
-        </a>
-
+            <img
+              src="/imagenes/airpod-foto.webp"
+              alt="AirPods Scroll Project"
+              class="w-full h-full rounded-xl object-cover"
+            />
+          </a>
+        </div>
+        
         <!-- Moto Scroll Project -->
-        <a href="https://moto-scroll-animation.vercel.app/" target="_blank" rel="noopener noreferrer" class="block transition-transform hover:scale-[1.04]">
-          <div
-            class="relative aspect-video border-[1.5px] border-white/30 outline outline-offset-[0.5px] outline-black rounded-xl overflow-hidden"
+        <div class="col-span-1 sm:col-span-1 md:col-span-2">
+          <a
+            href="https://github.com/AlanSan1195/JavaScript-Proyects/tree/main/04-scroll-moto"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block transition-transform hover:scale-[1.02] relative border-[1.5px] border-white/30 outline outline-offset-[0.5px] outline-black rounded-xl overflow-hidden h-48 sm:h-56 md:h-64"
           >
-            <video
-              autoplay
-              playsinline
-              muted
-              loop
-              class="w-full h-full object-cover"
-            >
-              <source src="/imagenes/moto.mp4" type="video/mp4" />
-            </video>
-            
-          </div>
-        </a>
+            <img
+              src="/imagenes/motoo.webp"
+              alt="Moto Scroll Project"
+              class="w-full h-full rounded-xl object-cover"
+            />
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
+</Layout>
 
-  <!-- Descripción General -->
-  <section class="py-14 z-10 max-w-3xl md:max-w-3xl mx-auto ">
-    <div class="px-4 ">
+<!-- Descripción General -->
+<section class=" relative py-14 z-10 max-w-3xl md:max-w-3xl mx-auto">
+  <div class="px-4  ">
+
+      <div class="flex flex-col ">
+        <h2 class="text-2xl md:text-5xl font-static text-white mb-6 ">
+          Descripción General de los Proyectos
+        </h2>
+        <p class="font-static text-sm md:text-medium md:text-xl text-gray-300 ">
+          Esta colección representa mi evolución en el dominio de <strong
+            class="text-white">animaciones de scroll</strong
+          >, desde técnicas básicas con JavaScript vanilla hasta
+          implementaciones avanzadas con GSAP. Cada proyecto explora diferentes
+          enfoques para crear experiencias interactivas que responden al
+          desplazamiento del usuario.
+        </p>
+
+        <p class="font-static text-sm md:text-medium md:text-xl text-gray-300">
+          El primer proyecto <strong class="text-white">Moto Scroll</strong> me enseñó
+          los fundamentos del método de frames, que posteriormente apliqué en <strong
+            class="text-white">AirPods Scroll</strong
+          >. Finalmente, <strong class="text-white">GTA-6 Landing</strong> representa
+          el dominio de GSAP y sus capacidades avanzadas de timeline y ScrollTrigger.
+        </p>
+
+        <div class="flex flex-wrap w-full gap-2 justify-center">
+          <span
+            class="px-3 py-1 bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-full text-sm"
+            >GSAP</span
+          >
+          <span
+            class="px-3 py-1 bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-full text-sm"
+            >ScrollTrigger</span
+          >
+          <span
+            class="px-3 py-1 bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-full text-sm"
+            >JavaScript</span
+          >
+          <span
+            class="px-3 py-1 bg-black/30 border-gray-400/20 rounded-full text-sm border"
+            >Frame Animation</span
+          >
+        </div>
+      </div>
+
+  </div>
+
+  <!--agradecimientos-->
+  <div class="text-center mb-8">
+    <p class="text-sm text-gray-400">
+      Técnicas aprendidas gracias a <a
+        href="https://midu.dev/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-gray-300">@midudev</a
+      >
+    </p>
+  </div>
+</section>
+
+<!-- Tecnologías y Enfoques -->
+<section class="py-14 relative z-10 max-w-3xl md:max-w-3xl mx-auto">
+  <div class="px-4">
+    <h2 class="text-2xl md:text-5xl font-bold text-white mb-12">
+      Tecnologías y Enfoques
+    </h2>
+    <ol class="space-y-8 md:space-y-8 list-decimal pl-6">
+      <li>
+        <p class="font-static text-sm md:text-medium md:text-xl text-gray-300">
+          <strong class="text-white"
+            >GSAP (GreenSock Animation Platform):</strong
+          >
+          La biblioteca más potente para animaciones web. Utilizada en el proyecto
+          GTA-6 para crear efectos de scroll sincronizados con Timeline y ScrollTrigger,
+          permitiendo animaciones complejas y fluidas.
+        </p>
+      </li>
+
+      <li>
+        <p class="font-static text-sm md:text-medium md:text-xl text-gray-300">
+          <strong class="text-white">ScrollTrigger Plugin:</strong>
+          Plugin esencial de GSAP que vincula animaciones al scroll de la página.
+          Permite crear efectos como parallax, fade-in/out y transformaciones basadas
+          en la posición del scroll del usuario.
+        </p>
+      </li>
+
+      <li>
+        <p class="font-static text-sm md:text-medium md:text-xl text-gray-300">
+          <strong class="text-white">Técnica de Frame Animation:</strong>
+          Método desarrollado inicialmente en Moto Scroll y perfeccionado en AirPods.
+          Consiste en cambiar imágenes secuencialmente basándose en el progreso del
+          scroll, creando la ilusión de video interactivo.
+        </p>
+      </li>
+
+      <li>
+        <p class="font-static text-sm md:text-medium md:text-xl text-gray-300">
+          <strong class="text-white">Canvas y Renderizado Optimizado:</strong>
+          Implementación de canvas HTML5 para renderizar secuencias de imágenes de
+          manera eficiente, optimizando el rendimiento y la fluidez de las animaciones.
+        </p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- Lo que Aprendí -->
+<section class="py-14 relative z-10 max-w-3xl md:max-w-3xl mx-auto">
+  <div class="px-4">
+    <h2 class="font-static text-2xl md:text-5xl text-center">Lo que Aprendí</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:mr-8">
       <div class="">
-        <div class="flex flex-col ">
-          <h2 class="text-2xl md:text-5xl font-static text-white mb-6">
-            Descripción General de los Proyectos
-          </h2>
-          <p
-            class="font-static text-sm md:text-medium md:text-xl text-white/80"
+        <h3
+          class="font-static text-sm md:text-lg text-pink-400 mb-4 text-center"
+        >
+          GSAP y Timeline
+        </h3>
+        <ul class="space-y-3 text-gray-300 font-static px-6 md:px-16">
+          <li
+            class="flex items-start font-static m-0 md:text-lg my-2 text-gray-300 text-sm"
           >
-            Esta colección representa mi evolución en el dominio de <strong class="text-white">animaciones de scroll</strong>, 
-            desde técnicas básicas con JavaScript vanilla hasta implementaciones avanzadas con GSAP. 
-            Cada proyecto explora diferentes enfoques para crear experiencias interactivas que responden 
-            al desplazamiento del usuario.
-          </p>
-
-          <p
-            class="font-static text-sm md:text-medium md:text-xl text-white/80"
+            <span class="text-pink-400 mr-2">•</span>
+            Dominio de gsap.timeline() para secuenciar animaciones complejas
+          </li>
+          <li
+            class="flex items-start font-static m-0 md:text-lg my-2 text-gray-300 text-sm"
           >
-            El primer proyecto <strong class="text-white">Moto Scroll</strong> me enseñó los fundamentos 
-            del método de frames, que posteriormente apliqué en <strong class="text-white">AirPods Scroll</strong>. 
-            Finalmente, <strong class="text-white">GTA-6 Landing</strong> representa el dominio de GSAP 
-            y sus capacidades avanzadas de timeline y ScrollTrigger.
-          </p>
-
-          <div class="flex flex-wrap w-full gap-2 justify-center">
-            <span
-              class="px-3 py-1 bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-full text-sm"
-              >GSAP</span
-            >
-            <span
-              class="px-3 py-1 bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-full text-sm"
-              >ScrollTrigger</span
-            >
-            <span
-              class="px-3 py-1 bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-full text-sm"
-              >JavaScript</span
-            >
-            <span
-              class="px-3 py-1 bg-black/30 border-gray-400/20 rounded-full text-sm border"
-              >Frame Animation</span
-            >
-          </div>
-
-       
-        </div>
+            <span class="text-pink-500 mr-2">•</span>
+            Uso de parámetros temporales como "-=1" y "&lt;" para sincronización
+            precisa
+          </li>
+          <li
+            class="flex items-start font-static m-0 md:text-lg my-2 text-gray-300 text-sm"
+          >
+            <span class="text-pink-500 mr-2">•</span>
+            Implementación del parámetro "scrub" para animaciones bidireccionales
+          </li>
+        </ul>
+      </div>
+      <div class="">
+        <h3
+          class="font-static text-sm md:text-lg text-pink-400 mb-4 text-center"
+        >
+          Técnicas de Scroll
+        </h3>
+        <ul class="space-y-3 text-gray-300 font-static px-6 md:px-16">
+          <li
+            class="flex items-start font-static m-0 md:text-lg my-2 text-gray-300 text-sm"
+          >
+            <span class="text-pink-500 mr-2">•</span>
+            Desarrollo del método de frame animation desde cero
+          </li>
+          <li
+            class="flex items-start font-static m-0 md:text-lg my-2 text-gray-300 text-sm"
+          >
+            <span class="text-pink-500 mr-2">•</span>
+            Optimización de rendimiento en animaciones de scroll intensivas
+          </li>
+          <li
+            class="flex items-start font-static m-0 md:text-lg my-2 text-gray-300 text-sm"
+          >
+            <span class="text-pink-500 mr-2">•</span>
+            Creación de experiencias inmersivas que responden al usuario
+          </li>
+        </ul>
       </div>
     </div>
+  </div>
+</section>
 
-    <!--agradecimientos-->
-    <div class="text-center mb-8">
-      <p class="text-sm text-gray-400">
-        Técnicas aprendidas gracias a <a href="https://midu.dev/" target="_blank" rel="noopener noreferrer" class="text-gray-300">@midudev</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- Tecnologías y Enfoques -->
-  <section class="py-14 z-10 max-w-3xl md:max-w-3xl mx-auto">
-    <div class="px-4 ">
-      <h2 class="text-2xl md:text-5xl font-bold text-white mb-12">
-        Tecnologías y Enfoques
-      </h2>
-      <ol class="space-y-8 md:space-y-8 list-decimal pl-6">
-        <li>
-          <p
-            class="font-static text-sm md:text-medium md:text-xl text-white/80"
-          >
-            <strong class="text-white">GSAP (GreenSock Animation Platform):</strong> 
-            La biblioteca más potente para animaciones web. Utilizada en el proyecto GTA-6 
-            para crear efectos de scroll sincronizados con Timeline y ScrollTrigger, 
-            permitiendo animaciones complejas y fluidas.
-          </p>
-        </li>
-
-        <li>
-          <p
-            class="font-static text-sm md:text-medium md:text-xl text-white/80"
-          >
-            <strong class="text-white">ScrollTrigger Plugin:</strong> 
-            Plugin esencial de GSAP que vincula animaciones al scroll de la página. 
-            Permite crear efectos como parallax, fade-in/out y transformaciones 
-            basadas en la posición del scroll del usuario.
-          </p>
-        </li>
-
-        <li>
-          <p
-            class="font-static text-sm md:text-medium md:text-xl text-white/80"
-          >
-            <strong class="text-white">Técnica de Frame Animation:</strong> 
-            Método desarrollado inicialmente en Moto Scroll y perfeccionado en AirPods. 
-            Consiste en cambiar imágenes secuencialmente basándose en el progreso del scroll, 
-            creando la ilusión de video interactivo.
-          </p>
-        </li>
-
-        <li>
-          <p
-            class="font-static text-sm md:text-medium md:text-xl text-white/80"
-          >
-            <strong class="text-white">Canvas y Renderizado Optimizado:</strong> 
-            Implementación de canvas HTML5 para renderizar secuencias de imágenes 
-            de manera eficiente, optimizando el rendimiento y la fluidez de las animaciones.
-          </p>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Lo que Aprendí -->
-  <section class="py-14 z-10 max-w-3xl md:max-w-3xl mx-auto">
-    <div class="px-4 ">
-      <h2 class="font-static text-2xl md:text-5xl text-center">
-        Lo que Aprendí
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:mr-8">
-        <div class="">
-          <h3
-            class="font-static text-sm md:text-lg text-pink-400 mb-4 text-center"
-          >
-            GSAP y Timeline
-          </h3>
-          <ul class="space-y-3 text-gray-300 font-static">
-            <li class="flex items-start text-sm md:text-lg">
-              <span class="text-pink-400 mr-2">•</span>
-              Dominio de gsap.timeline() para secuenciar animaciones complejas
-            </li>
-            <li class="flex items-start text-sm md:text-lg">
-              <span class="text-pink-500 mr-2">•</span>
-              Uso de parámetros temporales como "-=1" y "&lt;" para sincronización precisa
-            </li>
-            <li class="flex items-start text-sm md:text-lg">
-              <span class="text-pink-500 mr-2">•</span>
-              Implementación del parámetro "scrub" para animaciones bidireccionales
-            </li>
-          </ul>
-        </div>
-        <div class="">
-          <h3
-            class="font-static text-sm md:text-lg text-pink-400 mb-4 text-center"
-          >
-            Técnicas de Scroll
-          </h3>
-          <ul class="space-y-3 text-gray-300">
-            <li class="flex items-start text-xs md:text-lg">
-              <span class="text-pink-500 mr-2">•</span>
-              Desarrollo del método de frame animation desde cero
-            </li>
-            <li class="flex items-start text-xs md:text-lg">
-              <span class="text-pink-500 mr-2">•</span>
-              Optimización de rendimiento en animaciones de scroll intensivas
-            </li>
-            <li class="flex items-start text-xs md:text-lg">
-              <span class="text-pink-500 mr-2">•</span>
-              Creación de experiencias inmersivas que responden al usuario
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Implementación Técnica -->
-  <section class="py-14 z-10 max-w-3xl md:max-w-3xl mx-auto ">
-    <div class="px-4 gap-y-2">
-      <h2 class="text-2xl md:text-5xl font-static m-0">
-        Implementación Técnica
-      </h2>
-      <div class="grid grid-cols-1 gap-y-6">
-        <!-- GSAP Timeline -->
-        <div >
-          <h3 class="text-sm md:text-xl font-static text-white">
-            GSAP Timeline con Parámetros Temporales
-          </h3>
-          <p class="font-static text-xs md:text-lg text-white/80 m-0">
-            El poder de GSAP reside en su sistema de timeline que permite controlar 
-            la sincronización precisa de múltiples animaciones. Los parámetros como 
-            "-=1" y "&lt;" son fundamentales para crear secuencias fluidas.
-          </p>
-          <div class="bg-zinc-900 border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-lg p-4 text-sm">
-            <pre class="language-javascript text-xs overflow-x-auto text-green-400">
+<!-- Implementación Técnica -->
+<section class="py-10 relative z-10 max-w-3xl md:max-w-3xl mx-auto">
+  <div class="px-4 md:px-8 gap-y-2">
+    <h2 class="text-2xl md:text-5xl font-static m-0">Implementación Técnica</h2>
+    <div class="grid grid-cols-1 gap-y-6">
+      <!-- GSAP Timeline -->
+      <div>
+        <h3 class="text-sm md:text-xl font-static text-white">
+          GSAP Timeline con Parámetros Temporales
+        </h3>
+        <p class="font-static text-xs md:text-lg text-gray-300 mb-4">
+          El poder de GSAP reside en su sistema de timeline que permite
+          controlar la sincronización precisa de múltiples animaciones. Los
+          parámetros como "-=1" y "&lt;" son fundamentales para crear secuencias
+          fluidas.
+        </p>
+        <div
+          class="bg-zinc-900 border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-lg p-4 text-sm"
+        >
+          <pre
+            class="language-javascript text-xs overflow-x-auto text-green-400">
 <code>{`// Registro de plugins esenciales
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -304,21 +312,24 @@ tl.to('.title', { opacity: 1, y: 0, duration: 1 })
   .to('.image', { scale: 1.2, rotation: 10, duration: 1 }, '<') // Inicia simultáneamente
   .to('.cta', { opacity: 1, y: -50, duration: 0.8 }, '+=0.2'); // Inicia 0.2s después`}</code>
             </pre>
-          </div>
         </div>
+      </div>
 
-        <!-- Frame Animation -->
-        <div>
-          <h3 class="text-sm md:text-xl font-static text-white">
-            Técnica de Frame Animation
-          </h3>
-          <p class="font-static text-xs md:text-lg text-white/80 m-0">
-            Desarrollé esta técnica en Moto Scroll y la perfeccioné en AirPods. 
-            Consiste en cambiar imágenes secuencialmente basándose en el progreso 
-            del scroll, creando una animación fluida y controlada por el usuario.
-          </p>
-          <div class="bg-zinc-900 border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-lg p-4 text-sm">
-            <pre class="language-javascript text-xs text-green-400 overflow-x-auto">
+      <!-- Frame Animation -->
+      <div>
+        <h3 class="text-sm md:text-xl font-static text-white">
+          Técnica de Frame Animation
+        </h3>
+        <p class="font-static text-xs md:text-lg text-gray-300 mb-4">
+          Desarrollé esta técnica en Moto Scroll y la perfeccioné en AirPods.
+          Consiste en cambiar imágenes secuencialmente basándose en el progreso
+          del scroll, creando una animación fluida y controlada por el usuario.
+        </p>
+        <div
+          class="bg-zinc-900 border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-lg p-4 text-sm"
+        >
+          <pre
+            class="language-javascript text-xs text-green-400 overflow-x-auto">
 <code>{`// Sistema de frame animation optimizado
 const canvas = document.querySelector('#frame-canvas');
 const ctx = canvas.getContext('2d');
@@ -363,56 +374,53 @@ window.addEventListener('scroll', () => {
   }
 });`}</code>
             </pre>
-          </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Footer -->
-    <div
-      class="hidden justify-center items-center md:flex my-16 md:flex-col"
+  <!-- Footer -->
+  <div class="hidden justify-center items-center md:flex my-16 md:flex-col">
+    <footer
+      class="w-full flex z-10 justify-center items-center"
+      role="contentinfo"
+      aria-label="Site footer"
     >
-      <footer
-        class="w-full flex z-10 justify-center items-center"
-        role="contentinfo"
-        aria-label="Site footer"
-      >
-        <div class="flex-col justify-center items-center">
-          <figure
-            class="rounded-full w-10 h-10 border-white/60 border-[1px] mx-auto"
+      <div class="flex-col justify-center items-center">
+        <figure
+          class="rounded-full w-10 h-10 border-white/60 border-[1px] mx-auto"
+        >
+          <img
+            src="/imagenes/FotoPerfil.webp"
+            alt="Foto de perfil de Alan San, desarrollador frontend"
+            class="absolute w-10 h-10 rounded-full border-white/60 border-[1px] p-1"
+            width="56"
+            height="56"
+            loading="lazy"
+          />
+        </figure>
+        <p class="font-static font-bold opacity-80 mx-6 mt-5">
+          Made by <a
+            href="https://github.com/AlanSan1195"
+            class="text-white hover:cursor-pointer no-underline"
+            rel="author"
+            title="Visit Alan San profile">Alan San</a
           >
-            <img
-              src="/imagenes/FotoPerfil.webp"
-              alt="Foto de perfil de Alan San, desarrollador frontend"
-              class="absolute w-10 h-10 rounded-full border-white/60 border-[1px] p-1"
-              width="56"
-              height="56"
-              loading="lazy"
-            />
-          </figure>
-          <p class="font-static font-bold opacity-80 mx-6 mt-5">
-            Made by <a
-              href="https://github.com/AlanSan1195"
-              class="text-white hover:cursor-pointer no-underline"
-              rel="author"
-              title="Visit Alan San profile">Alan San</a
-            >
-          </p>
-          <SocialMedia />
-        </div>
-      </footer>
-    </div>
-  </section>
+        </p>
+        <SocialMedia />
+      </div>
+    </footer>
+  </div>
+</section>
 
-  <style>
-    code {
-      font-family: "Courier New", monospace;
-      line-height: 1.4;
-    }
-    .informative {
-      font-family: "static";
-      font-size: 20px;
-      opacity: 0.8;
-    }
-  </style>
-</Layout>
+<style>
+  code {
+    font-family: "Courier New", monospace;
+    line-height: 1.4;
+  }
+  .informative {
+    font-family: "static";
+    font-size: 20px;
+    opacity: 0.8;
+  }
+</style>
