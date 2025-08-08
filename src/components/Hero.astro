@@ -46,7 +46,7 @@ import SocialMedia from "../components/Social.astro";
       <h1 id="my-name" class="mt-2 mb-0 font-static text-3xl md:hidden">
         Alan San
       </h1>
-      <p class="font-static opacity-80 text-sm">
+      <p id="hero-description-sm" class="font-static opacity-80 text-sm">
         Soy un desarrollador web con sede en Guadalajara. Trabajo de forma
         independiente con las tecnologías que más disfruto usar siempre con el
         objetivo de crear una experiencia digital excepcional.
@@ -89,7 +89,7 @@ import SocialMedia from "../components/Social.astro";
       <h1 id="my-name-md" class="mb-0 font-static text-3xl hidden md:flex mt-5">
         Alan San
       </h1>
-      <p class="font-static opacity-80 my-2">
+      <p id="hero-description" class="font-static opacity-80 my-2">
         Soy un desarrollador web con sede en Guadalajara. Trabajo de forma
         independiente con las tecnologías que más disfruto usar con el objetivo
         de siempre crear una experiencia digital.
@@ -105,3 +105,32 @@ import SocialMedia from "../components/Social.astro";
     line-height: 95%;
   }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { SplitText } from "gsap/SplitText";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  // Register GSAP plugins
+  gsap.registerPlugin(SplitText);
+  gsap.registerPlugin(ScrollTrigger);
+  
+
+   
+      // Create SplitText instance
+      const Text = new SplitText("#hero-description-sm", {
+        type: "words",
+        charsClass: "char",
+      });
+      
+      // Animate words using GSAP
+      gsap.from(Text.words, {
+        duration: 1.0,
+        opacity: 0,
+        y: 10,
+        stagger: 0.1,
+        filter: "blur(10px)",
+        delay: 0.3
+      });
+
+</script>
