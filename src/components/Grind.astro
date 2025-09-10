@@ -93,7 +93,8 @@ import Email from "../assets/mail.svg";
     class="border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl text-xl col-span-14 md:col-span-5 md:block flex justify-center items-center"
   >
     <div
-      class="bg-black/30 rounded-3xl flex flex-col h-full w-full  "
+      class="bg-black/30 rounded-3xl flex flex-col h-full w-full"
+       id="project-scroll-link"
     >
       <div
         class="border-[1px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-3xl  bg-black/40 w-fit px-4 py-2 flex mt-4 mx-4"
@@ -138,6 +139,7 @@ import Email from "../assets/mail.svg";
   >
     <a
       href="/suitch"
+      id="suitch-project-link"
       class="block w-full h-full focus:outline-none  rounded-[20px]"
       aria-label="Ver detalles del proyecto Suitch desarrollado por Alan San"
     >
@@ -236,6 +238,7 @@ import Email from "../assets/mail.svg";
       </div>
       <a
         href="/matera"
+        id="matera-project-link"
         class="block focus:outline-none  rounded-[20px]"
         aria-label="Ver detalles del proyecto La Matera"
       >
@@ -259,7 +262,61 @@ import Email from "../assets/mail.svg";
   </div>
 </section>
 
-<style>
+<script>
+  // Suitch project click tracking
+  function initSuitchTracking() {
+    const suitchLink = document.getElementById('suitch-project-link');
+    if (!suitchLink) return;
+    
+    suitchLink.addEventListener('click', function() {
+      const storageKey = 'suitch-project-clicks';
+      let clicks = parseInt(localStorage.getItem(storageKey) || '0');
+      clicks += 1;
+      localStorage.setItem(storageKey, clicks.toString());
+    });
+  }
+
+  // Matera project click tracking
+  function initMateraTracking() {
+    const materaLink = document.getElementById('matera-project-link');
+    if (!materaLink) return;
+    
+    materaLink.addEventListener('click', function() {
+      const storageKey = 'matera-project-clicks';
+      let clicks = parseInt(localStorage.getItem(storageKey) || '0');
+      clicks += 1;
+      localStorage.setItem(storageKey, clicks.toString());
+    });
+  }
+
+  // Projects scroll click tracking  
+  function initProjectsScrollTracking(){
+    const projectScrollLink = document.getElementById('project-scroll-link');
+    if(!projectScrollLink) return;
+    
+    projectScrollLink.addEventListener('click', function(){
+      const scrollKey = 'project-scroll-clicks';
+      let scrolls = parseInt(localStorage.getItem(scrollKey) || '0');
+      scrolls += 1;
+      localStorage.setItem(scrollKey, scrolls.toString());
+    });
+  }
+  
+  // Initialize when DOM is loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      initSuitchTracking();
+      initMateraTracking();
+      initProjectsScrollTracking();
+    });
+  } else {
+    initSuitchTracking();
+    initMateraTracking();
+    initProjectsScrollTracking();
+  }
+</script>
+
+<style> 
   p {
     font-size: 16px;
     opacity: 0.8;
