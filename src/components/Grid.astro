@@ -3,103 +3,84 @@ import Email from "../assets/mail.svg";
 ---
 
 <section
-  class="grid grid-cols-14 gap-2 text-left grid-rows-2 md:grid-rows-2   mt-24 mb-24 md:mx-16  mx-1 z-30"
+  class="grid grid-cols-14 gap-2 text-left grid-rows-2 md:grid-rows-2 mt-24 mb-24 md:mx-16 mx-1 z-30"
   aria-label="Proyectos y contenido destacado"
 >
-  <!-- Blog post section with semantic structure -->
+  <!-- About Me Section -->
   <article
-    class="border-[1px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl  bg-black/40 backdrop-blur-5xl text-xl col-span-14 md:col-span-4 md:row-span-3"
+    class="border-[1.5px] border-white/10 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/10 backdrop-blur-xl text-xl col-span-14 md:col-span-4 md:row-span-3 flex flex-col"
     role="article"
-    aria-labelledby="latest-post-title"
+    aria-labelledby="about-me-title"
   >
+    <header
+      class="border-[1.5px] border-white/20 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/1 backdrop-blur-xl w-fit px-4 py-2 flex mt-4 mx-4"
+    >
+      <span class="m-0 informative text-sm" role="banner">Sobre mí</span>
+    </header>
 
-      <header
-        class="border-[1.5px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-3xl  bg-black/40  w-fit px-4 py-2 flex  mt-4 mx-4"
+    <main class="flex-1 flex flex-col p-4">
+      <h3
+        id="about-me-title"
+        class="font-static text-xl md:text-2xl text-white mb-3"
+        role="heading"
+        aria-level="3"
       >
-        <span class="m-0 informative" role="banner">Último Post</span>
-      </header>
+        Frontend Developer & UI Designer
+      </h3>
 
-      <aside class="w-max h-max border-l-2 my-2 mx-4 px-2" role="complementary">
-        <time
-          class="informative"
-          datetime={new Date().toISOString()}
-          aria-label={`Publicado el ${new Date().toLocaleDateString("es-ES", {
-            day: "numeric",
-            month: "long",
-            year: "numeric",
-          })}`}
+      <div
+        class="flex-1 overflow-y-auto scrollbar-hidden space-y-3"
+        aria-label="Presentación personal"
+      >
+        <p
+          class="informative font-static text-sm md:text-base text-gray-300 text-pretty leading-relaxed"
         >
-          {
-            new Date().toLocaleDateString("es-ES", {
-              day: "numeric",
-              month: "long",
-            })
-          }
-        </time>
-      </aside>
+          <span class="text-white font-semibold">+2 años de experiencia</span>,
+          una formación autodidacta y una gran variedad de proyectos que han
+          requerido todo tipo de interactividad, transiciones y animaciones.
+        </p>
 
-      <main>
-        <h3
-          id="latest-post-title"
-          class="font-static  m-3"
-          role="heading"
-          aria-level="3"
+        <p
+          class="informative font-static text-sm md:text-base text-gray-300 text-pretty leading-relaxed"
         >
-          Aprendiendo a usar Grid y a usar estilos con Tailwind
-        </h3>
+          Disfruto mucho diseñar y crear webs con
+          <span class="text-white font-semibold">
+            interfaces intuitivas y funcionales
+          </span>, donde cada detalle tenga un propósito y el usuario disfrute
+          esos segundos mientras navega.
+          <span class="text-white font-semibold">Mi enfoque está ahí</span>, en
+          crecer y mejorar estas habilidades que creo que marcan una gran
+          diferencia en la experiencia del usuario, en conjunto con la
+          <span class="text-white font-semibold">
+            accesibilidad y el rendimiento.
+          </span>
+        </p>
 
-        <section
-          id="Post"
-          class="mx-3 max-h-[350px] overflow-y-auto scrollbar-hidden"
-          aria-label="Resumen del post"
+        <p
+          class="informative font-static text-sm md:text-base text-gray-300 text-pretty leading-relaxed"
         >
-          <p class="informative font-static text-sm text-gray-300 text-pretty pb-2">
-            Me encanta lo fácil que es usar Grid con Tailwind. Recordar cómo
-            hacerlo con CSS me cuesta aún más y tengo que echar un vistazo
-            rápido para ver cómo posicionar celdas y darles su fracción a cada
-            columna y fila. Aun así, lo que yo hago es a veces ayudarme del
-            autocompletado y ver cómo funcionan los parámetros de <span
-              class="font-bold text-blue-300"
-              >grid-template-areas y grid-template-columns</span
-            >. Aquí te dejo un muy buen recurso si quieres implementar un bento
-            grid superfácil en tu proyecto.
-            <a
-              class="inline-block text-orange-400 underline text-xs font-static font-bold mt-2"
-              href="https://cssgridgenerator.io/"
-              target="_blank"
-              rel="noopener noreferrer">CSS grid generator</a
-            >
-          </p>
-        </section>
-        <footer class="mx-3 mb-3">
-          <div class="flex items-center mt-2 gap-2 flex-wrap">
-            <span class="informative text-xs opacity-60">Categoría:</span>
-            <mark
-              class="bg-blue-500/20 text-blue-300 px-2 py-1 rounded-full text-xs border border-blue-400/20"
-            >
-              Frontend
-            </mark>
-          </div>
-        </footer>
-       
-   
+          Soy muy versátil en cuanto al uso de tecnologías, ya que me gusta
+          muchísimo aprender siempre cosas nuevas. Al tratar de implementar
+          alguna idea, priorizo bien la tecnología o framework que sea mejor
+          para el proyecto.
+        </p>
       </div>
-      </main>
-
+    </main>
   </article>
 
   <!-- Scroll projects-->
   <article
-    class="border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl text-xl col-span-14 md:col-span-5 md:block flex justify-center items-center"
+    class="border-[1.5px] border-white/10 outline outline-offset-[0.7px] outline-black rounded-3xl text-xl col-span-14 md:col-span-5 md:block flex justify-center items-center"
   >
     <div
-      class="bg-black/30 rounded-3xl flex flex-col h-full w-full"
-       id="project-scroll-link"
+      class="bg-black/10 rounded-3xl flex flex-col h-full w-full backdrop-blur-xl"
+      id="project-scroll-link"
     >
       <div
-        class="border-[1px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-3xl  bg-black/40 w-fit px-4 py-2 flex mt-4 mx-4"
+        class="border-[1.5px] border-white/20 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/40 w-fit px-4 py-2 flex mt-4 mx-4"
       >
-        <span class="m-0 font-static informative">Proyectos Scroll</span>
+        <span class="m-0 font-static informative text-sm">Proyectos Scroll</span
+        >
       </div>
       <!-- embuelve proyectos  -->
       <div class="w-full h-full scale-95 mb-8 group relative">
@@ -125,7 +106,7 @@ import Email from "../assets/mail.svg";
         </video>
         <a
           href="/projectos"
-          class="font-static absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center  border-[1px] border-white/30 outline outline-offset-[0.5px] outline-black rounded-3xl  bg-black/50 px-4 py-2  z-10 no-underline focus:outline-none text-sm "
+          class="font-static absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center border-[1.5px] border-white/30 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/50 px-4 py-2 z-10 no-underline focus:outline-none text-sm"
           aria-label="Ver proyectos de scroll"
         >
           Ver proyectos
@@ -135,12 +116,12 @@ import Email from "../assets/mail.svg";
   </article>
   <!--  Suitch project-->
   <article
-    class=" text-xl p-4 border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl  bg-black/30 backdrop-blur-5xl col-span-14 md:col-span-5 h-80 md:h-auto"
+    class="text-xl p-4 border-[1.5px] border-white/10 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/10 backdrop-blur-xl col-span-14 md:col-span-5 h-80 md:h-auto"
   >
     <a
       href="/suitch"
       id="suitch-project-link"
-      class="block w-full h-full focus:outline-none  rounded-[20px]"
+      class="block w-full h-full focus:outline-none rounded-[20px]"
       aria-label="Ver detalles del proyecto Suitch desarrollado por Alan San"
     >
       <img
@@ -154,106 +135,126 @@ import Email from "../assets/mail.svg";
     </a>
   </article>
 
-
   <!-- proximo  -->
   <article
-    class=" grid col-span-14 md:col-span-5  md:grid-rows-1  text-xl gap-y-3  "
+    class="grid col-span-14 md:col-span-5 md:grid-rows-1 text-xl gap-y-3"
   >
     <!-- sub-cuadros -->
-      <div
-        class="relative bg-black/30  border-[1.5px]  border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl   items-center flex justify-center backdrop-blur-5xl h-full "
-      >
-          <!-- Contenido principal: imagen y actividad actual -->
-        <div class="flex  gap-2 items-center  m-3 md:m-0 ">
-          <!-- Imagen a la izquierda -->
-          <a href="https://valmarisnack.netlify.app/" target="_blank" rel="noopener noreferrer" class="w-auto flex justify-center md:justify-start m-2  ">
-            <img 
-              src="/imagenes/proyecto.webp" 
-              alt="Alan trabajando" 
-              class="w-20 h-20 md:w-24 md:h-44  rounded-xl -rotate-3 md:rotate-0 object-cover border-2 border-white/40 md:m-1
-              hover:scale-110 hover:rotate-1 transition-all duration-200"
-            />
-          </a>
-          
-          <!-- Texto a la derecha -->
-          <div class="flex-1 flex-col min-w-0  px-2  rounded-lg ">
-            <h3 class="text-lg text-white font-static m-0 ">Últimamente...</h3>
-            <p class="text-sm text-gray-300 font-static informative m-0 break-words overflow-hidden">
-              Creando el diseño de una nueva landing Page que ofrece servicio de eventos y snacks en Guadalajara. <a href="https://valmarisnack.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-yellow-400 font-semibold no-underline">Ver Proyecto</a>
-            </p>
-            <p class="text-sm text-gray-300 font-static informative m-0 break-words overflow-hidden">
-              El stack que usaré para crear la web será: <span class="text-white font-semibold font-static  ">Astro </span> y <span class="text-white font-semibold font-static">Tailwind CSS</span>.
-            </p>
-             <a href="https://www.figma.com/community/file/1550680308009266995/valmari-web" target="_blank" rel="noopener noreferrer" class="text-yellow-400 text-sm informative font-semibold no-underline">Ver Figma</a>
-            
-          </div>
-        </div>
-      </div>
-
-
-      <!-- contactame  -->
-      <div
-        class="bg-black/30  border-[1.5px]  border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl backdrop-blur-5xl w-auto h-auto py-1  "
-      >
-        <div
-          class="border-[1px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-3xl  bg-black/40  w-fit  px-2 py-1  md:px-4 md:py-2 flex  mt-2  mx-4"
+    <div
+      class="relative bg-black/10 border-[1.5px] border-white/10 outline outline-offset-[0.7px] outline-black rounded-3xl items-center flex justify-center backdrop-blur-xl h-full"
+    >
+      <!-- Contenido principal: imagen y actividad actual -->
+      <div class="flex gap-2 items-center m-3 md:m-0">
+        <!-- Imagen a la izquierda -->
+        <a
+          href="https://valmarisnack.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-auto flex justify-center md:justify-start m-2"
         >
-          <p class="m-0 font-static informative">Contactame</p>
-        </div>
-        <div class="flex justify-between items-center px-5 md:flex-col">
-          <div class="flex flex-col w-full mt-3 ">
-            <p class="m-0 font-static text-gray-300 informative">
-              ¿Tienes un proyecto del que quieras hablarme?
-            </p>
-            <p class="m-0 font-static text-gray-300 informative">
-              Transformemos juntos esa visión y de froma eficiente. ⚡️
-            </p>
-            
-          </div>
-          <!-- mail sm -->
-          <a
-            href="mailto:alansandovalt1@gmail.com"
-            class="text-white/50 hover:text-white/70 transition-colors duration-200  mt-4   "
-            aria-label="Enviar email a Alan San"
-            rel="noopener noreferrer"
-            target="_blank"
+          <img
+            src="/imagenes/proyecto.webp"
+            alt="Alan trabajando"
+            class="w-20 h-20 md:w-24 md:h-44 rounded-xl -rotate-3 md:rotate-0 object-cover border-2 border-white/40 md:m-1
+              hover:scale-110 hover:rotate-1 transition-all duration-200"
+          />
+        </a>
+
+        <!-- Texto a la derecha -->
+        <div class="flex-1 flex-col min-w-0 px-2 rounded-lg">
+          <h3 class="text-lg text-white font-static m-0">Últimamente...</h3>
+          <p
+            class="text-sm md:text-base text-gray-300 font-static informative m-0 break-words overflow-hidden"
           >
-            <Email class="w-8 h-8 mx-1  md:mx-auto" />
-          </a>
+            Creando el diseño de una nueva landing Page que ofrece servicio de
+            eventos y snacks en Guadalajara. <a
+              href="https://valmarisnack.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-yellow-400 font-semibold no-underline">Ver Proyecto</a
+            >
+          </p>
+          <p
+            class="text-sm md:text-base text-gray-300 font-static informative m-0 break-words overflow-hidden"
+          >
+            El stack que usaré para crear la web será: <span
+              class="text-white font-semibold font-static"
+              >Astro
+            </span> y <span class="text-white font-semibold font-static"
+              >Tailwind CSS</span
+            >.
+          </p>
+          <a
+            href="https://www.figma.com/community/file/1550680308009266995/valmari-web"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-yellow-400 text-sm md:text-base informative font-semibold no-underline"
+            >Ver Figma</a
+          >
         </div>
       </div>
+    </div>
 
+    <!-- contactame  -->
+    <div
+      class="bg-black/10 border-[1.5px] border-white/10 outline outline-offset-[0.7px] outline-black rounded-3xl backdrop-blur-xl w-auto h-auto py-1"
+    >
+      <div
+        class="border-[1.5px] border-white/20 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/40 w-fit px-2 py-1 md:px-4 md:py-2 flex mt-2 mx-4"
+      >
+        <p class="m-0 font-static informative text-sm">Contactame</p>
+      </div>
+      <div class="flex justify-between items-center px-5 md:flex-col">
+        <div class="flex flex-col w-full mt-3">
+          <p class="m-0 font-static text-gray-300 informative text-sm md:text-base">
+            ¿Tienes un proyecto del que quieras hablarme?
+          </p>
+          <p class="m-0 font-static text-gray-300 informative text-sm md:text-base">
+            Transformemos juntos esa visión y de froma eficiente. ⚡️
+          </p>
+        </div>
+        <!-- mail sm -->
+        <a
+          href="mailto:alansandovalt1@gmail.com"
+          class="text-white/50 hover:text-white/70 transition-colors duration-200 mt-4"
+          aria-label="Enviar email a Alan San"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <Email class="w-8 h-8 mx-1 md:mx-auto" />
+        </a>
+      </div>
+    </div>
   </article>
 
   <!-- matera landing  -->
   <article
-    class=" relative flex flex-col h-80 border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black bg-black/40 backdrop-blur-5xl  rounded-3xl text-xl p-4 lg:p-4 md:p-0  col-span-14 md:col-span-5  md:h-auto gap-y-2  "
+    class="relative flex flex-col h-80 border-[1.5px] border-white/10 outline outline-offset-[0.7px] outline-black bg-black/10 backdrop-blur-xl rounded-3xl text-xl p-4 lg:p-4 md:p-0 col-span-14 md:col-span-5 md:h-auto gap-y-2"
   >
-
-      <div class="flex items-center justify-between  m-1 md:gap-x-5 ">
-        <div
-          class="border-[1px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-3xl  bg-black/40 relative w-fit px-2 py-1 md:px-4 md:py-2 flex  "
-          >
-          <span class="m-0 informative text-xs text-center">Landing Page</span>
-        </div>
-        <span class="m-0 informative break-words text-wrap"
-          >Restaurante-Menú</span
+    <div class="flex items-center justify-between m-1 md:gap-x-5">
+      <div
+        class="border-[1.5px] border-white/20 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/40 relative w-fit px-2 py-1 md:px-4 md:py-2 flex"
+      >
+        <span class="m-0 informative text-sm font-static text-center"
+          >Landing Page</span
         >
       </div>
-      <a
-        href="/matera"
-        id="matera-project-link"
-        class="block focus:outline-none  rounded-[20px]"
-        aria-label="Ver detalles del proyecto La Matera"
+      <span class="m-0 informative break-words text-wrap text-sm md:text-base">Restaurante-Menú</span
       >
-        <img
-          src="/imagenes/matera3.webp"
-          alt="Landing page La Matera desarrollada por Alan San - Restaurante con menú digital"
-          class="w-[94%] h-[78%] md:h-[70%]  object-fill flex rounded-[20px] my-1 absolute left-1/2 -translate-x-1/2"
-          loading="lazy"
-        />
-      </a>
-
+    </div>
+    <a
+      href="/matera"
+      id="matera-project-link"
+      class="block focus:outline-none rounded-[20px]"
+      aria-label="Ver detalles del proyecto La Matera"
+    >
+      <img
+        src="/imagenes/matera3.webp"
+        alt="Landing page La Matera desarrollada por Alan San - Restaurante con menú digital"
+        class="w-[94%] h-[78%] md:h-[70%] object-fill flex rounded-[20px] my-1 absolute left-1/2 -translate-x-1/2"
+        loading="lazy"
+      />
+    </a>
   </article>
   <div
     class="box-gen rounde text-xl p-4 border-2 col-span-14 md:col-span-10 hidden h-80"
@@ -266,71 +267,12 @@ import Email from "../assets/mail.svg";
   </div>
 </section>
 
-<script>
-  // Suitch project click tracking
-  function initSuitchTracking() {
-    const suitchLink = document.getElementById('suitch-project-link');
-    if (!suitchLink) return;
-    
-    suitchLink.addEventListener('click', function() {
-      const storageKey = 'suitch-project-clicks';
-      let clicks = parseInt(localStorage.getItem(storageKey) || '0');
-      clicks += 1;
-      localStorage.setItem(storageKey, clicks.toString());
-    });
-  }
-
-  // Matera project click tracking
-  function initMateraTracking() {
-    const materaLink = document.getElementById('matera-project-link');
-    if (!materaLink) return;
-    
-    materaLink.addEventListener('click', function() {
-      const storageKey = 'matera-project-clicks';
-      let clicks = parseInt(localStorage.getItem(storageKey) || '0');
-      clicks += 1;
-      localStorage.setItem(storageKey, clicks.toString());
-    });
-  }
-
-  // Projects scroll click tracking  
-  function initProjectsScrollTracking(){
-    const projectScrollLink = document.getElementById('project-scroll-link');
-    if(!projectScrollLink) return;
-    
-    projectScrollLink.addEventListener('click', function(){
-      const scrollKey = 'project-scroll-clicks';
-      let scrolls = parseInt(localStorage.getItem(scrollKey) || '0');
-      scrolls += 1;
-      localStorage.setItem(scrollKey, scrolls.toString());
-    });
-  }
+<style>
   
-  // Initialize when DOM is loaded
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() {
-      initSuitchTracking();
-      initMateraTracking();
-      initProjectsScrollTracking();
-    });
-  } else {
-    initSuitchTracking();
-    initMateraTracking();
-    initProjectsScrollTracking();
-  }
-</script>
-
-<style> 
-  p {
-    font-size: 16px;
-    opacity: 0.8;
-  }
   .informative {
     font-family: "static";
-    font-size: 14px;
     opacity: 0.8;
   }
 
   /* :is(.dark *) agregar esto al boxgen cuando hagamso el modo obscuro  */
-
 </style>
