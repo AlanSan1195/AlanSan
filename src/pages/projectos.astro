@@ -443,33 +443,7 @@ window.addEventListener('scroll', () => {
   </div>
 </section>
 
-<script>
-  // View counter functionality based on real clicks from home page
-  function initViewCounter() {
-    const viewCounterElement = document.getElementById('view-counter');
-    if (!viewCounterElement) return;
-    
-    // Get clicks from the home page Projects Scroll section
-    const storageKey = 'project-scroll-clicks';
-    let views = parseInt(localStorage.getItem(storageKey) || '0');
-    
-    // Display the count with number formatting
-    viewCounterElement.textContent = views.toLocaleString();
-    
-    // Add a subtle animation when the page loads
-    setTimeout(() => {
-      viewCounterElement.style.opacity = '1';
-      viewCounterElement.style.transform = 'translateY(0)';
-    }, 300);
-  }
-  
-  // Initialize when DOM is loaded
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initViewCounter);
-  } else {
-    initViewCounter();
-  }
-</script>
+
 
 <style>
   code {
