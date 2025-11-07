@@ -1,0 +1,109 @@
+{
+  "suitch": {
+    "id": "suitch",
+    "title": "Plataforma de Streaming - Suitch",
+    "subTitle": "Simulación de Twitch desarrollada con React, y la API oficial de Twitch",
+    "image": {
+      "src": "/imagenes/suitch2ble.webp",
+      "alt": "Captura de pantalla de Suitch - Plataforma de streaming"
+    },
+    "links": {
+      "website": "https://suitch.netlify.app/",
+      "github": "https://github.com/AlanSan1195/Suitch-Twitch-API"
+    },
+    "review": [
+      "<strong class='text-white'>Suitch</strong> es una simulación de la plataforma Twitch que desarrollé para practicar y perfeccionar mis habilidades en React. El proyecto permite buscar streamers reales y ver su contenido en vivo, replicando la experiencia de usuario de la plataforma original.",
+      "Incluye características como iniciar sesión con Twitch, buscar a cualquier streamer que tenga un usuario en la plataforma de Twitch y sección de canales que están vivo."
+    ],
+    "themes": ["UI", "API`s", "Hooks", "Frontend",".env"],
+    "technologies": ["Astro", "React", "Tailwind CSS"],
+    "technologiesDetails": [
+      {
+        "name": "Astro Framework",
+        "description": "Utilizado para crear una aplicación web estática optimizada, aprovechando la facilidad que es trabajar con Astro para este tipo de proyects donde se optimiza mucho el uso de JavaScript"
+      },
+      {
+        "name": "Tailwind",
+        "description": "Para el diseño responsivo y estilizado rápido de la interfaz de usuario, asegurando una experiencia visual atractiva y coherente."
+      },
+      {
+        "name": "React",
+        "description": "Implementación de useState para manejo de estado local y useContext para compartir estado entre componentes, especialmente para el colapso de la barra lateral."
+      }
+    ],
+    "implementations": [
+      "Uso de los hooks useState y useContext para el manejo de estado y la compartición de datos entre componentes.",
+      "Implementación de rutas dinámicas en Astro para generar perfiles únicos de cada streamer con pre-renderizado.",
+      "useContext() para crear un componente padre que envuelve children y comparte interactividad entre componentes. Especialmente útil para el colapso de la barra lateral que afecta a múltiples componentes.",
+      "Restricciones de CORS para iframes de Twitch.",
+      "Uso seguro de la API de Twitch con variables de entorno para tokens y despliegue en Netlify.",
+      "Este proyecto me permitió enfrentarme a desafíos reales como el manejo de APIs externas, la gestión de estados y la implementación de páginas dinámicas con Astro."
+    ]
+  },
+  "matera": {
+    "id": "matera",
+    "title": "Landing page - La Matera",
+    "subTitle": "Rediseño completo de la web de un restaurante argentino en la ciudad de Guadalajara",
+    "image": {
+      "src": "/imagenes/matera-preview.webp",
+      "alt": "Captura de pantalla de La Matera"
+    },
+    "links": {
+      "website": "https://matera.netlify.app/",
+      "github": "https://github.com/AlanSan1195/matera-landing"
+    },
+    "review": [
+      "La Matera es una landing page desarrollada para un restaurante argentino en Guadalajara, diseñada para ofrecer una experiencia digital inmersiva que refleje la calidez y autenticidad de la cocina argentina.",
+      "El objetivo principal del proyecto fue rediseñar completamente la web para mejorar la experiencia del usuario, optimizar la presentación del menú y facilitar la navegación."
+    ],
+    "themes": ["UI", "3Djs", "Frontend","Javascript"],
+
+    "technologies": [],
+    "technologiesDetails": [],
+    "implementations": []
+  },
+  "valmari": {
+    "id": "valmari",
+    "title": "Valmarí - Barra de Snacks Premium",
+    "subTitle": "Sitio web para emprendimiento local de barras de snacks en Guadalajara.",
+    "image": {
+      "src": "/imagenes/valmari7.webp",
+      "alt": "Captura de pantalla de Valmarí - Barra de Snacks Valmarí"
+    },
+    "links": {
+      "website": "https://valmarisnack.netlify.app/",
+      "github": "https://github.com/AlanSan1195/valmari"
+    },
+    "review": [
+      "<strong class='text-white'>Valmarí</strong> es un sitio web creado para posicionar localmente un emprendimiento de barras de snacks en Guadalajara. En un mercado saturado de sitios web genéricos, Valmarí se destaca con animaciones fluidas, transiciones interactivas únicas y un diseño personalizado que refleja la identidad de marca.",
+      "El proyecto se enfoca en tres pilares fundamentales: <strong class='text-white'>SEO local optimizado</strong> para búsquedas como 'barra de snacks gdl' y 'eventos guadalajara', <strong class='text-white'>diferenciación visual</strong> con animaciones personalizadas que crean una experiencia memorable, y <strong class='text-white'>conversión efectiva</strong> diseñada para captar la atención y generar interés en los servicios."
+    ],
+    "themes": ["UI", "Transitions", "SEO", "Frontend","CSS"],
+    "technologies": ["Astro", "TailwindCSS", "Netlify", "Schema.org"],
+    "technologiesDetails": [
+      {
+        "name": "Astro Framework",
+        "description": "Elegido por su rendimiento excepcional al generar HTML estático con JavaScript mínimo."
+      },
+      {
+        "name": "TailwindCSS",
+        "description": " Permite crear experiencias visuales muy facil y rapido."
+      },
+      {
+        "name": "Schema.org y SEO",
+        "description": "Implementación completa de datos estructurados (LocalBusiness, Organization, OfferCatalog, FAQPage), geo tags para Guadalajara, Twitter Cards y optimización para Core Web Vitals. Estrategia enfocada en posicionamiento local competitivo."
+      },
+      {
+        "name": "Cascade AI (Windsurf)",
+        "description": "Uso estratégico de IA como herramienta de desarrollo para el sistema de testimonios. La IA analizó el proyecto y propuso una estrategia escalable: testimonios estáticos que evolucionarán a integración con Google Reviews, evitando spam y maximizando credibilidad."
+      }
+    ],
+    "implementations": [
+      "Animación y efectos personalizados usando keyframes y utilidades de TailwindCSS para crear una experiencia visual única y atractiva.",
+      "Implementación completa de SEO local con datos estructurados Schema.org, meta tags optimizados para redes sociales, geo tags específicos de Guadalajara y estrategia de keywords locales competitivas.",
+      "Sistema de testimonios con estrategia progresiva: Fase 1 con gestión manual desde JSON, preparado para Fase 2 con integración automática de Google Reviews API, maximizando credibilidad y beneficios SEO.",
+      "Optimización para Core Web Vitals con lazy loading, headers de Netlify configurados para performance, y sitemap automático para mejor indexación en búsquedas locales de GDL.",
+      "Arquitectura modular con componentes reutilizables (Hero, Packs, Testimonials, Production) que facilitan el mantenimiento y futuras iteraciones del proyecto."
+    ]
+  }
+}

@@ -1,9 +1,32 @@
-<footer class="w-full h-26 flex fixed z-30 bottom-0">
-  <div class="filter-blur bottom-0 backdrop-blur-md w-full" aria-hidden="true"></div>
-</footer>
-
-<style>
-  .filter-blur {
-    mask-image: linear-gradient(to top, #000000 20%, transparent);
-  }
-</style>
+---
+import SocialMedia from "./Social.astro";
+---
+<footer
+      class="w-full flex z-10 justify-center items-center mb-20"
+      role="contentinfo"
+      aria-label="Site footer"
+    >
+      <div class="flex-col justify-center items-center">
+        <figure
+          class="rounded-full w-10 h-10 border-white/60 border-[1px] mx-auto"
+        >
+          <img
+            src="/imagenes/FotoPerfil.webp"
+            alt="Foto de perfil de Alan San, desarrollador frontend"
+            class="absolute w-10 h-10 rounded-full border-white/60 border-[1px] p-1"
+            width="56"
+            height="56"
+            loading="lazy"
+          />
+        </figure>
+        <p class="font-static font-bold opacity-80 mx-6 mt-5">
+          Made by <a
+            href="https://github.com/AlanSan1195"
+            class="text-white hover:cursor-pointer no-underline"
+            rel="author"
+            title="Visit Alan San profile">Alan San</a
+          >
+        </p>
+        <SocialMedia />
+      </div>
+    </footer>

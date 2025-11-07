@@ -1,0 +1,39 @@
+{
+  "nuevo-proyecto": {
+    "id": "nuevo-proyecto",
+    "title": "Título del Proyecto",
+    "subTitle": "Descripción breve del proyecto (1-2 líneas)",
+    "image": {
+      "src": "/imagenes/proyecto.webp",
+      "alt": "Descripción de la imagen del proyecto"
+    },
+    "links": {
+      "website": "https://tu-proyecto.com",
+      "github": "https://github.com/tu-usuario/tu-repo"
+    },
+    "review": [
+      "<strong class='text-white'>Nombre del proyecto</strong> es... (primer párrafo)",
+      "Segundo párrafo con más detalles sobre el proyecto"
+    ],
+    "technologies": [
+      "Tecnología 1",
+      "Tecnología 2",
+      "Tecnología 3"
+    ],
+    "technologiesDetails": [
+      {
+        "name": "Nombre de Tecnología 1",
+        "description": "Cómo y por qué se usó esta tecnología en el proyecto"
+      },
+      {
+        "name": "Nombre de Tecnología 2",
+        "description": "Descripción detallada del uso de esta tecnología"
+      }
+    ],
+    "implementations": [
+      "Primera implementación o característica técnica destacada",
+      "Segunda implementación o desafío resuelto",
+      "Tercera implementación o aprendizaje importante"
+    ]
+  }
+}

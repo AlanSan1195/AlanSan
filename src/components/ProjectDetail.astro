@@ -1,0 +1,230 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import Github from "../assets/github.svg";
+import WebSiteIcon from "../assets/website.svg";
+
+interface Props {
+  project: {
+    id: string;
+    title: string;
+    subTitle: string;
+    image: {
+      src: string;
+      alt: string;
+    };
+    links: {
+      website?: string;
+      github?: string;
+    };
+    
+    review: string[];
+    themes: string[];
+    technologies: string[];
+    technologiesDetails: Array<{
+      name: string;
+      description: string;
+    }>;
+    implementations: string[];
+  };
+}
+
+const { project } = Astro.props;
+---
+
+<Layout title={`${project.title} - Alan San`}>
+  <article itemscope itemtype="https://schema.org/CreativeWork" class="" >
+    <header class="relative max-w-3xl md:max-w-4xl mx-auto overflow-hidden pt-16  ">
+      <nav class="relative px-4 mb-6" aria-label="Navegación del proyecto">
+        <a
+          href="/"
+          class="p-3 w-fit bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-full text-sm text-gray-300 hover:text-white justify-center flex"
+          aria-label="Volver al portafolio principal"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+        </a>
+      </nav>
+
+      <div class="relative px-4 mb-6">
+        <h1 class="text-4xl md:text-6xl font-static text-white mb-6" itemprop="name">
+          {project.title}
+        </h1>
+        <p
+          class="font-static text-sm md:text-medium md:text-xl text-gray-300 mb-4 max-w-3xl"
+          itemprop="description"
+        >
+        {project.subTitle}
+      </p>
+      <nav class="flex w-fit items-center gap-x-1" aria-label="Enlaces externos del proyecto">
+        {
+          project.links.website && (
+            <a
+              href={project.links.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white/50 hover:text-white/70 hover:scale-110 transition-all duration-100 focus:outline-none rounded"
+              aria-label={`Visitar sitio web de ${project.title}`}
+              itemprop="url"
+            >
+              <WebSiteIcon
+                class="w-7 h-7 md:w-8 md:h-8 inline-block mr-2"
+                aria-hidden="true"
+              />
+            </a>
+          )
+        }
+        {
+          project.links.github && (
+            <a
+              href={project.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Ver código fuente de ${project.title} en GitHub`}
+              class="text-white/50 hover:text-white/70 hover:scale-110 transition-all duration-100 focus:outline-none rounded"
+            >
+              <Github class="w-7 h-7 md:w-8 md:h-8" aria-hidden="true" />
+            </a>
+          )
+        }
+      </nav>
+      <div class=" flex gap-x-2 ">
+            {project.themes.length > 0 && (
+            <div 
+              class="flex flex-wrap w-full gap-2 mt-6" 
+              role="list" 
+              aria-label="Temas del proyecto"
+            >
+              {project.themes.map((theme) => (
+                <span 
+                  class="px-5 py-2 bg-black/20 backdrop-blur-xl border-[1.5px] border-white/20 outline outline-offset-[1.5px] outline-black rounded-lg text-sm opacity-60"
+                  role="listitem"
+                  itemprop="keywords"
+                >
+                  #{theme}
+                </span>
+              ))}
+            </div>
+          )}
+      </div>
+      </div>
+
+      <figure class="max-w-4xl mx-auto px-4">
+        <img
+          src={project.image.src}
+          alt={project.image.alt}
+          class="w-full h-auto object-cover bg-black/40 border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl"
+          loading="lazy"
+          itemprop="image"
+          width="1200"
+          height="675"
+        />
+      </figure>
+    </header>  {
+    project.review.length > 0 && (
+      <section 
+        class="py-6 max-w-3xl md:max-w-4xl mx-auto" 
+        aria-labelledby="project-overview"
+      >
+        <div class="px-4 ">
+          <h2 
+            id="project-overview" 
+            class="text-2xl md:text-5xl font-static text-white mb-6 "
+          >
+            {project.subTitle}
+          </h2>
+          <div class="flex flex-col" itemprop="about">
+            {project.review.map((paragraph) => (
+              <p
+                class="font-static text-sm md:text-medium md:text-xl text-gray-300 mb-4"
+                set:html={paragraph}
+              />
+            ))}
+          </div>
+          
+        </div>
+      </section>
+    )
+  }
+
+  {
+    project.technologiesDetails.length > 0 && (
+      <section 
+        class="py-6 z-10 max-w-3xl md:max-w-4xl mx-auto px-4"
+        aria-labelledby="technologies-section"
+      >
+        <div class="px-4 ">
+          <h2 
+            id="technologies-section" 
+            class="text-2xl md:text-5xl font-bold text-white mb-6"
+          >
+            Tecnologías Utilizadas
+          </h2>
+          <ol class="space-y-3 md:space-y-8 list-decimal px-1">
+            {project.technologiesDetails.map((tech) => (
+              <li>
+                <p class="font-static text-sm md:text-medium md:text-xl text-gray-300">
+                  <strong class="text-white">{tech.name}:</strong>{" "}
+                  <span itemprop="technicalSkill">{tech.description}</span>
+                </p>
+              </li>
+            ))}
+          </ol>
+      
+        </div>
+      </section>
+    )
+  }
+
+  {
+    project.implementations.length > 0 && (
+      <section 
+        class="py-6 z-10 max-w-3xl md:max-w-4xl mx-auto"
+        aria-labelledby="implementations-section"
+      >
+        <div class="px-4">
+          <h2 
+            id="implementations-section" 
+            class="text-2xl md:text-5xl font-static mb-6"
+          >
+            Implementaciones 
+          </h2>
+
+          <ul class="space-y-3 text-gray-300 font-static px-1">
+            {project.implementations.map((implementation) => (
+              <li class="flex font-static m-0 my-2 text-gray-300 text-sm md:text-medium md:text-xl">
+                <span class="text-pink-500 mr-2 flex-shrink-0" aria-hidden="true">•</span>
+                <span>{implementation}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )
+  }
+  </article>
+  <Footer />
+</Layout>
+
+<style>
+  code {
+    font-family: "Courier New", monospace;
+    line-height: 1.4;
+  }
+  .informative {
+    font-family: "static";
+    font-size: 20px;
+    opacity: 0.8;
+  }
+</style>
