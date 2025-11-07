@@ -1,5 +1,6 @@
 ---
 import Email from "../assets/mail.svg";
+import projectdata from "../data/projects.json";
 ---
 
 <section
@@ -132,6 +133,7 @@ import Email from "../assets/mail.svg";
         width="320"
         height="240"
         loading="lazy"
+        transition:name={`transition-${projectdata.suitch.id}`}
       />
     </a>
   </article>
@@ -158,6 +160,8 @@ import Email from "../assets/mail.svg";
             alt="Alan trabajando"
             class="w-20 h-20 md:w-24 md:h-44 rounded-xl -rotate-3 md:rotate-0 object-cover border-2 border-white/40 md:m-1
               hover:scale-110 hover:rotate-1 transition-all duration-200"
+            loading="lazy"
+            transition:name={`transition-${projectdata.valmari.id}`}
           />
         </a>
 

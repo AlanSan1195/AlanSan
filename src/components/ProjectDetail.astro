@@ -121,6 +121,7 @@ const { project } = Astro.props;
 
       <figure class="max-w-4xl mx-auto px-4">
         <img
+        transition:name={`transition-${project.id}`}
           src={project.image.src}
           alt={project.image.alt}
           class="w-full h-auto object-cover bg-black/40 border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl"
