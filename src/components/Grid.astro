@@ -161,7 +161,7 @@ import projectdata from "../data/projects.json";
             class="w-20 h-20 md:w-24 md:h-44 rounded-xl -rotate-3 md:rotate-0 object-cover border-2 border-white/40 md:m-1
               hover:scale-110 hover:rotate-1 transition-all duration-200"
             loading="lazy"
-            transition:name={`transition-${projectdata.valmari.id}`}
+            
           />
         </a>
 
@@ -236,21 +236,10 @@ import projectdata from "../data/projects.json";
     </div>
   </article>
 
-  <!-- matera landing  -->
+  <!-- valmari landing -->
   <article
     class="relative flex flex-col h-80 border-[1.5px] border-white/10 outline outline-offset-[0.7px] outline-black bg-black/10 backdrop-blur-xl rounded-3xl text-xl p-4 col-span-14 md:col-span-5 md:h-auto gap-y-2"
   >
-    <!-- <div class="flex items-center justify-between m-1 md:gap-x-5">
-      <div
-        class="border-[1.5px] border-white/20 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/40 relative w-fit px-2 py-1 md:px-4 md:py-2 flex"
-      >
-        <span class="m-0 informative text-base font-static text-center"
-          >Landing Page</span
-        >
-      </div>
-      
-      
-    </div> -->
     <a
       href="/valmari"
       id="valmari-project-link"
@@ -262,6 +251,7 @@ import projectdata from "../data/projects.json";
         alt="Landing page Valmarí desarrollada por Alan San - Servicio de eventos y snacks en Guadalajara"
         class="w-full h-full object-fill flex justify-center items-center rounded-[20px]"
         loading="lazy"
+        transition:name={`transition-${projectdata.valmari.id}`}
       />
     </a>
   </article>
