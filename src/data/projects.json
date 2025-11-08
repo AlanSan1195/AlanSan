@@ -53,14 +53,37 @@
       "github": "https://github.com/AlanSan1195/matera-landing"
     },
     "review": [
-      "La Matera es una landing page desarrollada para un restaurante argentino en Guadalajara, diseñada para ofrecer una experiencia digital inmersiva que refleje la calidez y autenticidad de la cocina argentina.",
-      "El objetivo principal del proyecto fue rediseñar completamente la web para mejorar la experiencia del usuario, optimizar la presentación del menú y facilitar la navegación."
+      "<strong class='text-white'>La Matera</strong> fue mi primer proyecto freelance real: un rediseño completo del sitio web para un restaurante argentino en Guadalajara con gran tradición en la ciudad. El objetivo principal era crear una experiencia web más atractiva y moderna que mejorara la comunicación de los platillos hacia los clientes, generando mayor engagement.",
+      "El sitio incluye video hero impactante, menú digital organizado por categorías (empanadas, carnes, mariscos, postres), sección de eventos con carrusel informativo, y efectos visuales 3D con partículas de humo usando Three.js que dan profundidad y atmósfera al restaurante, cabe mencionar que este efecto fue adaptado de la comunidad de @Midudev."
     ],
-    "themes": ["UI", "3Djs", "Frontend","Javascript"],
-
-    "technologies": [],
-    "technologiesDetails": [],
-    "implementations": []
+    "themes": ["UI", "3D", "Three.js", "Frontend", "Freelance"],
+    "technologies": ["Astro", "Tailwind CSS", "Three.js"],
+    "technologiesDetails": [
+      {
+        "name": "Astro Framework (SSR mode)",
+        "description": "Framework principal con renderizado del lado del servidor usando Node.js adapter en modo standalone para mejor performance."
+      },
+      {
+        "name": "Tailwind CSS",
+        "description": "Diseño responsivo mobile-first con máscaras degradadas, efectos de luces de fondo y transiciones suaves entre secciones."
+      },
+      {
+        "name": "Three.js",
+        "description": "Implementación de efecto de humo con partículas 3D en el fondo que da profundidad y atmósfera al sitio, creando una experiencia visual única."
+      },
+      {
+        "name": "Optimización de imágenes",
+        "description": "Todo el sitio usa formato WebP para mejor rendimiento y tiempos de carga optimizados."
+      }
+    ],
+    "implementations": [
+      "Video hero en la portada con presentación impactante del restaurante y CTA directo a WhatsApp para reservas.",
+      "Menú digital completo organizado por 9 categorías (empanadas, pizzas, entradas, ensaladas, pastas, carnes, mariscos, pollo, postres).",
+      "Efecto de humo 3D con Three.js adaptado de la comunidad de Midudev, creando animación de partículas continua en el fondo.",
+      "Diseño responsive con mobile-first approach, navegación adaptable (menú hamburguesa en móvil) y carruseles horizontales optimizados para touch.",
+      "Sistema de reservas integrado vía WhatsApp con CTAs estratégicos en todo el sitio.",
+      "Este fue mi primer proyecto real como freelance: aprendí a comunicarme con clientes, recibir feedback y ajustar según necesidades reales. Aunque tiene áreas de mejora (datos hardcodeados, componentes grandes), el código funciona y resolvió el problema del cliente - la experiencia más valiosa."
+    ]
   },
   "valmari": {
     "id": "valmari",
@@ -104,6 +127,136 @@
       "Sistema de testimonios con estrategia progresiva: Fase 1 con gestión manual desde JSON, preparado para Fase 2 con integración automática de Google Reviews API, maximizando credibilidad y beneficios SEO.",
       "Optimización para Core Web Vitals con lazy loading, headers de Netlify configurados para performance, y sitemap automático para mejor indexación en búsquedas locales de GDL.",
       "Arquitectura modular con componentes reutilizables (Hero, Packs, Testimonials, Production) que facilitan el mantenimiento y futuras iteraciones del proyecto."
+    ]
+  },
+  "airpods": {
+    "id": "airpods",
+    "title": "GSAP Scroll Animation Demo",
+    "subTitle": "Animación como la Web de Apple",
+    "image": {
+      "src": "/imagenes/airpod-foto.webp",
+      "alt": "Captura de pantalla de GSAP Scroll Animation"
+    },
+    "links": {
+      "website": "https://airpods-scroll-swart.vercel.app/",
+      "github": "https://github.com/AlanSan1195/GsapScroll"
+    },
+    "review": [
+      "<strong class='text-white'>GSAP Scroll Animation Demo</strong> es una demostración del uso de GSAP y ScrollTrigger para crear animaciones avanzadas basadas en el scroll. El objetivo principal fue animar la opacidad y escala de un título y renderizar una secuencia de imágenes sincronizadas con el desplazamiento de la página.",
+      "El proyecto me permitió aprender a implementar esta biblioteca de Javascript que en verdad se me hace increíble, sin duda uno de los proyectos que más disfruté en aprender y descubrir."
+    ],
+    "themes": ["Animation", "GSAP", "ScrollTrigger", "Frontend", "Canvas"],
+    "technologies": ["GSAP", "ScrollTrigger", "Canvas API", "JavaScript"],
+    "technologiesDetails": [
+      {
+        "name": "GSAP y ScrollTrigger",
+        "description": "Librería GSAP con su plugin ScrollTrigger para vincular animaciones a la posición del scroll, logrando efectos visuales modernos y fluidos que responden al usuario."
+      },
+      {
+        "name": "Canvas API",
+        "description": "Renderizado de secuencias de imágenes sincronizadas con el scroll para crear animaciones fluidas y optimizadas."
+      },
+      {
+        "name": "Timeline",
+        "description": "Uso de timelines en GSAP para coordinar múltiples animaciones y mantener el control sobre la secuencia de efectos."
+      },
+      {
+        "name": "Parámetro Scrub",
+        "description": "El parámetro scrub es fundamental para que la animación reaccione de forma suave tanto al avanzar como al retroceder el scroll. Sin scrub, la animación solo se dispara una vez y no responde igual al volver atrás."
+      }
+    ],
+    "implementations": [
+      "Animación de título con efectos de fade-in y fade-out controlados por scroll usando GSAP y ScrollTrigger.",
+      "Renderizado de secuencia de imágenes en canvas sincronizada perfectamente con el desplazamiento de la página.",
+      "Implementación del parámetro scrub para lograr animaciones bidireccionales suaves que responden tanto al scroll hacia abajo como hacia arriba.",
+      "Uso de timelines para coordinar múltiples animaciones y efectos visuales en secuencia.",
+      "Optimización de rendimiento para renderizado fluido de imágenes en canvas durante el scroll."
+    ]
+  },
+  "arkanoid": {
+    "id": "arkanoid",
+    "title": "Arkanoid Game",
+    "subTitle": "Recreación del clásico juego arcade construida con JavaScript vanilla y Canvas",
+    "image": {
+      "src": "/imagenes/arkanoid-preview.webp",
+      "alt": "Captura de pantalla de Arkanoid Game"
+    },
+    "links": {
+      "website": "https://arkanoidsan.netlify.app/",
+      "github": "https://github.com/AlanSan1195/JavaScript-Proyects?tab=readme-ov-file"
+    },
+    "review": [
+      "<strong class='text-white'>Arkanoid Game</strong> es una recreación del clásico juego arcade de rompe-bloques construida completamente con JavaScript vanilla y HTML5 Canvas. Este proyecto representa un verdadero homenaje a los juegos arcade de los 80s con física realista y gráficos retro.",
+      "El juego incluye 13 bloques desafiantes, física de pelota realista con colisiones precisas, sistema de vidas, controles suaves con teclado y sprites pixel art auténticos al estilo arcade."
+    ],
+    "themes": ["Game Dev", "Canvas", "JavaScript", "Physics", "Retro"],
+    "technologies": ["HTML5", "CSS3", "JavaScript ES6", "Canvas API", "Sprites"],
+    "technologiesDetails": [
+      {
+        "name": "Canvas API",
+        "description": "Utilizado para el renderizado de gráficos 2D, gestión de sprites y animaciones del juego en tiempo real."
+      },
+      {
+        "name": "JavaScript Vanilla",
+        "description": "Implementación de toda la lógica del juego sin frameworks, incluyendo física de colisiones, sistema de vidas y controles de teclado."
+      },
+      {
+        "name": "Sistema de Colisiones",
+        "description": "Detección precisa de colisiones entre pelota, paleta y bloques con física realista de rebotes dinámicos."
+      },
+      {
+        "name": "Sprites Pixel Art",
+        "description": "Uso de imágenes sprite para elementos del juego (paleta, pelota, bloques, bordes) manteniendo la estética retro arcade."
+      }
+    ],
+    "implementations": [
+      "Sistema completo de física para pelota con colisiones precisas y rebotes dinámicos realistas.",
+      "Detección de colisiones entre pelota, paleta y los 13 bloques del nivel con destrucción al impacto.",
+      "Sistema de vidas (3 vidas) con gestión de game over al perder todas las vidas.",
+      "Controles de teclado fluidos para movimiento de paleta (flechas izquierda/derecha).",
+      "Renderizado optimizado en Canvas con sprites pixel art auténticos y efectos visuales retro.",
+      "Game loop eficiente para animaciones suaves y respuesta en tiempo real del jugador."
+    ]
+  },
+  "gta": {
+    "id": "gta",
+    "title": "GTA VI Landing Page",
+    "subTitle": "Recreación del efecto scroll icónico del sitio oficial de Rockstar Games",
+    "image": {
+      "src": "/imagenes/gta-foto.webp",
+      "alt": "Captura de pantalla de GTA VI Landing Page"
+    },
+    "links": {
+      "website": "https://webgta6-alan-sans-projects.vercel.app/",
+      "github": "https://github.com/AlanSan1195/gta-6-web"
+    },
+    "review": [
+      "<strong class='text-white'>GTA VI Landing Page</strong> es una recreación del sitio oficial de GTA VI de Rockstar Games, replicando el icónico efecto de scroll animado. El proyecto utiliza GSAP (GreenSock Animation Platform) y ScrollTrigger para crear animaciones fluidas y profesionales sincronizadas con el scroll del usuario.",
+      "El desafío principal fue implementar el efecto de máscara con el logo de GTA VI que actúa como una ventana revelando el contenido, junto con animaciones secuenciales de zoom, transiciones de tamaño y efectos de clip-path tipo cortina elíptica, todo perfectamente sincronizado con el desplazamiento de la página."
+    ],
+    "themes": ["Animation", "GSAP", "ScrollTrigger", "UI", "Masks"],
+    "technologies": ["Astro", "GSAP", "TailwindCSS", "ScrollTrigger"],
+    "technologiesDetails": [
+      {
+        "name": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "description": ""
+      },
+      {
+        "name": "",
+        "description": ""
+      }
+    ],
+    "implementations": [
+      "Efecto de máscara CSS con logo de GTA VI que revela el contenido usando mask-image, mask-position y mask-size animados con GSAP.",
+      "Efectos de clip-path tipo cortina: transición elíptica del footer desde 'ellipse(60% 0% at 50% 190%)' hasta 'ellipse(60% 100% at 50% -100%)' para efecto de revelado y desvanecimiento."
     ]
   }
 }

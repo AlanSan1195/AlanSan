@@ -37,7 +37,7 @@ const { project } = Astro.props;
       <nav class="relative px-4 mb-6" aria-label="Navegación del proyecto">
         <a
           href="/"
-          class="p-3 w-fit bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[0.5px] outline-black rounded-full text-sm text-gray-300 hover:text-white justify-center flex"
+          class="p-3 w-fit bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[1px] outline-black rounded-full text-sm text-gray-300 hover:text-white justify-center flex"
           aria-label="Volver al portafolio principal"
         >
           <svg
@@ -107,7 +107,7 @@ const { project } = Astro.props;
             >
               {project.themes.map((theme) => (
                 <span 
-                  class="px-5 py-2 bg-black/20 backdrop-blur-xl border-[1.5px] border-white/20 outline outline-offset-[1.5px] outline-black rounded-lg text-sm opacity-60"
+                  class="px-3 py-1 bg-black/20 backdrop-blur-xl border-[1.5px] border-white/20 outline outline-offset-[1px] outline-black rounded-lg text-xs md:text-sm opacity-60"
                   role="listitem"
                   itemprop="keywords"
                 >
@@ -124,7 +124,7 @@ const { project } = Astro.props;
         transition:name={`transition-${project.id}`}
           src={project.image.src}
           alt={project.image.alt}
-          class="w-full h-auto object-cover bg-black/40 border-[1.5px] border-white/10 outline outline-offset-[0.5px] outline-black rounded-3xl"
+          class="w-full h-auto object-cover bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[1px] outline-black rounded-3xl"
           loading="lazy"
           itemprop="image"
           width="1200"
