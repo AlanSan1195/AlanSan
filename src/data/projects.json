@@ -45,7 +45,7 @@
     "title": "Landing page - La Matera",
     "subTitle": "Rediseño completo de la web de un restaurante argentino en la ciudad de Guadalajara",
     "image": {
-      "src": "/imagenes/matera-preview.webp",
+      "src": "/imagenes/matera3.webp",
       "alt": "Captura de pantalla de La Matera"
     },
     "links": {
@@ -237,22 +237,7 @@
     "themes": ["Animation", "GSAP", "ScrollTrigger", "UI", "Masks"],
     "technologies": ["Astro", "GSAP", "TailwindCSS", "ScrollTrigger"],
     "technologiesDetails": [
-      {
-        "name": "",
-        "description": ""
-      },
-      {
-        "name": "",
-        "description": ""
-      },
-      {
-        "name": "",
-        "description": ""
-      },
-      {
-        "name": "",
-        "description": ""
-      }
+     
     ],
     "implementations": [
       "Efecto de máscara CSS con logo de GTA VI que revela el contenido usando mask-image, mask-position y mask-size animados con GSAP.",
