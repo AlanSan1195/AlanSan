@@ -242,5 +242,32 @@
       "Efecto de máscara CSS con logo de GTA VI que revela el contenido usando mask-image, mask-position y mask-size animados con GSAP.",
       "Efectos de clip-path tipo cortina: transición elíptica del footer desde 'ellipse(60% 0% at 50% 190%)' hasta 'ellipse(60% 100% at 50% -100%)' para efecto de revelado y desvanecimiento."
     ]
+  },
+  "simpsons": {
+    "id": "simpsons",
+    "section": "/",
+    "title": "The Simpsons - Animación Fortnite",
+    "subTitle": "Animacion de Fortnite x Los Simpsons",
+    "image": {
+      "src": "/imagenes/simpsons-title.svg",
+      "alt": "Captura de pantalla de The Simpsons Animation"
+    },
+    "links": {
+      "website": "https://aycaramba.netlify.app/",
+      "github": "https://github.com/AlanSan1195/the-simpsons"
+    },
+    "review": [
+      "<strong class='text-white'>The Simpsons Animation</strong> es una recreación de la animación de transición inspirada en el lanzamiento de la temporada de Fortnite x Los Simpsons. Al ver esa transición tan fluida y creativa, surgió la curiosidad de replicar y entender cómo funciona ese tipo de animación avanzada.",
+      "El proyecto es principalmente educativo y experimental, enfocado en entender cómo funcionan las animaciones complejas sincronizadas con scroll y cómo combinar múltiples transformaciones para crear efectos visuales impactantes. La elección de Los Simpsons es perfecta para practicar la integración de datos externos con animaciones frontend."
+    ],
+    "themes": ["Animation", "GSAP", "ScrollTrigger", "Learning", "API"],
+    "technologies": ["Astro", "GSAP", "ScrollTrigger", "Tailwind CSS", "The Simpsons API"],
+    "technologiesDetails": [
+    ],
+    "implementations": [
+      "Animación de escala masiva del logo de Los Simpsons (scale: 1 a 100) sincronizada con el scroll usando ScrollTrigger. esa es una de las claves para estas animaciones tan grandes.",
+
+      "GSAP: timeline, ScrollTrigger, animaciones simultáneas y parámetros clave como scale, x/y, opacity y duration."
+    ]
   }
 }
