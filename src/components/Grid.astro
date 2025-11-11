@@ -36,7 +36,7 @@ import projectdata from "../data/projects.json";
         <p
           class="informative font-static text-base md:text-base text-gray-300 text-pretty leading-relaxed"
         >
-          <span class="text-white font-semibold">+2 años de experiencia</span>,
+          <span class="text-white font-semibold opacity-100 ">+2 años de experiencia</span>,
           una formación autodidacta y una gran variedad de proyectos que han
           requerido todo tipo de interactividad, transiciones y animaciones.
         </p>
@@ -45,14 +45,14 @@ import projectdata from "../data/projects.json";
           class="informative font-static text-base md:text-base text-gray-300 text-pretty leading-relaxed"
         >
           Disfruto mucho diseñar y crear webs con
-          <span class="text-white font-semibold">
+          <span class="text-white font-semibold opacity-100">
             interfaces intuitivas y funcionales
           </span>, donde cada detalle tenga un propósito y el usuario disfrute
           esos segundos mientras navega.
-          <span class="text-white font-semibold">Mi enfoque está ahí</span>, en
+          <span class="text-white font-semibold opacity-100">Mi enfoque está ahí</span>, en
           crecer y mejorar estas habilidades que creo que marcan una gran
           diferencia en la experiencia del usuario, en conjunto con la
-          <span class="text-white font-semibold">
+          <span class="text-white font-semibold opacity-100">
             accesibilidad y el rendimiento.
           </span>
         </p>
@@ -101,7 +101,7 @@ import projectdata from "../data/projects.json";
           <source src="/imagenes/gta.mp4" type="video/mp4" />
         </video>
         <a
-          href="/projectos"
+          href="/proyectos"
           class="font-static absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center border-[1.5px] border-white/30 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/50 px-4 py-2 z-10 no-underline focus:outline-none text-base"
           aria-label="Ver proyectos de scroll"
         >
@@ -170,16 +170,16 @@ import projectdata from "../data/projects.json";
               href="https://valmarisnack.netlify.app/"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-yellow-400 font-semibold no-underline">Ver Proyecto</a
+              class="text-yellow-400 font-semibold no-underline">Ver Sitio</a
             >
           </p>
           <p
             class="text-base md:text-base text-gray-300 font-static informative m-0 break-words overflow-hidden"
           >
             El stack que usaré para crear la web será: <span
-              class="text-white font-semibold font-static"
+              class="text-white font-semibold opacity-100 font-static"
               >Astro
-            </span> y <span class="text-white font-semibold font-static"
+            </span> y <span class="text-white font-semibold opacity-100 font-static"
               >Tailwind CSS</span
             >.
           </p>
@@ -264,6 +264,7 @@ import projectdata from "../data/projects.json";
   .informative {
     font-family: "static";
     opacity: 0.8;
+
   }
 
   /* :is(.dark *) agregar esto al boxgen cuando hagamso el modo obscuro  */
