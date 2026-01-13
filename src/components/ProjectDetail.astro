@@ -32,7 +32,11 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<Layout title={`${project.title} - Alan San`}>
+<Layout 
+  title={`${project.title} - Alan San`}
+  description={project.subTitle}
+  image={project.image.src}
+>
   <article itemscope itemtype="https://schema.org/CreativeWork" class="">
     <header
       class="relative max-w-3xl md:max-w-4xl mx-auto overflow-hidden pt-16"

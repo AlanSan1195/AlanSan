@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://alansan.dev/sitemap.xml
+Sitemap: https://alansan.dev/sitemap-index.xml
 
 
 # Permitir que todos los motores de búsqueda rastreen el sitio
