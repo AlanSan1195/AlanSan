@@ -105,14 +105,14 @@ const siteUrl = "https://alansan.dev";
   </head>
   <body>
     <Header />
-    <Backgound />
+    <Backgound transition:persist />
     <main
       class="flex flex-col justify-center mx-auto items-center max-w-[1500px] relative"
     >
       <slot />
       <Footer />
     </main>
-    <Backdrop />
+    <Backdrop transition:persist />
   </body>
 </html>
 <style>

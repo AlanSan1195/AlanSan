@@ -126,7 +126,8 @@ import projectdata from "../data/projects.json";
         class="w-full h-full object-fill flex justify-center items-center rounded-[20px]"
         width="320"
         height="240"
-        loading="lazy"
+        loading="eager"
+        fetchpriority="high"
         transition:name={`transition-${projectdata.suitch.id}`}
       />
     </a>
