@@ -4,17 +4,17 @@ import SocialMedia from "../components/Social.astro";
 
 <!-- HERO-FULL -->
 <section
-  class="w-[90%] h-auto flex flex-col mt-8 z-20 "
+  class="w-[90%] h-auto flex flex-col mt-8 z-20"
   aria-labelledby="hero-title"
 >
   <!-- HERO SM -->
-  <div class="cursor-pointer md:hidden h-full group ">
+  <div class="cursor-pointer md:hidden h-full group">
     <h2
       id="hero-title"
       class="font-display text-[90px] line uppercase break-words my-0"
     >
       <span
-        class="hover:text-orange-400 focus:text-orange-400 active:text-orange-400 "
+        class="hover:text-orange-400 focus:text-orange-400 active:text-orange-400"
         >Front</span
       >
       <span
@@ -30,7 +30,7 @@ import SocialMedia from "../components/Social.astro";
       >
     </h2>
     <!-- FOTO PERFIL -->
-    <div class="flex flex-col md:hidden ">
+    <div class="flex flex-col md:hidden">
       <figure
         class="rounded-full w-14 h-14 my-3 border-white/60 border-[1px] m-0"
       >
@@ -43,23 +43,26 @@ import SocialMedia from "../components/Social.astro";
           loading="eager"
         />
       </figure>
-      <h1 id="my-name" class="mt-2 mb-0 font-static text-3xl md:hidden">
+      <h1 id="my-name" class="mt-2 mb-0 font-alpha text-3xl md:hidden">
         Alan San
       </h1>
-      <p id="hero-description-sm" class="font-static opacity-80 text-base">
-         Soy un desarrollador web con sede en Guadalajara y actualmente trabajo como freelance. Espero poder ayudarte a implementar ideas creativas en tu próximo proyecto.
+      <p id="hero-description-sm" class="font-alpha opacity-80 text-base">
+        Soy un desarrollador web con sede en Guadalajara y actualmente trabajo
+        como freelance. Espero poder ayudarte a implementar ideas creativas en
+        tu próximo proyecto.
       </p>
     </div>
   </div>
-  <div class=" m-0 md:hidden">
-
+  <div class="m-0 md:hidden">
     <SocialMedia />
   </div>
 
   <!-- HERO MD-->
-  <div class="flex flex-col ">
-    <div class="md:flex md:w-fit hidden md:flex-col cursor-pointer h-full w-auto ">
-      <h2 class="font-display text-3xl uppercase">
+  <div class="flex flex-col">
+    <div
+      class="md:flex md:w-fit hidden md:flex-col cursor-pointer h-full w-auto"
+    >
+      <h2 class="font-display text-3xl uppercase vhs-effect ">
         <span class="hover:text-orange-400">Front</span>
         <span
           class="bg-pink-500 w-10 h-[2px] inline-block -translate-y-2"
@@ -71,7 +74,7 @@ import SocialMedia from "../components/Social.astro";
       </h2>
     </div>
     <!-- imagen md  -->
-    <div class="hidden items-center gap-x-1 md:block w-xl">
+    <div class="hidden items-center gap-x-1 md:block max-w-2xl">
       <figure
         class="rounded-full w-18 h-18 border-white/60 border-[1px] flex-col m-0"
       >
@@ -84,11 +87,16 @@ import SocialMedia from "../components/Social.astro";
           loading="eager"
         />
       </figure>
-      <h1 id="my-name-md" class="mb-0 font-static text-3xl hidden md:flex mt-5 vhs-effect">
+      <h1
+        id="my-name-md"
+        class="mb-0 font-static text-4xl hidden md:flex mt-5"
+      >
         Alan San
       </h1>
       <p id="hero-description" class="font-static opacity-80 my-2 text-base">
-      Soy un desarrollador web con sede en Guadalajara y actualmente trabajo como freelance. Espero poder ayudarte a implementar ideas creativas en tu próximo proyecto.
+        Soy un desarrollador web con sede en Guadalajara y actualmente trabajo
+        como freelance. Espero poder ayudarte a implementar ideas creativas en
+        tu próximo proyecto.
       </p>
       <!-- social-media -->
       <SocialMedia />
@@ -97,84 +105,85 @@ import SocialMedia from "../components/Social.astro";
 </section>
 
 <style>
+ 
   .line {
     line-height: 95%;
   }
-    /* @keyframes vhs {
+  /* @keyframes vhs {
     0% {
       text-shadow:
-        -1px 1px 8px hsla(0, 0%, 100%, 0.6),
-        1px -1px 8px rgba(255, 255, 235, 0.7),
-        0 0 1px rgba(251, 0, 231, 0.8),
-        0 0 3px rgba(0, 233, 235, 0.8),
-        0 0 3px rgba(0, 242, 14, 0.8),
-        0 0 3px rgba(244, 45, 0, 0.8),
-        0 0 3px rgba(59, 0, 226, 0.8);
+        -1px 1px 8px hsla(0, 0%, 10%, 0.9),
+        1px -1px 8px rgba(255, 255, 235, 0.1),
+        0 0 1px rgba(251, 0, 231, 0.5),
+        0 0 3px rgba(0, 233, 235, 0.5),
+        0 0 3px rgba(0, 242, 14, 0.5),
+        0 0 3px rgba(244, 45, 0, 0.5),
+        0 0 3px rgba(59, 0, 226, 0.5);
     }
     25% {
       text-shadow:
-        -1px 1px 8px hsla(0, 0%, 100%, 0.6),
-        1px -1px 8px rgba(255, 255, 235, 0.7),
-        0 0 1px rgba(251, 0, 231, 0.8),
-        0 0 3px rgba(0, 233, 235, 0.8),
-        0 0 3px rgba(0, 242, 14, 0.8),
-        0 0 3px rgba(244, 45, 0, 0.8),
-        0 0 3px rgba(59, 0, 226, 0.8);
+        -1px 1px 8px hsla(0, 0%, 10%, 0.9),
+        1px -1px 8px rgba(255, 255, 235, 0.1),
+        0 0 1px rgba(251, 0, 231, 0.5),
+        0 0 3px rgba(0, 233, 235, 0.5),
+        0 0 3px rgba(0, 242, 14, 0.5),
+        0 0 3px rgba(244, 45, 0, 0.5),
+        0 0 3px rgba(59, 0, 226, 0.5);
     }
     45% {
       text-shadow:
-        -1px 1px 8px hsla(0, 0%, 100%, 0.6),
-        1px -1px 8px rgba(255, 255, 235, 0.7),
-        5px 0 1px rgba(251, 0, 231, 0.8),
-        0 5px 1px rgba(0, 233, 235, 0.8),
-        -5px 0 1px rgba(0, 242, 14, 0.8),
-        0 -5px 1px rgba(244, 45, 0, 0.8),
-        5px 0 1px rgba(59, 0, 226, 0.8);
+        -1px 1px 8px hsla(0, 0%, 30%, 0.6),
+        1px -1px 8px rgba(255, 255, 235, 0.1),
+        5px 0 1px rgba(251, 0, 231, 0.5),
+        0 5px 1px rgba(0, 233, 235, 0.5),
+        -5px 0 1px rgba(0, 242, 14, 0.5),
+        0 -5px 1px rgba(244, 45, 0, 0.5),
+        5px 0 1px rgba(59, 0, 226, 0.5);
     }
     50% {
       text-shadow:
-        -1px 1px 8px hsla(0, 0%, 100%, 0.6),
-        1px -1px 8px rgba(255, 255, 235, 0.7),
-        -5px 0 1px rgba(251, 0, 231, 0.8),
-        0 -5px 1px rgba(0, 233, 235, 0.8),
-        5px 0 1px rgba(0, 242, 14, 0.8),
-        0 5px 1px rgba(244, 45, 0, 0.8),
-        -5px 0 1px rgba(59, 0, 226, 0.8);
+        -1px 1px 8px hsla(0, 0%, 30%, 0.6),
+        1px -1px 8px rgba(255, 255, 235, 0.1),
+        -5px 0 1px rgba(251, 0, 231, 0.5),
+        0 -5px 1px rgba(0, 233, 235, 0.5),
+        5px 0 1px rgba(0, 242, 14, 0.5),
+        0 5px 1px rgba(244, 45, 0, 0.5),
+        -5px 0 1px rgba(59, 0, 226, 0.5);
     }
     55% {
       text-shadow:
-        -1px 1px 8px hsla(0, 0%, 100%, 0.6),
-        1px -1px 8px rgba(255, 255, 235, 0.7),
-        0 0 3px rgba(251, 0, 231, 0.8),
-        0 0 3px rgba(0, 233, 235, 0.8),
-        0 0 3px rgba(0, 242, 14, 0.8),
-        0 0 3px rgba(244, 45, 0, 0.8),
-        0 0 3px rgba(59, 0, 226, 0.8);
+        -1px 1px 8px hsla(0, 0%, 30%, 0.6),
+        1px -1px 8px rgba(255, 255, 235, 0.1),
+        0 0 3px rgba(251, 0, 231, 0.5),
+        0 0 3px rgba(0, 233, 235, 0.5),
+        0 0 3px rgba(0, 242, 14, 0.5),
+        0 0 3px rgba(244, 45, 0, 0.5),
+        0 0 3px rgba(59, 0, 226, 0.5);
     }
     90% {
       text-shadow:
-        -1px 1px 8px hsla(0, 0%, 100%, 0.6),
-        1px -1px 8px rgba(255, 255, 235, 0.7),
-        -5px 0 1px rgba(251, 0, 231, 0.8),
-        0 5px 1px rgba(0, 233, 235, 0.8),
-        5px 0 1px rgba(0, 242, 14, 0.8),
-        0 -5px 1px rgba(244, 45, 0, 0.8),
-        5px 0 1px rgba(59, 0, 226, 0.8);
+        -1px 1px 8px hsla(0, 0%, 10%, 0.9),
+        1px -1px 8px rgba(255, 255, 235, 0.1),
+        -5px 0 1px rgba(251, 0, 231, 0.5),
+        0 5px 1px rgba(0, 233, 235, 0.5),
+        5px 0 1px rgba(0, 242, 14, 0.5),
+        0 -5px 1px rgba(244, 45, 0, 0.5),
+        5px 0 1px rgba(59, 0, 226, 0.5);
     }
     100% {
       text-shadow:
-        -1px 1px 8px hsla(0, 0%, 100%, 0.6),
-        1px -1px 8px rgba(255, 255, 235, 0.7),
-        5px 0 1px rgba(251, 0, 231, 0.8),
-        0 -5px 1px rgba(0, 233, 235, 0.8),
-        -5px 0 1px rgba(0, 242, 14, 0.8),
-        0 5px 1px rgba(244, 45, 0, 0.8),
-        -5px 0 1px rgba(59, 0, 226, 0.8);
+        -1px 1px 8px hsla(0, 0%, 10%, 0.9),
+        1px -1px 8px rgba(255, 255, 235, 0.1),
+        5px 0 1px rgba(251, 0, 231, 0.5),
+        0 -5px 1px rgba(0, 233, 235, 0.5),
+        -5px 0 1px rgba(0, 242, 14, 0.5),
+        0 5px 1px rgba(244, 45, 0, 0.5),
+        -5px 0 1px rgba(59, 0, 226, 0.5);
     }
   }
 
   .vhs-effect {
-    animation: vhs 1s steps(9) 0s infinite alternate;
+    animation: vhs 1s steps(18) 0s infinite alternate;
   } */
 </style>
 
@@ -182,27 +191,24 @@ import SocialMedia from "../components/Social.astro";
   import { gsap } from "gsap";
   import { SplitText } from "gsap/SplitText";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
-  
+
   // Register GSAP plugins
   gsap.registerPlugin(SplitText);
   gsap.registerPlugin(ScrollTrigger);
-  
 
-   
-      // Create SplitText instance
-      const Text = new SplitText("#hero-description-sm", {
-        type: "words",
-        charsClass: "char",
-      });
-      
-      // Animate words using GSAP
-      gsap.from(Text.words, {
-        duration: 1.0,
-        opacity: 0,
-        y: 10,
-        stagger: 0.1,
-        filter: "blur(10px)",
-        delay: 0.3
-      });
+  // Create SplitText instance
+  const Text = new SplitText("#hero-description-sm", {
+    type: "words",
+    charsClass: "char",
+  });
 
+  // Animate words using GSAP
+  gsap.from(Text.words, {
+    duration: 1.0,
+    opacity: 0,
+    y: 10,
+    stagger: 0.1,
+    filter: "blur(10px)",
+    delay: 0.3,
+  });
 </script>

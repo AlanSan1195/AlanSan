@@ -4,24 +4,15 @@
 
 ![Portfolio Preview](https://img.shields.io/badge/Status-Live-brightgreen) ![Astro](https://img.shields.io/badge/Astro-5.11.0-orange) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.11-blue)
 
-## ✨ Lo Que Hace Especial Este Portfolio
 
-### 🎨 **Inspiración Visual: Auroras Boreales**
-El diseño está inspirado en las **auroras boreales**, creando una experiencia visual única:
-- **Efectos de luz animados** que simulan el movimiento natural de las auroras
-- **Colores degradados** que evocan los tonos verdes y azules del fenómeno
-- **Animaciones suaves** que crean una sensación de movimiento orgánico
-- **Backdrop blur** para efectos de profundidad y modernidad
-
-### 🚀 **Tecnologías Modernas**
+### 🚀 **Tecnologías**
 - **Astro 5.11** - Framework moderno para sitios web rápidos
 - **TailwindCSS 4.1** - Estilos utilitarios con configuración simplificada
 - **TypeScript** - Tipado estático para mejor desarrollo
 - **Fuentes personalizadas** - Tipografía única y expresiva
 
-## 🎯 **Buenas Prácticas Implementadas**
 
-### 📱 **Diseño Responsivo**
+### 📱 **Responsive**
 ```astro
 <!-- Ejemplo de grid responsivo -->
 <section class="grid grid-cols-14 gap-2 md:p-5 lg:px-12">
@@ -76,8 +67,8 @@ Etiquetas semánticas y ARIA para una web inclusiva:
 <div aria-hidden="true"><!-- Decoración --></div>
 ```
 
-#### **🏗️ Estructura Semántica Avanzada**
-Implementación de etiquetas semánticas modernas en el componente de blog:
+#### **🏗️ Estructura Semántica**
+Implementación de etiquetas semánticas en el componente de blog:
 
 ```astro
 <!-- Artículo con estructura semántica completa -->
