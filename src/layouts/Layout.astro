@@ -27,6 +27,11 @@ const siteUrl = "https://alansan.dev";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Preload de fuentes críticas -->
+    <link rel="preload" href="/fonts/FRONTEND.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/static.woff2" as="font" type="font/woff2" crossorigin />
+
     <meta name="description" content={description} />
     <meta name="author" content="Alan San" />
     <meta
@@ -125,19 +130,23 @@ const siteUrl = "https://alansan.dev";
   }
   @font-face {
     font-family: "frontend";
-    src: url(/public/fonts/FRONTEND.woff2) format(woff2);
+    src: url(/fonts/FRONTEND.woff2) format("woff2");
+    font-display: swap;
   }
   @font-face {
     font-family: "static";
-    src: url(/public/fonts/static.woff2) format(woff2);
+    src: url(/fonts/static.woff2) format("woff2");
+    font-display: swap;
   }
   @font-face {
     font-family: "pixel";
-    src: url(/public/fonts/pixel.woff2) format(woff2);
+    src: url(/fonts/pixel.woff2) format("woff2");
+    font-display: swap;
   }
   @font-face {
     font-family: "jet";
-    src: url(/public/fonts/JetBrainsMono-Bold.ttf) format("truetype");
+    src: url(/fonts/JetBrainsMono-Bold.ttf) format("truetype");
+    font-display: swap;
   }
 
   html,
