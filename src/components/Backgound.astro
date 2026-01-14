@@ -1,8 +1,6 @@
-<!-- Fondo animado - capa de toda la pantalla ----------------------------------------- -->
+<!-- Fondo animado - capa de toda la pantalla -->
 <div class="overflow-hidden pointer-events-none fixed inset-0 min-h-screen">
-  <!-- div que contiene a todos los divs que representan las luces -->
-  <div class="northen-lights-box rotate-17 md:rotate-35 md:scale-135  ">
-    <!-- divs que representan las luces..... -->
+  <div class="northen-lights-box rotate-17 md:rotate-30 md:scale-175">
     <div class="northen-light" style="--x: 0;  --y: -100; --scale: 0.5"></div>
     <div class="northen-light" style="--x: 12 ;--y: -100; --scale: 0.5"></div>
     <div class="northen-light" style="--x: 24;  --y: 100; --scale: 0.5"></div>
@@ -11,81 +9,74 @@
     <div class="northen-light" style="--x: 60;--y: 100; --scale: 0.5"></div>
     <div class="northen-light" style="--x: 72;--y: 100; --scale: 0.5"></div>
     <div class="northen-light" style="--x: 84;--y: 100; --scale: 0.5"></div>
-
   </div>
 </div>
 
 <style>
+  @import "tailwindcss";
+
+  /* background effect  */
   .northen-lights-box {
     position: absolute;
     inset: 0;
     translate: 40dvw -50dvh;
     opacity: 70%;
-
-
-
     filter: blur(60px) brightness(0.9);
-
-    /* se funde con fondo   */
   }
 
-  /* 3️⃣  Cada “luz” individual  ----------------------------------- */
+  /* Cada "luz" individual */
   .northen-light {
     position: absolute;
     top: 0;
     left: 0;
     width: 100px;
     height: 900px;
-    /* DE DONDE TE PUSE AL PRICNIPIO POSICIONATE * 10 PX A UN LADO  */
     --base: translate(calc(var(--x) * 12px));
     transform: var(--base);
   }
 
-  /* divas pares */
+  /* divs pares */
   .northen-light:nth-child(2n) {
     animation: fly-y 5s ease-in-out infinite alternate;
     animation-delay: 1s;
     background-image: linear-gradient(
       0deg,
       transparent,
-          #9710c0d1 15%,
-          #00f2fff3 10%,
-          #00d0ff5a 50%,
-          transparent
+      #9710c0d1 15%,
+      #00f2fff3 10%,
+      #00d0ff5a 50%,
+      transparent
     );
-    
-      }
+  }
 
-  /* divs impares  */
+  /* divs impares */
   .northen-light:nth-child(2n + 1) {
     animation: fly-x 3s ease-in-out infinite alternate;
     background-image: linear-gradient(
-       0deg,
+      0deg,
       transparent,
       #9710c0d1 15%,
       #00f2fff3 10%,
       #00d0ff5a 50%,
-          transparent
+      transparent
     );
   }
 
   @keyframes fly-y {
     from {
       transform: var(--base) translateY(-15%);
-
     }
     to {
       transform: var(--base) translateY(10%);
-
     }
   }
+
   @keyframes fly-x {
     from {
       transform: var(--base) translateX(-15%);
     }
     to {
       transform: var(--base) translateX(-30%);
-
     }
   }
 </style>

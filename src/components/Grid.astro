@@ -4,7 +4,7 @@ import projectdata from "../data/projects.json";
 ---
 
 <section
-  class="grid grid-cols-14 gap-2 text-left grid-rows-2 md:grid-rows-2 mt-24 mb-10 md:mx-16 mx-1 z-30"
+  class="grid grid-cols-14 gap-2 text-left grid-rows-2 md:grid-rows-2 mt-10 mb-10 md:mx-16 mx-1 z-30"
   aria-label="Proyectos y contenido destacado"
 >
   <!-- About Me Section -->
@@ -36,8 +36,9 @@ import projectdata from "../data/projects.json";
         <p
           class="informative font-static text-base md:text-base text-gray-300 text-pretty leading-relaxed"
         >
-          <span class="text-white font-semibold opacity-100 ">+2 años de experiencia</span>,
-          una formación autodidacta y una gran variedad de proyectos que han
+          <span class="text-white font-semibold opacity-100"
+            >+2 años de experiencia</span
+          >, una formación autodidacta y una gran variedad de proyectos que han
           requerido todo tipo de interactividad, transiciones y animaciones.
         </p>
 
@@ -49,8 +50,9 @@ import projectdata from "../data/projects.json";
             interfaces intuitivas y funcionales
           </span>, donde cada detalle tenga un propósito y el usuario disfrute
           esos segundos mientras navega.
-          <span class="text-white font-semibold opacity-100">Mi enfoque está ahí</span>, en
-          crecer y mejorar estas habilidades que creo que marcan una gran
+          <span class="text-white font-semibold opacity-100"
+            >Mi enfoque está ahí</span
+          >, en crecer y mejorar estas habilidades que creo que marcan una gran
           diferencia en la experiencia del usuario, en conjunto con la
           <span class="text-white font-semibold opacity-100">
             accesibilidad y el rendimiento.
@@ -77,7 +79,6 @@ import projectdata from "../data/projects.json";
       class="bg-black/10 rounded-3xl flex flex-col h-full w-full backdrop-blur-xl"
       id="project-scroll-link"
     >
-      
       <!-- embuelve proyectos  -->
       <div class="w-full h-full scale-95 mb-8 group relative">
         <div
@@ -90,11 +91,13 @@ import projectdata from "../data/projects.json";
           aria-hidden="true"
         >
         </div>
+
         <video
           autoplay
           muted
           loop
           playsinline
+          preload="none"
           class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[90%] object-cover flex justify-center items-center rounded-[20px] transition-all duration-300 group-hover:blur-sm"
           aria-label="Video demostrativo de proyectos de Alan San"
         >
@@ -145,18 +148,15 @@ import projectdata from "../data/projects.json";
       <div class="flex gap-2 items-center m-3 md:m-0">
         <!-- Imagen a la izquierda -->
         <a
-          href="https://aycaramba.netlify.app/"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/simpsons"
           class="w-auto flex justify-center md:justify-start m-2"
         >
           <img
             src="/imagenes/simpsons-title.svg"
             alt="Alan trabajando"
-            class="w-30 h-30  rounded-xl -rotate-3 md:rotate-0 object-fill md:m-1
+            class="w-30 h-30 rounded-xl -rotate-3 md:rotate-0 object-fill md:m-1
               hover:scale-110 hover:rotate-1 transition-all duration-200"
             loading="lazy"
-            
           />
         </a>
 
@@ -166,19 +166,29 @@ import projectdata from "../data/projects.json";
           <p
             class="text-base md:text-base text-gray-300 font-static informative m-0 break-words overflow-hidden"
           >
-            Recreando la animación de inicio de partida de la nueva temporada de <span class="text-white font-semibold opacity-100">Fortnite x Los Simpsons</span>.
+            Recreando la animación de inicio de partida de la nueva temporada de <span
+              class="text-white font-semibold opacity-100"
+              >Fortnite x Los Simpsons</span
+            >.
             <a
-              href="/simpsons"
+              href="https://aycaramba.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               class="text-yellow-400 font-semibold no-underline">Ver Proyecto</a
             >
           </p>
           <p
             class="text-base md:text-base text-gray-300 font-static informative mt-2 break-words overflow-hidden"
           >
-            Usaré una <a href="https://thesimpsonsapi.com/" target="_blank" rel="noopener noreferrer" class="font-semibold opacity-100 font-static no-underline text-yellow-400">la API de los Simpsons</a>
-            para complementar esta idea. 💛 
+            Usaré una <a
+              href="https://thesimpsonsapi.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-semibold opacity-100 font-static no-underline text-yellow-400"
+              >la API de los Simpsons</a
+            >
+            para complementar esta idea. 💛
           </p>
-          
         </div>
       </div>
     </div>
@@ -253,7 +263,6 @@ import projectdata from "../data/projects.json";
   .informative {
     font-family: "static";
     opacity: 0.8;
-
   }
 
   /* :is(.dark *) agregar esto al boxgen cuando hagamso el modo obscuro  */
