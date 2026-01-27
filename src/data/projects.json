@@ -289,7 +289,7 @@
       "extra": "Usa SSE para streaming en tiempo real y Clerk para autenticacion."
     },
     "image": {
-      "src": "/src/assets/rocketchat.svg",
+      "src": "/imagenes/rocketchat.svg",
       "alt": "Captura de pantalla de RocketChat - Chat Simulation Stream"
     },
     "links": {
