@@ -1,11 +1,12 @@
 {
   "suitch": {
     "id": "suitch",
+    "order": 1,
     "section": "/",
     "title": "Plataforma de Streaming - Suitch",
     "subTitle": "Simulación de Twitch desarrollada con React, y la API oficial de Twitch",
     "image": {
-      "src": "/imagenes/suitch2ble.webp",
+      "src": "/imagenes/suitchweb.webp",
       "alt": "Captura de pantalla de Suitch - Plataforma de streaming"
     },
     "links": {
@@ -43,6 +44,7 @@
   },
   "matera": {
     "id": "matera",
+    "order": 2,
     "section": "/proyectos",
     "title": "Landing page - La Matera",
     "subTitle": "Rediseño completo de la web de un restaurante argentino en la ciudad de Guadalajara",
@@ -89,6 +91,7 @@
   },
   "valmari": {
     "id": "valmari",
+    "order": 3,
     "section": "/",
     "title": "Valmarí - Barra de Snacks",
     "subTitle": "Sitio web para emprendimiento local de barras de snacks en Guadalajara.",
@@ -134,6 +137,7 @@
   },
   "airpods": {
     "id": "airpods",
+    "order": 4,
     "section": "/proyectos",
     "title": "GSAP Scroll Animation Demo",
     "subTitle": "Animación como la Web de Apple",
@@ -179,6 +183,7 @@
   },
   "arkanoid": {
     "id": "arkanoid",
+    "order": 5,
     "section": "/proyectos",
     "title": "Arkanoid Game",
     "subTitle": "Recreación del clásico juego arcade construida con JavaScript vanilla y Canvas",
@@ -218,6 +223,7 @@
   },
   "gta": {
     "id": "gta",
+    "order": 6,
     "section": "/proyectos",
     "title": "GTA VI Landing Page",
     "subTitle": "Recreación del efecto scroll icónico del sitio oficial de Rockstar Games",
@@ -245,11 +251,12 @@
   },
   "simpsons": {
     "id": "simpsons",
-    "section": "/",
+    "order": 7,
+    "section": "/proyectos",
     "title": "The Simpsons - Animación Fortnite",
     "subTitle": "Animacion de Fortnite x Los Simpsons",
     "image": {
-      "src": "/imagenes/simpsons-title.svg",
+      "src": "/imagenes/s.webp",
       "alt": "Captura de pantalla de The Simpsons Animation"
     },
     "links": {
@@ -268,6 +275,57 @@
       "Animación de escala masiva del logo de Los Simpsons (scale: 1 a 100) sincronizada con el scroll usando ScrollTrigger. esa es una de las claves para estas animaciones tan grandes.",
 
       "GSAP: timeline, ScrollTrigger, animaciones simultáneas y parámetros clave como scale, x/y, opacity y duration."
+    ]
+  },
+  "rocketchat": {
+    "id": "rocketchat",
+    "order": 8,
+    "section": "/",
+    "title": "RocketChat - Chat Simulation Stream",
+    "subTitle": "Plataforma para streamers que simula una audiencia interactiva en tiempo real con IA",
+    "lately": {
+      "description": "Creando una plataforma fullstack para streamers que genera chat interactivo con IA.",
+      "highlight": "RocketChat",
+      "extra": "Usa SSE para streaming en tiempo real y Clerk para autenticacion."
+    },
+    "image": {
+      "src": "/src/assets/rocketchat.svg",
+      "alt": "Captura de pantalla de RocketChat - Chat Simulation Stream"
+    },
+    "links": {
+      "website": "https://www.rocketchat.online/",
+      "github": "https://github.com/AlanSan1195/chat-simulation-stream"
+    },
+    "review": [
+      "<strong class='text-white'>RocketChat</strong> es una plataforma web diseñada para streamers principiantes que simula una audiencia interactiva en tiempo real. El proyecto genera mensajes de chat contextuales segun el videojuego seleccionado, utilizando inteligencia artificial para crear una experiencia de streaming mas dinamica.",
+      "implementa autenticacion con Clerk, streaming en tiempo real con Server-Sent Events (SSE), y un sistema de fallback entre multiples proveedores de IA (Groq y Cerebras) para garantizar disponibilidad continua del servicio."
+    ],
+    "themes": ["IA", "SSE", "Auth", "Backend", "Fullstack"],
+    "technologies": ["Astro 5", "React 19", "Tailwind CSS 4", "Clerk", "Groq SDK", "Cerebras SDK", "TypeScript"],
+    "technologiesDetails": [
+      {
+        "name": "Server-Sent Events (SSE)",
+        "description": "Implementacion de streaming en tiempo real usando ReadableStream y TextEncoder para enviar mensajes de chat al cliente cada 3-7 segundos sin polling constante."
+      },
+      {
+        "name": "Patron Strategy + Failover",
+        "description": "Sistema de multiples proveedores de IA (Groq y Cerebras) con interfaz comun que permite intercambiarlos sin cambiar el codigo consumidor. Si uno falla, automaticamente usa el siguiente."
+      },
+      {
+        "name": "Clerk Authentication",
+        "description": "Autenticacion completa con tema oscuro y espanol, incluyendo middleware de proteccion de rutas y CSP dinamica para desarrollo y produccion."
+      },
+      {
+        "name": "Cache en Memoria",
+        "description": "Sistema de cache con Map para frases generadas por juego y limite de juegos por usuario, evitando llamadas innecesarias a la IA."
+      }
+    ],
+    "implementations": [
+      "SSE con ReadableStream para streaming de mensajes en tiempo real, incluyendo cleanup automatico cuando el cliente cierra la conexion usando AbortSignal.",
+      "Patron Singleton Lazy para clientes de API, creando una sola instancia reutilizada con validacion temprana de API keys.",
+      
+      "Middleware de seguridad con CSP dinamica segun entorn y headers de proteccion"
+      
     ]
   }
 }

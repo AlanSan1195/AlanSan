@@ -1,8 +1,15 @@
 {
   "nuevo-proyecto": {
     "id": "nuevo-proyecto",
+    "order": 9,
+    "section": "/",
     "title": "Título del Proyecto",
     "subTitle": "Descripción breve del proyecto (1-2 líneas)",
+    "lately": {
+      "description": "Texto descriptivo para la sección 'Últimamente' en el home.",
+      "highlight": "Palabra o frase destacada",
+      "extra": "Texto adicional opcional (puede omitirse)"
+    },
     "image": {
       "src": "/imagenes/proyecto.webp",
       "alt": "Descripción de la imagen del proyecto"
@@ -15,6 +22,7 @@
       "<strong class='text-white'>Nombre del proyecto</strong> es... (primer párrafo)",
       "Segundo párrafo con más detalles sobre el proyecto"
     ],
+    "themes": ["Theme1", "Theme2", "Theme3"],
     "technologies": [
       "Tecnología 1",
       "Tecnología 2",

@@ -1,0 +1,8 @@
+---
+import ProjectDetail from "../components/ProjectDetail.astro";
+import projectsData from "../data/projects.json";
+
+const project = projectsData.rocketchat;
+---
+
+<ProjectDetail project={project} />
