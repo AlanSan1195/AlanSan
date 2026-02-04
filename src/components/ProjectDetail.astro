@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Github from "../assets/github.svg";
 import WebSiteIcon from "../assets/website.svg";
+import { string } from "astro:schema";
 
 interface Props {
   project: {
@@ -11,6 +12,7 @@ interface Props {
     subTitle: string;
     image: {
       src: string;
+      srcHero?: string;
       alt: string;
     };
     links: {
@@ -132,7 +134,7 @@ const { project } = Astro.props;
       <figure class="max-w-4xl mx-auto px-4">
         <img
           transition:name={`transition-${project.id}`}
-          src={project.image.src}
+          src={project.image.srcHero ?? project.image.src}
           alt={project.image.alt}
           class="w-full h-auto object-cover bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[1px] outline-black rounded-3xl"
           loading="lazy"

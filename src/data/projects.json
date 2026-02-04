@@ -17,7 +17,7 @@
       "<strong class='text-white'>Suitch</strong> es una simulación de la plataforma Twitch que desarrollé para practicar y perfeccionar mis habilidades en React. El proyecto permite buscar streamers reales y ver su contenido en vivo, replicando la experiencia de usuario de la plataforma original.",
       "Incluye características como iniciar sesión con Twitch, buscar a cualquier streamer que tenga un usuario en la plataforma de Twitch y sección de canales que están vivo."
     ],
-    "themes": ["UI", "API`s", "Hooks", "Frontend",".env"],
+    "themes": ["UI", "API`s", "Hooks", "Frontend", ".env"],
     "technologies": ["Astro", "React", "Tailwind CSS"],
     "technologiesDetails": [
       {
@@ -86,13 +86,12 @@
       "Efecto de humo 3D con Three.js adaptado de la comunidad de Midudev, creando animación de partículas continua en el fondo.",
       "Diseño responsive con mobile-first, navegación adaptable (menú hamburguesa en móvil) y carruseles horizontales optimizados para touch.",
       "Sistema de reservas integrado vía WhatsApp con CTAs estratégicos en todo el sitio."
-      
     ]
   },
   "valmari": {
     "id": "valmari",
     "order": 3,
-    "section": "/",
+    "section": "/proyectos",
     "title": "Valmarí - Barra de Snacks",
     "subTitle": "Sitio web para emprendimiento local de barras de snacks en Guadalajara.",
     "image": {
@@ -107,7 +106,7 @@
       "<strong class='text-white'>Valmarí</strong> es un sitio web creado para posicionar localmente un emprendimiento de barras de snacks en Guadalajara. En un mercado saturado de sitios web genéricos, Valmarí se destaca con animaciones fluidas, transiciones interactivas únicas y un diseño personalizado que refleja la identidad de marca.",
       "El proyecto se enfoca en tres pilares fundamentales: <strong class='text-white'>SEO local optimizado</strong> para búsquedas como 'barra de snacks gdl' y 'eventos guadalajara', <strong class='text-white'>diferenciación visual</strong> con animaciones personalizadas que crean una experiencia memorable, y <strong class='text-white'>conversión efectiva</strong> diseñada para captar la atención y generar interés en los servicios."
     ],
-    "themes": ["UI", "Transitions", "SEO", "Frontend","CSS"],
+    "themes": ["UI", "Transitions", "SEO", "Frontend", "CSS"],
     "technologies": ["Astro", "TailwindCSS", "Netlify", "Schema.org"],
     "technologiesDetails": [
       {
@@ -200,7 +199,13 @@
       "El juego incluye 13 bloques desafiantes, física de pelota realista con colisiones precisas y controles con teclado y sprites pixel art auténticos al estilo arcade."
     ],
     "themes": ["Game Dev", "Canvas", "JavaScript", "Physics", "Retro"],
-    "technologies": ["HTML5", "CSS3", "JavaScript ES6", "Canvas API", "Sprites"],
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript ES6",
+      "Canvas API",
+      "Sprites"
+    ],
     "technologiesDetails": [
       {
         "name": "Canvas",
@@ -210,7 +215,7 @@
         "name": "JavaScript Vanilla",
         "description": "Implementación de toda la lógica del juego sin frameworks, incluyendo física de colisiones, sistema de vidas y controles de teclado."
       },
-     
+
       {
         "name": "Sprites Pixel Art",
         "description": "Uso de imágenes sprite para elementos del juego (paleta, pelota, bloques, bordes) manteniendo la estética retro arcade."
@@ -241,9 +246,7 @@
     ],
     "themes": ["Animation", "GSAP", "ScrollTrigger", "UI", "Masks"],
     "technologies": ["Astro", "GSAP", "TailwindCSS", "ScrollTrigger"],
-    "technologiesDetails": [
-     
-    ],
+    "technologiesDetails": [],
     "implementations": [
       "Efecto de máscara CSS con logo de GTA VI que revela el contenido usando mask-image, mask-position y mask-size animados con GSAP.",
       "Efectos de clip-path tipo cortina: transición elíptica del footer desde 'ellipse(60% 0% at 50% 190%)' hasta 'ellipse(60% 100% at 50% -100%)' para efecto de revelado y desvanecimiento."
@@ -252,11 +255,11 @@
   "simpsons": {
     "id": "simpsons",
     "order": 7,
-    "section": "/proyectos",
+    "section": "/",
     "title": "The Simpsons - Animación Fortnite",
     "subTitle": "Animacion de Fortnite x Los Simpsons",
     "image": {
-      "src": "/imagenes/s.webp",
+      "src": "/imagenes/the-simpsons.webp",
       "alt": "Captura de pantalla de The Simpsons Animation"
     },
     "links": {
@@ -268,9 +271,14 @@
       "El proyecto es principalmente educativo y experimental, enfocado en entender cómo funcionan las animaciones complejas sincronizadas con scroll y cómo combinar múltiples transformaciones para crear efectos visuales impactantes. La elección de Los Simpsons es perfecta para practicar la integración de datos externos con animaciones frontend."
     ],
     "themes": ["Animation", "GSAP", "ScrollTrigger", "Learning", "API"],
-    "technologies": ["Astro", "GSAP", "ScrollTrigger", "Tailwind CSS", "The Simpsons API"],
-    "technologiesDetails": [
+    "technologies": [
+      "Astro",
+      "GSAP",
+      "ScrollTrigger",
+      "Tailwind CSS",
+      "The Simpsons API"
     ],
+    "technologiesDetails": [],
     "implementations": [
       "Animación de escala masiva del logo de Los Simpsons (scale: 1 a 100) sincronizada con el scroll usando ScrollTrigger. esa es una de las claves para estas animaciones tan grandes.",
 
@@ -290,6 +298,7 @@
     },
     "image": {
       "src": "/imagenes/rocketchat.svg",
+      "srcHero": "/imagenes/rocketchat.webp",
       "alt": "Captura de pantalla de RocketChat - Chat Simulation Stream"
     },
     "links": {
@@ -301,7 +310,15 @@
       "implementa autenticacion con Clerk, streaming en tiempo real con Server-Sent Events (SSE), y un sistema de fallback entre multiples proveedores de IA (Groq y Cerebras) para garantizar disponibilidad continua del servicio."
     ],
     "themes": ["IA", "SSE", "Auth", "Backend", "Fullstack"],
-    "technologies": ["Astro 5", "React 19", "Tailwind CSS 4", "Clerk", "Groq SDK", "Cerebras SDK", "TypeScript"],
+    "technologies": [
+      "Astro 5",
+      "React 19",
+      "Tailwind CSS 4",
+      "Clerk",
+      "Groq SDK",
+      "Cerebras SDK",
+      "TypeScript"
+    ],
     "technologiesDetails": [
       {
         "name": "Server-Sent Events (SSE)",
@@ -323,9 +340,8 @@
     "implementations": [
       "SSE con ReadableStream para streaming de mensajes en tiempo real, incluyendo cleanup automatico cuando el cliente cierra la conexion usando AbortSignal.",
       "Patron Singleton Lazy para clientes de API, creando una sola instancia reutilizada con validacion temprana de API keys.",
-      
+
       "Middleware de seguridad con CSP dinamica segun entorn y headers de proteccion"
-      
     ]
   }
 }

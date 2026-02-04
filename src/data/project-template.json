@@ -12,6 +12,7 @@
     },
     "image": {
       "src": "/imagenes/proyecto.webp",
+      "srcHero": "/imagenes/proyecto-hero.webp",
       "alt": "Descripción de la imagen del proyecto"
     },
     "links": {

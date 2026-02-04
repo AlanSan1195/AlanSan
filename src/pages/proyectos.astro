@@ -62,7 +62,7 @@ const selectedProjects = projectsArray
             >
               <img
                 transition:name={`transition-${project.id}`}
-                src={project.image.src}
+                src={project.image.srcHero ?? project.image.src}
                 alt={project.image.alt}
                 class="w-full h-full rounded-xl object-cover"
                 loading="lazy"
