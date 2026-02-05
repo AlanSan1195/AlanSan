@@ -179,13 +179,13 @@ const beforeLastProject = sortedProjects[1];
             <span class="text-[#F55B30] font-semibold opacity-100"
               >{latestProject.lately?.highlight}</span
             >
-            <a
-              href={latestProject.links.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-white font-semibold no-underline">Ver Proyecto</a
-            >
           </p>
+          <a
+            href={latestProject.links.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-white font-semibold no-underline text-base">Ver Proyecto</a
+          >
           {latestProject.lately?.extra && (
             <p
               class="text-base md:text-base text-gray-300 font-static informative mt-2 break-words overflow-hidden"
@@ -266,6 +266,7 @@ const beforeLastProject = sortedProjects[1];
 <style>
   .informative {
     font-family: "static";
+    opacity: 0.8;
 
   }
 
