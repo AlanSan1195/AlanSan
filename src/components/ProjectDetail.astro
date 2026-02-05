@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import Github from "../assets/github.svg";
 import WebSiteIcon from "../assets/website.svg";
-import { string } from "astro:schema";
 
 interface Props {
   project: {
@@ -19,7 +18,6 @@ interface Props {
       website?: string;
       github?: string;
     };
-
     review: string[];
     themes: string[];
     technologies: string[];
@@ -32,21 +30,125 @@ interface Props {
 }
 
 const { project } = Astro.props;
+const siteUrl = "https://alansan.dev";
+
+// Limpiar HTML de los reviews para la descripción
+const cleanDescription = project.review[0]
+  ?.replace(/<[^>]*>/g, '')
+  ?.substring(0, 160) + '...' || project.subTitle;
+
+// JSON-LD específico para el proyecto (SoftwareApplication/CreativeWork)
+const projectJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": `${siteUrl}/${project.id}`,
+  "name": project.title,
+  "description": project.subTitle,
+  "image": `${siteUrl}${project.image.srcHero ?? project.image.src}`,
+  "url": project.links.website,
+  "applicationCategory": "WebApplication",
+  "operatingSystem": "Web Browser",
+  "author": {
+    "@type": "Person",
+    "@id": `${siteUrl}/#person`,
+    "name": "Alan San"
+  },
+  "creator": {
+    "@type": "Person",
+    "@id": `${siteUrl}/#person`,
+    "name": "Alan San"
+  },
+  ...(project.links.github && {
+    "codeRepository": project.links.github
+  }),
+  "programmingLanguage": project.technologies,
+  "keywords": [...project.themes, ...project.technologies].join(", "),
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/OnlineOnly"
+  }
+};
+
+// Breadcrumb JSON-LD
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": siteUrl
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Proyectos",
+      "item": `${siteUrl}/proyectos`
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": project.title,
+      "item": `${siteUrl}/${project.id}`
+    }
+  ]
+};
+
+// Combinar ambos JSON-LD
+const combinedJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [projectJsonLd, breadcrumbJsonLd]
+};
 ---
 
 <Layout 
-  title={`${project.title} - Alan San`}
-  description={project.subTitle}
-  image={project.image.src}
+  title={`${project.title} - Proyecto de Alan San | Desarrollador Frontend`}
+  description={cleanDescription}
+  image={project.image.srcHero ?? project.image.src}
+  type="article"
+  jsonLd={combinedJsonLd}
 >
-  <article itemscope itemtype="https://schema.org/CreativeWork" class="">
+  <article itemscope itemtype="https://schema.org/SoftwareApplication">
+    <meta itemprop="applicationCategory" content="WebApplication" />
+    <meta itemprop="operatingSystem" content="Web Browser" />
+    
     <header
       class="relative max-w-3xl md:max-w-4xl mx-auto overflow-hidden pt-16"
     >
+      <!-- Breadcrumb Navigation -->
+      <nav 
+        class="relative px-4 mb-4" 
+        aria-label="Breadcrumb"
+      >
+        <ol class="flex items-center gap-2 text-sm text-gray-400" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="/" itemprop="item" class="hover:text-white transition-colors">
+              <span itemprop="name">Inicio</span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li aria-hidden="true">/</li>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="/proyectos" itemprop="item" class="hover:text-white transition-colors">
+              <span itemprop="name">Proyectos</span>
+            </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li aria-hidden="true">/</li>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name" class="text-white">{project.title}</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
       <nav class="relative px-4 mb-6" aria-label="Navegación del proyecto">
         <a
           href={`${project.section}`}
-          class="p-3 w-fit bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[1px] outline-black rounded-full text-sm text-gray-300 hover:text-white justify-center flex"
+          class="p-3 w-fit bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[1px] outline-black rounded-full text-sm text-gray-300 hover:text-white justify-center flex transition-colors"
           aria-label="Volver al portafolio principal"
         >
           <svg
@@ -102,6 +204,7 @@ const { project } = Astro.props;
                 rel="noopener noreferrer"
                 aria-label={`Ver código fuente de ${project.title} en GitHub`}
                 class="text-white/50 hover:text-white/70 hover:scale-110 transition-all duration-100 focus:outline-none rounded"
+                itemprop="codeRepository"
               >
                 <Github class="w-7 h-7 md:w-8 md:h-8" aria-hidden="true" />
               </a>
@@ -137,27 +240,29 @@ const { project } = Astro.props;
           src={project.image.srcHero ?? project.image.src}
           alt={project.image.alt}
           class="w-full h-auto object-cover bg-black/40 border-[1.5px] border-white/20 outline outline-offset-[1px] outline-black rounded-3xl"
-          loading="lazy"
+          loading="eager"
           itemprop="image"
           width="1200"
           height="675"
         />
+        <figcaption class="sr-only">{project.image.alt}</figcaption>
       </figure>
     </header>
+
     {
       project.review.length > 0 && (
         <section
           class="py-6 max-w-3xl md:max-w-4xl mx-auto"
           aria-labelledby="project-overview"
         >
-          <div class="px-4 ">
+          <div class="px-4">
             <h2
               id="project-overview"
-              class="text-2xl md:text-5xl font-static text-white mb-6 "
+              class="text-2xl md:text-5xl font-static text-white mb-6"
             >
               {project.subTitle}
             </h2>
-            <div class="flex flex-col" itemprop="about">
+            <div class="flex flex-col" itemprop="description">
               {project.review.map((paragraph) => (
                 <p
                   class="font-static text-sm md:text-medium md:text-xl text-gray-300 mb-4"
@@ -176,7 +281,7 @@ const { project } = Astro.props;
           class="py-6 z-10 max-w-3xl md:max-w-4xl mx-auto px-4"
           aria-labelledby="technologies-section"
         >
-          <div class="px-4 ">
+          <div class="px-4">
             <h2
               id="technologies-section"
               class="text-2xl md:text-5xl font-bold text-white mb-6"
@@ -187,8 +292,8 @@ const { project } = Astro.props;
               {project.technologiesDetails.map((tech) => (
                 <li>
                   <p class="font-static text-sm md:text-medium md:text-xl text-gray-300">
-                    <strong class="text-white">{tech.name}:</strong>{" "}
-                    <span itemprop="technicalSkill">{tech.description}</span>
+                    <strong class="text-white" itemprop="programmingLanguage">{tech.name}:</strong>{" "}
+                    <span>{tech.description}</span>
                   </p>
                 </li>
               ))}
@@ -212,7 +317,7 @@ const { project } = Astro.props;
               Implementaciones
             </h2>
 
-            <ul class="space-y-3 text-gray-300 font-static px-1">
+            <ul class="space-y-3 text-gray-300 font-static px-1" itemprop="featureList">
               {project.implementations.map((implementation) => (
                 <li class="flex font-static m-0 my-2 text-gray-300 text-sm md:text-medium md:text-xl">
                   <span
@@ -229,18 +334,42 @@ const { project } = Astro.props;
         </section>
       )
     }
-      <h4 class="px-5 sm:px-8 md:px-10">Enlace al proyecto: <a href={project.links.website} class="text-yellow-400 font-semibold no-underline " target="_blank" rel="noopener noreferrer">{project.links.website}</a></h4>
+
+    <footer class="px-5 sm:px-8 md:px-10 pb-8">
+      <p class="text-lg">
+        Enlace al proyecto: 
+        <a 
+          href={project.links.website} 
+          class="text-yellow-400 font-semibold no-underline hover:underline" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          itemprop="url"
+        >
+          {project.links.website}
+        </a>
+      </p>
+      
+      <!-- Author info for SEO -->
+      <div class="mt-4 text-sm text-gray-400" itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <span>Desarrollado por </span>
+        <a href="https://alansan.dev" itemprop="url" class="text-white hover:text-yellow-400 transition-colors">
+          <span itemprop="name">Alan San</span>
+        </a>
+      </div>
+    </footer>
   </article>
 </Layout>
 
 <style>
-  code {
-    font-family: "Courier New", monospace;
-    line-height: 1.4;
-  }
-  .informative {
-    font-family: "static";
-    font-size: 20px;
-    opacity: 0.8;
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 </style>

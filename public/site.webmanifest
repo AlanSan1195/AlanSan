@@ -1,0 +1,21 @@
+{
+  "name": "Alan San - Portfolio",
+  "short_name": "Alan San",
+  "description": "Portfolio profesional de Alan San, desarrollador frontend y diseñador web en Guadalajara, México",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#161616",
+  "theme_color": "#161616",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "development", "design"],
+  "lang": "es-MX",
+  "dir": "ltr"
+}
