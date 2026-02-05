@@ -1,9 +1,24 @@
-<!-- Fondo animado - capa de toda la pantalla -->
+---
+// Efecto de auroras boreales - persiste durante View Transitions
+---
+
+<div 
+  class="overflow-hidden pointer-events-none fixed inset-0 min-h-screen"
+  data-astro-transition-persist="northern-lights"
+>
+  <div class="northen-lights-box rotate-17 md:rotate-30 md:scale-135">
+    <div class="northen-light" style="--x: 0;  --y: -100; --scale: 0.5"></div>
+    <div class="northen-light" style="--x: 12 ;--y: -100; --scale: 0.5"></div>
+    <div class="northen-light" style="--x: 24;  --y: 100; --scale: 0.5"></div>
+    <div class="northen-light" style="--x: 36;--y: 100; --scale: 0.5"></div>
+    <div class="northen-light" style="--x: 48;--y: 100; --scale: 0.5"></div>
+    <div class="northen-light" style="--x: 60;--y: 100; --scale: 0.5"></div>
+    <div class="northen-light" style="--x: 72;--y: 100; --scale: 0.5"></div>
+    <div class="northen-light" style="--x: 84;--y: 100; --scale: 0.5"></div>
+  </div>
+</div>
 
 <style>
-  @import "tailwindcss";
-
-  /* background effect  */
   .northen-lights-box {
     position: absolute;
     inset: 0;
@@ -12,7 +27,6 @@
     filter: blur(60px) brightness(0.9);
   }
 
-  /* Cada "luz" individual */
   .northen-light {
     position: absolute;
     top: 0;
@@ -23,7 +37,6 @@
     transform: var(--base);
   }
 
-  /* divs pares */
   .northen-light:nth-child(2n) {
     animation: fly-y 5s ease-in-out infinite alternate;
     animation-delay: 1s;
@@ -37,7 +50,6 @@
     );
   }
 
-  /* divs impares */
   .northen-light:nth-child(2n + 1) {
     animation: fly-x 3s ease-in-out infinite alternate;
     background-image: linear-gradient(
