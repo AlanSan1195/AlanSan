@@ -139,8 +139,16 @@ const combinedJsonLd = {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#1c1918"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#f5f5f4"
+    />
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>
@@ -158,7 +166,8 @@ const combinedJsonLd = {
       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
     <meta name="googlebot" content="index, follow" />
-    <meta name="theme-color" content="#161616" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c191800" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f5f400" /> 
     <meta name="color-scheme" content="dark" />
     <meta name="format-detection" content="telephone=no" />
 
@@ -319,5 +328,6 @@ const combinedJsonLd = {
     transition:
       background-color 0.3s ease,
       color 0.3s ease;
+      
   }
 </style>
