@@ -2,14 +2,41 @@
 import Layout from "../layouts/Layout.astro";
 import ProjectData from "../data/projects.json";
 
-// Obtener todos los proyectos excepto Suitch (ya destacado en home), ordenados por order (más reciente primero)
+// Obtener todos los proyectos ordenados por order (más reciente primero)
 const projectsArray = Object.values(ProjectData);
 const selectedProjects = projectsArray
   .filter((project) => project.id)
   .sort((a, b) => b.order - a.order);
+
+const pageTitle = "Proyectos | Alan San - Desarrollador Frontend";
+const pageDescription = `Explora ${selectedProjects.length} proyectos de desarrollo web: aplicaciones React, landing pages con animaciones GSAP, juegos en Canvas y más. Portfolio de Alan San, desarrollador frontend en Guadalajara.`;
+
+// JSON-LD para la colección de proyectos
+const projectsJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: pageTitle,
+  description: pageDescription,
+  url: "https://alansan.dev/proyectos",
+  mainEntity: {
+    "@type": "ItemList",
+    numberOfItems: selectedProjects.length,
+    itemListElement: selectedProjects.map((project, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `https://alansan.dev/${project.id}`,
+      name: project.title,
+    })),
+  },
+};
 ---
 
-<Layout title="Proyectos de Scroll - Alan San">
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  image="/imagenes/FotoPerfil.webp"
+  jsonLd={projectsJsonLd}
+>
   <!-- Back to Portfolio -->
   <section
     class="relative max-w-3xl md:max-w-4xl mx-auto overflow-hidden pt-10 z-10"
@@ -64,6 +91,9 @@ const selectedProjects = projectsArray
                 alt={project.image.alt}
                 class="w-full h-full object-cover"
                 loading="lazy"
+                width="640"
+                height="360"
+                decoding="async"
               />
 
               {/* Overlay con título al hacer hover */}

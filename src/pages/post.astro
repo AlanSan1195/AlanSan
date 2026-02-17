@@ -3,9 +3,16 @@ import Layout from "../layouts/Layout.astro";
 
 // Placeholder para futuros posts - cuando tengas contenido, puedes importar de un JSON o usar Content Collections
 const posts: { id: string; title: string; description: string; date: string }[] = [];
+
+const pageTitle = "Blog | Alan San - Desarrollo Web y Frontend";
+const pageDescription = "Artículos y recursos sobre desarrollo frontend, JavaScript, React, Astro, animaciones GSAP y diseño web. Consejos y aprendizajes de un desarrollador en Guadalajara.";
 ---
 
-<Layout title="Posts - Alan San">
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  image="/imagenes/FotoPerfil.webp"
+>
   <section
     class="relative max-w-3xl md:max-w-4xl mx-auto overflow-hidden pt-10 z-10"
   >
