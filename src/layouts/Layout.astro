@@ -1,7 +1,5 @@
 ---
-import NorthernLights from "../components/NorthernLights.astro";
 import Header from "../components/Header.astro";
-import Backdrop from "../components/Backdrop.astro";
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
 
@@ -19,7 +17,7 @@ export interface Props {
 const {
   title = "Alan San - Desarrollador Frontend & Diseñador Web en Guadalajara",
   description = "Desarrollador frontend y diseñador web en Guadalajara, México. Especializado en React, Astro, JavaScript y experiencias digitales modernas. +2 años de experiencia creando interfaces intuitivas y funcionales.",
-  image = "/imagenes/FotoPerfil.webp",
+  image = "/imagenes/mi-logo.webp",
   canonical = Astro.url.href,
   type = "website",
   publishedDate,
@@ -46,7 +44,7 @@ const personJsonLd = {
   url: siteUrl,
   image: {
     "@type": "ImageObject",
-    url: `${siteUrl}/imagenes/FotoPerfil.webp`,
+    url: `${siteUrl}/imagenes/mi-logo.webp`,
     width: 400,
     height: 400,
   },
@@ -166,8 +164,6 @@ const combinedJsonLd = {
       content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     />
     <meta name="googlebot" content="index, follow" />
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c191800" />
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f5f400" /> 
     <meta name="color-scheme" content="dark" />
     <meta name="format-detection" content="telephone=no" />
 
@@ -251,16 +247,13 @@ const combinedJsonLd = {
     </script>
   </head>
   <body>
-    <!-- <NorthernLights /> -->
     <Header />
-
     <main
       class="flex flex-col justify-center mx-auto items-center max-w-4xl px-4 relative"
     >
       <slot />
       <Footer />
     </main>
-    <Backdrop />
   </body>
 </html>
 <style>
@@ -328,6 +321,5 @@ const combinedJsonLd = {
     transition:
       background-color 0.3s ease,
       color 0.3s ease;
-      
   }
 </style>

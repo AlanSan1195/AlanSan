@@ -1,6 +1,6 @@
 ---
 import projectData from "../data/projects.json";
-import ProjectIcon from "../assets/project.svg";
+import FigmaIcon from "../assets/figmapixel.svg";
 
 // Obtener los últimos 2 proyectos ordenados por order descendente
 const latestProjects = Object.values(projectData)
@@ -19,7 +19,19 @@ const latestProjects = Object.values(projectData)
       
       <div class="my-3 flex flex-col h-full ">
         <div class="flex items-center gap-2 mb-3">
-          <ProjectIcon class="w-4 h-4 text-[var(--color-text-muted)]" />
+          {project.links.figma ? (
+            <a 
+              href={project.links.figma}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Ver diseño de ${project.title} en Figma`}
+              class="text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:scale-110 transition-all duration-100"
+            >
+              <FigmaIcon class="w-4 h-4" />
+            </a>
+          ) : (
+            <FigmaIcon class="w-4 h-4 text-[var(--color-text-muted)]" />
+          )}
           <time 
             datetime={project.createdAt || ""} 
             class="text-xs font-king ligero text-[var(--color-text-muted)]"

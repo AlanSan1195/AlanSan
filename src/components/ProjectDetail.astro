@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Github from "../assets/github.svg";
-import WebSiteIcon from "../assets/website.svg";
+import Github from "../assets/gitHubpixel.svg";
+import WebSiteIcon from "../assets/webpixel.svg";
+import FigmaIcon from "../assets/figmapixel.svg";
 
 interface Props {
   project: {
@@ -17,6 +18,7 @@ interface Props {
     links: {
       website?: string;
       github?: string;
+      figma?: string;
     };
     review: string[];
     themes: string[];
@@ -163,7 +165,7 @@ const combinedJsonLd = {
                 itemprop="url"
               >
                 <WebSiteIcon
-                  class="w-7 h-7 md:w-8 md:h-8 inline-block mr-2"
+                  class="w-7 h-7  inline-block mr-2"
                   aria-hidden="true"
                 />
               </a>
@@ -179,7 +181,20 @@ const combinedJsonLd = {
                 class="text-[var(--color-text-secondary)] hover:text-[var(--color-text)] hover:scale-110 transition-all duration-100 focus:outline-none"
                 itemprop="codeRepository"
               >
-                <Github class="w-7 h-7 md:w-8 md:h-8" aria-hidden="true" />
+                <Github class="w-7 h-7 " aria-hidden="true" />
+              </a>
+            )
+          }
+          {
+            project.links.figma && (
+              <a
+                href={project.links.figma}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Ver diseño de ${project.title} en Figma`}
+                class="text-[var(--color-text-secondary)] hover:text-[var(--color-text)] hover:scale-110 transition-all duration-100 focus:outline-none"
+              >
+                <FigmaIcon class="w-7 h-7 " aria-hidden="true" />
               </a>
             )
           }
