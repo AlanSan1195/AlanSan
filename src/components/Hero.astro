@@ -1,117 +1,46 @@
 ---
 import SocialMedia from "../components/Social.astro";
 import { Image } from "astro:assets";
-import profileImage from "../assets/FotoPerfil.webp";
+
 ---
 
 <!-- HERO-FULL -->
 <section
-  class="w-[90%] h-auto flex flex-col mt-8 z-20"
+  class="flex flex-col justify-center items-center mt-8 mb-4 mx-auto max-w-4xl"
   aria-labelledby="hero-title"
 >
-  <!-- HERO SM -->
-  <div class=" md:hidden h-full">
-    <h2
-      id="hero-title"
-      class="font-display text-[90px] line uppercase break-words my-0"
-    >
-      <span
-        class=""
-        >Front</span
+  <!-- HERO IMG-->
+  <div class="flex flex-col sm:mx-0 w-auto">
+    <figure class="relative m-0 mt-3 gap-x-6 flex content-end items-end group border-[1px] border-white w-fit">
+      <div
+        class="absolute -bottom-3 left-2.5 h-38 w-38 border-white border-[1px] z-10 transition-color  duration-400 group-hover:translate-x-[6px] group-hover:translate-y-[6px] group-hover:border-white/30 group-hover:bg-black/20  ease-in "
       >
-      <span
-        class="bg-pink-500 w-18 h-[2px] inline-block -translate-y-4"
-        aria-hidden="true"></span>
-      <span
-        class=""
-        >End</span
-      >
-      <span
-        class=""
-        >Developer</span
-      >
-    </h2>
-    <!-- FOTO PERFIL -->
-    <div class="flex flex-col md:hidden">
-      <figure
-        class="rounded-full w-14 h-14 my-3 border-white/60 border-[1px] m-0"
-      >
-        <Image
-          src={profileImage}
-          alt="Foto de perfil de Alan San, desarrollador frontend"
-          class="absolute w-14 h-14 rounded-full border-white/60 border-[1px] p-1"
-          width={56}
-          height={56}
-          loading="eager"
-          format="webp"
-          quality={80}
-        />
-      </figure>
-      <h1 id="my-name" class="mt-2 mb-0 font-alpha text-3xl md:hidden">
-        Alan San
-      </h1>
-      <p id="hero-description-sm" class="font-alpha opacity-80 text-base">
-        Soy un desarrollador web con sede en Guadalajara y actualmente trabajo
-        como freelance. Espero poder ayudarte a implementar ideas creativas en
-        tu próximo proyecto.
-      </p>
-    </div>
-  </div>
-  <div class="m-0 md:hidden">
-    <SocialMedia />
-  </div>
+      </div>
 
-  <!-- HERO MD-->
-  <div class="flex flex-col lg:mt-14 ">
-    <div
-      class="md:flex md:w-fit hidden md:flex-col  h-full w-auto"
-    >
-      <h2 class="font-display text-3xl uppercase vhs-effect ">
-        <span class="">Front</span>
-        <span
-          class="bg-pink-500 w-10 h-[2px] inline-block -translate-y-2"
-          aria-hidden="true"></span>
-        <span class=" inline-block">End</span>
-        <br /><span class="inline-block  translate-x-10"
-          >Developer</span
-        >
-      </h2>
-    </div>
-    <!-- imagen md  -->
-    <div class="hidden items-center gap-x-1 md:block max-w-2xl">
-      <figure
-        class="rounded-full w-18 h-18 border-white/60 border-[1px] flex-col m-0"
-      >
-        <Image
-          src={profileImage}
-          alt="Foto de perfil de Alan San, desarrollador frontend"
-          class="absolute rounded-full border-white/60 border-[1px] p-1"
-          width={72}
-          height={72}
-          loading="eager"
-          format="webp"
-          quality={80}
-        />
-      </figure>
+      <img
+        src="/src/assets/fotoperfil.webp"
+        alt="Foto de perfil de Alan San, desarrollador frontend"
+        class=" bg-[#1C1918]  p-[6px] w-34 h-34 object-cover z-20 "
+      />
+    </figure>
+
+    <div class="items-center md:block w-auto mt-10">
       <h1
         id="my-name-md"
-        class="mb-0 font-static text-4xl hidden md:flex mt-5"
-      >
-        Alan San
+        class="font-king ligero  text-sm mb-0 md:flex opacity-60"
+      > Sobre mí
       </h1>
-      <p id="hero-description" class="font-static opacity-80 my-2 text-base">
-        Soy un desarrollador web con sede en Guadalajara y actualmente trabajo
-        como freelance. Espero poder ayudarte a implementar ideas creativas en
-        tu próximo proyecto.
+      <p id="hero-description" class="font-alpha my-3 text-lg md:text-2xl ">
+       Mi nombre es Alan Sandoval y tengo +3 años de experiencia como desarrollador web.
+       Me especializo en el frontend y tengo un gran interés en el diseño de interfaces. 
+       aqui puedes ver algunos de mis proyectos y si ves algo que te guste puse... let's be friends.
       </p>
-      <!-- social-media -->
       <SocialMedia />
     </div>
   </div>
 </section>
 
 <style>
- 
   .line {
     line-height: 95%;
   }
@@ -119,7 +48,7 @@ import profileImage from "../assets/FotoPerfil.webp";
     0% {
       text-shadow:
         -1px 1px 8px hsla(0, 0%, 10%, 0.9),
-        1px -1px 8px rgba(255, 255, 235, 0.1),
+        1px -1px 8px rgba(255, 255, 235, 0.2),
         0 0 1px rgba(251, 0, 231, 0.5),
         0 0 3px rgba(0, 233, 235, 0.5),
         0 0 3px rgba(0, 242, 14, 0.5),
@@ -191,9 +120,13 @@ import profileImage from "../assets/FotoPerfil.webp";
   .vhs-effect {
     animation: vhs 1s steps(18) 0s infinite alternate;
   } */
+
+  .ligero {
+    font-weight: 300;
+  }
 </style>
 
-<script>
+<!-- <script>
   import { gsap } from "gsap";
   import { SplitText } from "gsap/SplitText";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -203,7 +136,7 @@ import profileImage from "../assets/FotoPerfil.webp";
   gsap.registerPlugin(ScrollTrigger);
 
   // Create SplitText instance
-  const Text = new SplitText("#hero-description-sm", {
+  const Text = new SplitText("#hero-description", {
     type: "words",
     charsClass: "char",
   });
@@ -217,4 +150,4 @@ import profileImage from "../assets/FotoPerfil.webp";
     filter: "blur(10px)",
     delay: 0.3,
   });
-</script>
+</script> -->

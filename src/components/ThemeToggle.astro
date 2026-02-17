@@ -1,0 +1,77 @@
+---
+---
+
+<button
+  id="theme-toggle"
+  type="button"
+  aria-label="Cambiar tema"
+  class="p-1 border-0 bg-transparent hover:opacity-100 transition-opacity cursor-pointer"
+>
+  <svg
+    id="sun-icon"
+    class="hidden w-5 h-5 text-inherit"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path d="M17 10v4h-1v1h-1v1h-1v1h-4v-1H9v-1H8v-1H7v-4h1V9h1V8h1V7h4v1h1v1h1v1z" />
+    <path d="M21 11v-1h1V9h1V7h-3V6h-2V4h-1V1h-2v1h-1v1h-1v1h-2V3h-1V2H9V1H7v3H6v2H4v1H1v2h1v1h1v1h1v2H3v1H2v1H1v2h3v1h2v2h1v3h2v-1h1v-1h1v-1h2v1h1v1h1v1h2v-3h1v-2h2v-1h3v-2h-1v-1h-1v-1h-1v-2zm-3 4h-1v1h-1v1h-1v1H9v-1H8v-1H7v-1H6V9h1V8h1V7h1V6h6v1h1v1h1v1h1z" />
+  </svg>
+  <svg
+    id="moon-icon"
+    class="hidden w-5 h-5 text-inherit"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path d="M22 17v2h-1v1h-1v1h-2v1h-2v1h-6v-1H8v-1H6v-1H5v-1H4v-2H3v-2H2V9h1V7h1V5h1V4h1V3h2V2h2V1h5v1h-2v1h-2v1h-1v2H9v2H8v4h1v2h1v2h1v1h2v1h2v1h4v-1h2v-1z" />
+  </svg>
+</button>
+
+<script>
+  function initThemeToggle() {
+    const toggle = document.getElementById("theme-toggle");
+    const sunIcon = document.getElementById("sun-icon");
+    const moonIcon = document.getElementById("moon-icon");
+
+    if (!toggle || !sunIcon || !moonIcon) return;
+
+    function updateIcons(theme: string) {
+      if (theme === "dark") {
+        sunIcon.classList.remove("hidden");
+        moonIcon.classList.add("hidden");
+      } else {
+        sunIcon.classList.add("hidden");
+        moonIcon.classList.remove("hidden");
+      }
+    }
+
+    function getTheme(): string {
+      const stored = localStorage.getItem("theme");
+      if (stored) return stored;
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    }
+
+    function setTheme(theme: string) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+      updateIcons(theme);
+    }
+
+    // Inicializar
+    const currentTheme = getTheme();
+    setTheme(currentTheme);
+
+    // Toggle
+    toggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+  }
+
+  // Ejecutar en carga inicial y en navegación con View Transitions
+  initThemeToggle();
+  document.addEventListener("astro:after-swap", initThemeToggle);
+</script>

@@ -1,46 +1,74 @@
 ---
-import Github from "../assets/github.svg";
-import Linkedin from "../assets/linkedin.svg";
-import Instagram from "../assets/instagram.svg";
-import Email from "../assets/mail.svg";
+import profileImage from "../assets/fotoperfil.webp";
+import TwitchIcon from "../assets/twitch.svg";
+import GitHubIcon from "../assets/gitHubpixel.svg";
+import Cohete from "../assets/cohete.svg";
+import LinkedInIcon from "../assets/linkPixel.svg";
 ---
 
 <!-- social-media -->
-<nav class="flex m-1 p-1 flex-wrap gap-x-4" aria-label="Redes sociales y contacto">
+<div class="w-full h-auto flex flex-wrap  gap-x-4 sm:gap-x-5 items-center">
+  <!-- svj -->
+
   <a
-    href="https://github.com/AlanSan1195"
+    class="no-underline text-inherit group flex items-center gap-x-1"
     target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Ver perfil de GitHub de Alan San"
-    class="text-white/50 hover:text-white/70 hover:scale-110 transition-all duration-100 focus:outline-none   rounded"
-  >
-    <Github class="w-8 h-8" aria-hidden="true" />
-  </a>
-  <a
     href="https://www.linkedin.com/in/devsan11/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Conectar en LinkedIn con Alan San"
-    class="text-white/50 hover:text-white/70 hover:scale-110 transition-all duration-100 focus:outline-none   rounded"
+    rel="noreferrer"
   >
-    <Linkedin class="w-8 h-8" aria-hidden="true" />
+    <LinkedInIcon
+      class="w-3 h-3 group-hover:text-blue-300 opacity-60 group-hover:opacity-90"
+    />
+    <p
+      class="no-underline text-inherit font-king ligero text-xs opacity-60 group-hover:opacity-90"
+    >
+      LinkedIn
+    </p></a
+  >
+
+  <a
+    class="no-underline text-inherit flex items-center gap-x-2 group"
+    target="_blank"
+    href="https://github.com/AlanSan1195"
+    rel="noreferrer"
+  >
+    <GitHubIcon
+      class="w-3 h-3 group-hover:text-[#C2FE0D] opacity-60 group-hover:opacity-90"
+    />
+    <p
+      class="no-underline text-inherit font-king ligero text-xs opacity-60 group-hover:opacity-90"
+    >
+      GitHub
+    </p>
   </a>
   <a
-    href="https://www.instagram.com/alanpro._/"
+    class="no-underline text-inherit flex items-center gap-x-2 group"
     target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Seguir en Instagram a Alan San"
-    class="text-white/50 hover:text-white/70 hover:scale-110 transition-all duration-100 focus:outline-none   rounded"
+    href="mailto:alansandovalt1@gmail.com"
+    rel="noreferrer"
   >
-    <Instagram class="w-8 h-8" aria-hidden="true" />
+    <Cohete
+      class="w-3 h-3 group-hover:text-[#e8701f] opacity-60 group-hover:opacity-90"
+    />
+    <p
+      class="no-underline text-inherit font-king ligero text-xs opacity-60 group-hover:opacity-90"
+    >
+      Email
+    </p>
   </a>
   <a
-    href="mailto:alansandovalt@gmail.com"
-    rel="noopener noreferrer"
+    class="no-underline text-inherit flex items-center gap-x-2 group"
     target="_blank"
-    aria-label="Enviar correo electrónico a Alan San"
-    class="text-white/50 hover:text-white/70 hover:scale-110 transition-all duration-100 focus:outline-none   rounded"
+    href="https://www.twitch.tv/alanpr0o"
+    rel="noreferrer"
   >
-    <Email class="w-8 h-8" aria-hidden="true" />
+    <TwitchIcon
+      class="w-3 h-3 group-hover:text-purple-400 opacity-60 group-hover:opacity-90"
+    />
+    <p
+      class="no-underline text-inherit font-king ligero text-xs opacity-60 group-hover:opacity-90"
+    >
+      Twitch
+    </p>
   </a>
-</nav>
+</div>

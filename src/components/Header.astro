@@ -1,9 +1,39 @@
-<header class="w-full h-10 flex fixed z-30" role="banner">
-  <div class="filter-blur absolute inset-0 backdrop-blur-xs w-full h-20" aria-hidden="true"></div>
+---
+import Social from "./Social.astro";
+import HelloIcon from "../assets/hello.svg";
+import ThemeToggle from "./ThemeToggle.astro";
+---
+
+<header
+  class="w-full  md:max-w-4xl mx-auto px-0 sm:px-4 cursor-pointer h-auto flex justify-between items-center pt-4"
+  role="banner"
+>
+  <a class="px-2 no-underline text-inherit flex" href="/">
+    <HelloIcon class="w-7 h-6 opacity-70" />
+    <h2 class="font-alpha text-base sm:text-lg m-0  text-[var(--color-text-secondary)]">Alansan.dev</h2>
+  </a>
+
+  <nav class="flex items-center gap-4">
+    <a
+      href="/proyectos"
+      class="no-underline text-inherit font-king ligero text-sm opacity-60 hover:opacity-100 transition-opacity"
+    >
+      Proyectos
+    </a>
+    <a
+      href="/post"
+      class="no-underline text-inherit font-king ligero text-sm opacity-70 hover:opacity-100 transition-opacity"
+    >
+      Post
+    </a>
+    <ThemeToggle />
+  </nav>
 </header>
 
 <style>
   .filter-blur {
     mask-image: linear-gradient(to bottom, #000000 20%, transparent);
   }
+ 
+
 </style>

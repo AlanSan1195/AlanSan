@@ -1,274 +1,221 @@
 ---
-import Email from "../assets/mail.svg";
-import projectdata from "../data/projects.json";
+import projectData from "../data/projects.json";
+import GithubIcon from "../assets/gitHubpixel.svg";
 
-// Obtener proyectos ordenados por 'order' (mayor = más reciente)
-const projectsArray = Object.values(projectdata);
-const sortedProjects = projectsArray.sort((a, b) => b.order - a.order);
+// Importar logos como componentes Astro
+import AstroLogo from "../assets/logos-svg/astro.astro";
+import ClerkLogo from "../assets/logos-svg/clerk.astro";
+import CssLogo from "../assets/logos-svg/css.astro";
+import HtmlLogo from "../assets/logos-svg/html.astro";
+import JavascriptLogo from "../assets/logos-svg/javascript.astro";
+import NetlifyLogo from "../assets/logos-svg/netlify.astro";
+import NodeLogo from "../assets/logos-svg/node.astro";
+import ReactLogo from "../assets/logos-svg/react.astro";
+import SupabaseLogo from "../assets/logos-svg/supabase.astro";
+import TailwindLogo from "../assets/logos-svg/tailwind.astro";
+import ThreejsLogo from "../assets/logos-svg/threejs.astro";
+import VercelLogo from "../assets/logos-svg/vercel.astro";
 
-// Último proyecto (para sección "Últimamente")
-const latestProject = sortedProjects[0];
-// Penúltimo proyecto (para el slot tipo Valmari)
-const beforeLastProject = sortedProjects[1];
+const logoComponents: Record<string, any> = {
+  astro: AstroLogo,
+  clerk: ClerkLogo,
+  css: CssLogo,
+  html: HtmlLogo,
+  javascript: JavascriptLogo,
+  netlify: NetlifyLogo,
+  node: NodeLogo,
+  react: ReactLogo,
+  supabase: SupabaseLogo,
+  tailwind: TailwindLogo,
+  threejs: ThreejsLogo,
+  vercel: VercelLogo,
+};
+
+const getLogoKey = (logoPathOrKey: string): string => {
+  if (logoPathOrKey.includes("/")) {
+    return logoPathOrKey.split("/").pop()?.replace(".svg", "") ?? "";
+  }
+
+  return logoPathOrKey;
+};
+
+// Obtener los 4 proyectos más recientes ordenados por order
+const projects = Object.values(projectData)
+  .sort((a, b) => b.order - a.order)
+  .slice(2, 6);
 ---
 
-<section
-  class="grid grid-cols-14 gap-2 text-left grid-rows-2 md:grid-rows-2 mt-10 mb-10 md:mx-16 mx-1 z-30"
-  aria-label="Proyectos y contenido destacado"
->
-  <!-- About Me Section -->
-  <article
-    class="border-[1.5px] border-white/10 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/10 backdrop-blur-xl text-xl col-span-14 md:col-span-4 md:row-span-3 flex flex-col"
-    role="article"
-    aria-labelledby="about-me-title"
-  >
-    <header
-      class="border-[1.5px] border-white/20 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/1 backdrop-blur-xl w-fit px-4 py-2 flex mt-4 mx-4"
-    >
-      <span class="m-0 informative text-base" role="banner">Sobre mí</span>
-    </header>
-
-    <main class="flex-1 flex flex-col p-4">
-      <h3
-        id="about-me-title"
-        class="font-static text-xl md:text-xl text-white mb-3"
-        role="heading"
-        aria-level="3"
-      >
-        Frontend Developer & UI Designer
-      </h3>
-
-      <div
-        class="flex-1 overflow-y-auto scrollbar-hidden space-y-3"
-        aria-label="Presentación personal"
-      >
-        <p
-          class="informative font-static text-base md:text-base text-gray-300 text-pretty leading-relaxed"
-        >
-          <span class="text-white font-semibold opacity-100"
-            >+2 años de experiencia</span
-          >, una formación autodidacta y una gran variedad de proyectos que han
-          requerido todo tipo de interactividad, transiciones y animaciones.
-        </p>
-
-        <p
-          class="informative font-static text-base md:text-base text-gray-300 text-pretty leading-relaxed"
-        >
-          Disfruto mucho diseñar y crear webs con
-          <span class="text-white font-semibold opacity-100">
-            interfaces intuitivas y funcionales
-          </span>, donde cada detalle tenga un propósito y el usuario disfrute
-          esos segundos mientras navega.
-          <span class="text-white font-semibold opacity-100"
-            >Mi enfoque está ahí</span
-          >, en crecer y mejorar estas habilidades que creo que marcan una gran
-          diferencia en la experiencia del usuario, en conjunto con la
-          <span class="text-white font-semibold opacity-100">
-            accesibilidad y el rendimiento.
-          </span>
-        </p>
-
-        <p
-          class="informative font-static text-base md:text-base text-gray-300 text-pretty leading-relaxed"
-        >
-          Soy muy versátil en cuanto al uso de tecnologías, ya que me gusta
-          muchísimo aprender siempre cosas nuevas. Al tratar de implementar
-          alguna idea, priorizo bien la tecnología o framework que sea mejor
-          para el proyecto.
-        </p>
-      </div>
-    </main>
-  </article>
-
-  <!-- Scroll projects-->
-  <article
-    class="border-[1.5px] border-white/10 outline outline-offset-[0.7px] outline-black rounded-3xl text-xl col-span-14 md:col-span-5 md:block flex justify-center items-center"
-  >
-    <div
-      class="bg-black/10 rounded-3xl flex flex-col h-full w-full backdrop-blur-xl"
-      id="project-scroll-link"
-    >
-      <!-- embuelve proyectos  -->
-      <div class="w-full h-full scale-95 mb-8 group relative">
-        <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[85%] bg-pink-400 rounded-2xl -rotate-8 transition-all duration-300 group-hover:blur-sm"
-          aria-hidden="true"
-        >
-        </div>
-        <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[88%] bg-pink-100 rounded-2xl -rotate-4 transition-all duration-300 group-hover:blur-sm"
-          aria-hidden="true"
-        >
-        </div>
-
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="none"
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[90%] object-cover flex justify-center items-center rounded-[20px] transition-all duration-300 group-hover:blur-sm"
-          aria-label="Video demostrativo de proyectos de Alan San"
-        >
-          <source src="/imagenes/gta.mp4" type="video/mp4" />
-        </video>
-        <a
-          href="/proyectos"
-          class="font-static absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center border-[1.5px] border-white/30 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/50 px-4 py-2 z-10 no-underline focus:outline-none text-base"
-          aria-label="Ver proyectos de scroll"
-        >
-          Ver más proyectos
-        </a>
-      </div>
-    </div>
-  </article>
-  <!--  Suitch project-->
-  <article
-    class="text-xl border-[1.5px] border-white/10 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/10 backdrop-blur-xl col-span-14 md:col-span-5 h-80 md:h-auto"
-  >
+<section class="w-auto mx-auto mt-8">
+  <header class="flex items-center justify-between">
+    <h2 class="text-2xl font-alpha text-[var(--color-text)]">Proyectos</h2>
     <a
-      href="/suitch"
-      id="suitch-project-link"
-      class="block w-full h-full focus:outline-none rounded-[20px]"
-      aria-label="Ver detalles del proyecto Suitch desarrollado por Alan San"
+      href="/proyectos"
+      class="inline-flex items-center gap-y-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors font-alpha"
     >
-      <img
-        src="/imagenes/suitchweb.webp"
-        alt="Proyecto Suitch por Alan San - Aplicación de streaming similar a Twitch"
-        class="w-full h-full object-fill flex justify-center items-center rounded-[20px]"
-        width="320"
-        height="240"
-        loading="eager"
-        fetchpriority="high"
-        transition:name={`transition-${projectdata.suitch.id}`}
-      />
-    </a>
-  </article>
-
-  <!-- Últimamente (último proyecto) -->
-  <article
-    class="grid col-span-14 md:col-span-5 md:grid-rows-1 text-xl gap-y-3 "
-  >
-    <!-- sub-cuadros -->
-    <div
-      class="relative bg-black/10 border-[1.5px] border-white/10 outline outline-offset-[0.7px] outline-black rounded-3xl items-center flex justify-center backdrop-blur-xl h-full" id="last-project"
-    >
-      <!-- Contenido principal: imagen y actividad actual -->
-      <div class="flex gap-2 py-2 items-center m-3 md:m-0">
-        <!-- Imagen a la izquierda -->
-        <a
-          href={`/${latestProject.id}`}
-          class="w-auto flex justify-center md:justify-start m-2 scale-90 -rotate-3"
-        >
-          <img
-            src={latestProject.image.src}
-            alt={latestProject.image.alt}
-            class="w-30 h-30 rounded-xl -rotate-3 md:rotate-0 object-fill md:m-1
-              hover:scale-110 hover:rotate-1 transition-all duration-200"
-            loading="lazy"
-          />
-        </a>
-
-        <!-- Texto a la derecha -->
-        <div class="flex-1 flex-col min-w-0  px-2 rounded-lg">
-          <h3 class="text-lg text-white font-static m-0">Últimamente...</h3>
-          <p
-            class="text-base md:text-base text-gray-300 font-static informative m-0 break-words overflow-hidden"
-          >
-            {latestProject.lately?.description}{" "}
-            <span class="text-[#F55B30] font-semibold opacity-100"
-              >{latestProject.lately?.highlight}</span
-            >
-          </p>
-          <a
-            href={latestProject.links.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-white font-semibold no-underline text-base">Ver Proyecto</a
-          >
-          {latestProject.lately?.extra && (
-            <p
-              class="text-base md:text-base text-gray-300 font-static informative mt-2 break-words overflow-hidden"
-            >
-              {latestProject.lately.extra}
-            </p>
-          )}
-        </div>
-      </div>
-    </div>
-
-    <!-- contactame  -->
-    <div
-      class="bg-black/10 border-[1.5px] border-white/10 outline outline-offset-[0.7px] outline-black rounded-3xl backdrop-blur-xl w-auto h-auto py-1"
-    >
-      <div
-        class="border-[1.5px] border-white/20 outline outline-offset-[0.7px] outline-black rounded-3xl bg-black/40 w-fit px-2 py-1 md:px-4 md:py-2 flex mt-2 mx-4"
+      <svg
+        class="w-4 h-4"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
       >
-        <p class="m-0 font-static informative text-base">Contactame</p>
-      </div>
-      <div class="flex justify-between items-center px-5 md:flex-col">
-        <div class="flex flex-col w-full mt-3">
-          <p
-            class="m-0 font-static text-gray-300 informative text-base md:text-base"
-          >
-            ¿Tienes un proyecto del que quieras hablarme?
-          </p>
-          <p
-            class="m-0 font-static text-gray-300 informative text-base md:text-base"
-          >
-            Transformemos juntos esa visión y de froma eficiente. ⚡️
-          </p>
-        </div>
-        <!-- mail sm -->
-        <a
-          href="mailto:alansandovalt1@gmail.com"
-          class="text-white/50 hover:text-white/70 transition-colors duration-200 mt-4"
-          aria-label="Enviar email a Alan San"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <Email class="w-8 h-8 mx-1 md:mx-auto" />
-        </a>
-      </div>
-    </div>
-  </article>
-
-  <!-- Penúltimo proyecto (dinámico) -->
-  <article
-    class="relative flex flex-col h-80 border-[1.5px] border-white/10 outline outline-offset-[0.7px] outline-black bg-black/10 backdrop-blur-xl rounded-3xl text-xl p-1 col-span-14 md:col-span-5 md:h-auto gap-y-2"
-    id="before-last-project"
-  >
-    <a
-      href={`/${beforeLastProject.id}`}
-      class="block focus:outline-none w-full h-full rounded-[20px]"
-      aria-label={`Ver detalles del proyecto ${beforeLastProject.title} desarrollado por Alan San`}
-    >
-      <img
-        src={beforeLastProject.image.src}
-        alt={beforeLastProject.image.alt}
-        class="w-full h-full object-fill flex justify-center items-center rounded-[20px]"
-        loading="lazy"
-        transition:name={`transition-${beforeLastProject.id}`}
-      />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+      </svg>
     </a>
-  </article>
-  <div
-    class="box-gen rounde text-xl p-4 border-2 col-span-14 md:col-span-10 hidden h-80"
-  >
-    <div
-      class="bg-black/30 backdrop-blur-5xl h-full rounded-[20px] border border-gray-400/20"
-    >
-      cuarto cuadro
-    </div>
+  </header>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    {
+      projects.map((project) => (
+        <div class="glow-card border-[0.5px] border-[var(--color-border)] bg-transparent transition-all duration-200 no-underline block p-3">
+          <div class="flex items-start justify-between mb-3 ">
+            <a
+              class="group text-base font-alpha text-[var(--color-text)] flex items-center gap-1 m-0 no-underline"
+              href={`/${project.id}`}
+            >
+              {project.title}
+              <svg
+                class="w-3.5 h-3.5 text-[var(--color-text-muted)] group-hover:text-[var(--color-text)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 17L17 7M17 7H7M17 7v10"
+                />
+              </svg>
+            </a>
+            <a
+              href={project.links.github}
+              target="_blank"
+              rel="noreferrer"
+              class="no-underline text-inherit"
+            >
+              <GithubIcon class="w-4.5 h-4.5 text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors" />
+            </a>
+          </div>
+          <div class="flex items-start gap-x-2 mb-3">
+            <span class="m-0 p-0">{project.emoji}</span>
+            <p class="font-satoshi text-sm text-pretty text-[var(--color-text-muted)] m-0 h-9">{project.subTitle}</p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2">
+            {project.logos?.map((logoPathOrKey: string) => {
+              const logoKey = getLogoKey(logoPathOrKey);
+              const LogoComponent = logoComponents[logoKey];
+              return LogoComponent ? (
+                <div class="flex items-center gap-x-2 bg-[var(--color-bg-secondary)] border-[0.5px] border-[var(--color-border)] px-2 py-1">
+                  <LogoComponent class="w-4 h-4" />
+                  <span class="font-king text-xs text-[var(--color-text-muted)]">{logoKey}</span>
+                </div>
+              ) : null;
+            })}
+          </div>
+        </div>
+      ))
+    }
   </div>
 </section>
 
-<style>
-  .informative {
-    font-family: "static";
-    opacity: 0.8;
+<script>
+  // @ts-nocheck
+  /**
+   * @param {HTMLElement} element
+   */
+  const applyGlowTracking = (element) => {
+    /**
+     * @param {number} clientX
+     * @param {number} clientY
+     */
+    const setPointer = (clientX, clientY) => {
+      const rect = element.getBoundingClientRect();
+      element.style.setProperty("--mx", `${clientX - rect.left}px`);
+      element.style.setProperty("--my", `${clientY - rect.top}px`);
+      element.style.setProperty("--active", "1");
+    };
 
+    element.addEventListener("pointerenter", (event) => {
+      setPointer(event.clientX, event.clientY);
+    });
+
+    element.addEventListener("pointermove", (event) => {
+      setPointer(event.clientX, event.clientY);
+    });
+
+    element.addEventListener("pointerleave", () => {
+      element.style.setProperty("--active", "0");
+    });
+  };
+
+  const init = () => {
+    document
+      .querySelectorAll(".glow-card")
+      .forEach((element) =>
+        applyGlowTracking(/** @type {HTMLElement} */ (element)),
+      );
+  };
+
+  init();
+  document.addEventListener("astro:page-load", init);
+</script>
+
+<style>
+  .glow-card {
+    position: relative;
+    --mx: 50%;
+    --my: 50%;
+    --active: 0;
+    --glow-color: rgba(255, 255, 255, 1);
+    --glow-bg: rgba(255, 255, 200, 0.02);
   }
 
-  /* :is(.dark *) agregar esto al boxgen cuando hagamso el modo obscuro  */
+  :global([data-theme="light"]) .glow-card {
+    --glow-color: rgba(0, 0, 0, 0.8);
+    --glow-bg: rgba(0, 0, 0, 0.03);
+  }
+
+  .glow-card::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: 10;
+    pointer-events: none;
+    border-radius: inherit;
+    padding: 1.28px;
+    background: radial-gradient(
+      180px 45px at var(--mx) var(--my),
+      var(--glow-color),
+      transparent 80%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    opacity: var(--active);
+    transition: opacity 280ms ease;
+  }
+
+  .glow-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+    border-radius: inherit;
+    background: radial-gradient(
+      ellipse 100px 50px at var(--mx) var(--my),
+      var(--glow-bg),
+      transparent 220%
+    );
+    opacity: var(--active);
+    transition: opacity 280ms ease;
+  }
 </style>

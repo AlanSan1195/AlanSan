@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+// Placeholder para futuros posts - cuando tengas contenido, puedes importar de un JSON o usar Content Collections
+const posts: { id: string; title: string; description: string; date: string }[] = [];
+---
+
+<Layout title="Posts - Alan San">
+  <section
+    class="relative max-w-3xl md:max-w-4xl mx-auto overflow-hidden pt-10 z-10"
+  >
+    <div class="relative px-4 mb-6">
+      <div class="mx-auto mt-2">
+        <a
+          href="/"
+          class="p-2 w-fit bg-[var(--color-bg-secondary)] border-[1.5px] hover:bg-[var(--color-bg-card)] border-[var(--color-border)] outline outline-offset-[0.5px] outline-[var(--color-bg)] ll text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text)] justify-center flex transition-colors"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+        </a>
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-alpha text-[var(--color-text)] mb-6">
+        Posts
+      </h1>
+      <p
+        class="font-king ligero text-sm md:text-lg text-[var(--color-text-muted)] mb-4 max-w-3xl"
+      >
+        Artículos y pensamientos sobre desarrollo, diseño y tecnología.
+      </p>
+    </div>
+
+    <div class="max-w-3xl md:max-w-4xl mx-auto px-4 mb-32">
+      {
+        posts.length > 0 ? (
+          <div class="flex flex-col gap-6">
+            {posts.map((post) => (
+              <a
+                href={`/post/${post.id}`}
+                class="group block p-6 bg-[var(--color-bg-secondary)] border-[1.5px] border-[var(--color-border)] outline outline-offset-[0.5px] outline-[var(--color-bg)] hover:border-[var(--color-border-hover)] transition-all"
+              >
+                <span class="font-king ligero text-xs text-[var(--color-text-muted)]">
+                  {post.date}
+                </span>
+                <h3 class="text-[var(--color-text)] font-alpha text-lg md:text-xl mt-2 group-hover:text-[var(--color-accent)] transition-colors">
+                  {post.title}
+                </h3>
+                <p class="text-[var(--color-text-secondary)] font-king ligero text-sm mt-2">
+                  {post.description}
+                </p>
+              </a>
+            ))}
+          </div>
+        ) : (
+          <div class="text-center py-16">
+            <p class="font-king ligero text-lg text-[var(--color-text-muted)]">
+              Próximamente...
+            </p>
+          </div>
+        )
+      }
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .ligero {
+    font-weight: 200;
+  }
+</style>

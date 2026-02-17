@@ -2,11 +2,15 @@
   "suitch": {
     "id": "suitch",
     "order": 1,
+    "createdAt": "2023-03-15",
     "section": "/",
     "title": "Plataforma de Streaming - Suitch",
     "subTitle": "Simulación de Twitch desarrollada con React, y la API oficial de Twitch",
+    "logos": ["astro", "react", "tailwind"],
+    "emoji": "🎮",
     "image": {
       "src": "/imagenes/suitchweb.webp",
+      "srcHero": "/imagenes/suitch2ble.webp",
       "alt": "Captura de pantalla de Suitch - Plataforma de streaming"
     },
     "links": {
@@ -14,7 +18,7 @@
       "github": "https://github.com/AlanSan1195/Suitch-Twitch-API"
     },
     "review": [
-      "<strong class='text-white'>Suitch</strong> es una simulación de la plataforma Twitch que desarrollé para practicar y perfeccionar mis habilidades en React. El proyecto permite buscar streamers reales y ver su contenido en vivo, replicando la experiencia de usuario de la plataforma original.",
+      "<strong class='text-[var(--color-text)]'>Suitch</strong> es una simulación de la plataforma Twitch que desarrollé para practicar y perfeccionar mis habilidades en React. El proyecto permite buscar streamers reales y ver su contenido en vivo, replicando la experiencia de usuario de la plataforma original.",
       "Incluye características como iniciar sesión con Twitch, buscar a cualquier streamer que tenga un usuario en la plataforma de Twitch y sección de canales que están vivo."
     ],
     "themes": ["UI", "API`s", "Hooks", "Frontend", ".env"],
@@ -45,9 +49,12 @@
   "matera": {
     "id": "matera",
     "order": 2,
+    "createdAt": "2023-06-20",
     "section": "/proyectos",
     "title": "Landing page - La Matera",
-    "subTitle": "Rediseño completo de la web de un restaurante argentino en la ciudad de Guadalajara",
+    "subTitle": "🥩 Rediseño completo de la web de un restaurante argentino en la ciudad de Guadalajara",
+    "emoji": "🥩",
+    "logos": ["astro", "tailwind", "threejs"],
     "image": {
       "src": "/imagenes/matera3.webp",
       "alt": "Captura de pantalla de La Matera"
@@ -57,7 +64,7 @@
       "github": "https://github.com/AlanSan1195/matera-landing"
     },
     "review": [
-      "<strong class='text-white'>La Matera</strong> fue mi primer proyecto freelance real: un rediseño completo del sitio web para un restaurante argentino en Guadalajara con gran tradición en la ciudad. El objetivo principal era crear una experiencia web más atractiva y moderna que mejorara la comunicación de los platillos hacia los clientes, generando mayor engagement.",
+      "<strong class='text-[var(--color-text)]'>La Matera</strong> fue mi primer proyecto freelance real: un rediseño completo del sitio web para un restaurante argentino en Guadalajara con gran tradición en la ciudad. El objetivo principal era crear una experiencia web más atractiva y moderna que mejorara la comunicación de los platillos hacia los clientes, generando mayor engagement.",
       "Un diseño para envolver la escencia del lugar, para esto usamos un video en todo el hero que se adapta bien con la idea de las particuylas del humo en la seccion que esta por debajo. menú digital organizado por categorías (empanadas, carnes, mariscos, postres), sección de eventos con carrusel informativo, y efectos visuales 3D con partículas de humo usando Three.js que dan profundidad y atmósfera al restaurante, cabe mencionar que este efecto fue adaptado de la comunidad de @Midudev."
     ],
     "themes": ["UI", "3D", "Three.js", "Frontend", "Freelance"],
@@ -91,9 +98,12 @@
   "valmari": {
     "id": "valmari",
     "order": 3,
+    "createdAt": "2023-09-10",
     "section": "/proyectos",
     "title": "Valmarí - Barra de Snacks",
-    "subTitle": "Sitio web para emprendimiento local de barras de snacks en Guadalajara.",
+    "subTitle": " Sitio web para emprendimiento local de barras de snacks en Guadalajara.",
+    "emoji": "🍭",
+    "logos": ["astro", "tailwind", "netlify"],
     "image": {
       "src": "/imagenes/valmari7.webp",
       "alt": "Captura de pantalla de Valmarí - Barra de Snacks Valmarí"
@@ -103,8 +113,8 @@
       "github": "https://github.com/AlanSan1195/valmari"
     },
     "review": [
-      "<strong class='text-white'>Valmarí</strong> es un sitio web creado para posicionar localmente un emprendimiento de barras de snacks en Guadalajara. En un mercado saturado de sitios web genéricos, Valmarí se destaca con animaciones fluidas, transiciones interactivas únicas y un diseño personalizado que refleja la identidad de marca.",
-      "El proyecto se enfoca en tres pilares fundamentales: <strong class='text-white'>SEO local optimizado</strong> para búsquedas como 'barra de snacks gdl' y 'eventos guadalajara', <strong class='text-white'>diferenciación visual</strong> con animaciones personalizadas que crean una experiencia memorable, y <strong class='text-white'>conversión efectiva</strong> diseñada para captar la atención y generar interés en los servicios."
+      "<strong class='text-[var(--color-text)]'>Valmarí</strong> es un sitio web creado para posicionar localmente un emprendimiento de barras de snacks en Guadalajara. En un mercado saturado de sitios web genéricos, Valmarí se destaca con animaciones fluidas, transiciones interactivas únicas y un diseño personalizado que refleja la identidad de marca.",
+      "El proyecto se enfoca en tres pilares fundamentales: <strong class='text-[var(--color-text)]'>SEO local optimizado</strong> para búsquedas como 'barra de snacks gdl' y 'eventos guadalajara', <strong class='text-[var(--color-text)]'>diferenciación visual</strong> con animaciones personalizadas que crean una experiencia memorable, y <strong class='text-[var(--color-text)]'>conversión efectiva</strong> diseñada para captar la atención y generar interés en los servicios."
     ],
     "themes": ["UI", "Transitions", "SEO", "Frontend", "CSS"],
     "technologies": ["Astro", "TailwindCSS", "Netlify", "Schema.org"],
@@ -137,9 +147,12 @@
   "airpods": {
     "id": "airpods",
     "order": 4,
+    "createdAt": "2024-01-05",
     "section": "/proyectos",
     "title": "GSAP Scroll Animation Demo",
-    "subTitle": "Animación como la Web de Apple",
+    "subTitle": " Animación como la Web de Apple",
+    "emoji": "✨",
+    "logos": ["javascript"],
     "image": {
       "src": "/imagenes/airpod-foto.webp",
       "alt": "Captura de pantalla de GSAP Scroll Animation"
@@ -149,7 +162,7 @@
       "github": "https://github.com/AlanSan1195/GsapScroll"
     },
     "review": [
-      "<strong class='text-white'>GSAP Scroll Animation Demo</strong> es una demostración del uso de GSAP y ScrollTrigger para crear animaciones avanzadas basadas en el scroll. El objetivo principal fue animar la opacidad y escala de un título y renderizar una secuencia de imágenes sincronizadas con el desplazamiento de la página.",
+      "<strong class='text-[var(--color-text)]'>GSAP Scroll Animation Demo</strong> es una demostración del uso de GSAP y ScrollTrigger para crear animaciones avanzadas basadas en el scroll. El objetivo principal fue animar la opacidad y escala de un título y renderizar una secuencia de imágenes sincronizadas con el desplazamiento de la página.",
       "El proyecto me permitió aprender a implementar esta biblioteca de Javascript que en verdad se me hace increíble, sin duda uno de los proyectos que más disfruté en aprender y descubrir."
     ],
     "themes": ["Animation", "GSAP", "ScrollTrigger", "Frontend", "Canvas"],
@@ -183,9 +196,12 @@
   "arkanoid": {
     "id": "arkanoid",
     "order": 5,
+    "createdAt": "2024-04-18",
     "section": "/proyectos",
     "title": "Arkanoid Game",
-    "subTitle": "Recreación del clásico juego arcade construida con JavaScript vanilla y Canvas",
+    "subTitle": " Un clásico juego arcade construida con JavaScript vanilla y Canvas",
+    "emoji": "🧩",
+    "logos": ["html", "css", "javascript"],
     "image": {
       "src": "/imagenes/arkanoid.webp",
       "alt": "Captura de pantalla de Arkanoid Game"
@@ -195,7 +211,7 @@
       "github": "https://github.com/AlanSan1195/JavaScript-Proyects?tab=readme-ov-file"
     },
     "review": [
-      "<strong class='text-white'>Arkanoid Game</strong> es una recreación del clásico juego arcade de rompe-bloques construida completamente con JavaScript vanilla y HTML5 Canvas. Este proyecto representa un verdadero /naje a los juegos arcade de los 80s con física realista y gráficos retro.",
+      "<strong class='text-[var(--color-text)]'>Arkanoid Game</strong> es una recreación del clásico juego arcade de rompe-bloques construida completamente con JavaScript vanilla y HTML5 Canvas. Este proyecto representa un verdadero homenaje a los juegos arcade de los 80s con física realista y gráficos retro.",
       "El juego incluye 13 bloques desafiantes, física de pelota realista con colisiones precisas y controles con teclado y sprites pixel art auténticos al estilo arcade."
     ],
     "themes": ["Game Dev", "Canvas", "JavaScript", "Physics", "Retro"],
@@ -229,9 +245,12 @@
   "gta": {
     "id": "gta",
     "order": 6,
+    "createdAt": "2024-07-25",
     "section": "/proyectos",
     "title": "GTA VI Landing Page",
-    "subTitle": "Recreación del efecto scroll icónico del sitio oficial de Rockstar Games",
+    "subTitle": " Recreación del efecto scroll icónico del sitio oficial de Rockstar Games",
+    "emoji": "🚨",
+    "logos": ["astro", "tailwind"],
     "image": {
       "src": "/imagenes/gta-foto.webp",
       "alt": "Captura de pantalla de GTA VI Landing Page"
@@ -241,7 +260,7 @@
       "github": "https://github.com/AlanSan1195/gta-6-web"
     },
     "review": [
-      "<strong class='text-white'>GTA VI Landing Page</strong> es una recreación del sitio oficial de GTA VI de Rockstar Games, replicando el icónico efecto de scroll animado. El proyecto utiliza GSAP (GreenSock Animation Platform) y ScrollTrigger para crear animaciones fluidas y sincronizadas con el scroll del usuario.",
+      "<strong class='text-[var(--color-text)]'>GTA VI Landing Page</strong> es una recreación del sitio oficial de GTA VI de Rockstar Games, replicando el icónico efecto de scroll animado. El proyecto utiliza GSAP (GreenSock Animation Platform) y ScrollTrigger para crear animaciones fluidas y sincronizadas con el scroll del usuario.",
       "El desafío principal fue implementar el efecto de máscara con el logo de GTA VI que actúa como una ventana revelando el contenido, junto con animaciones secuenciales de zoom, transiciones de tamaño y efectos de clip-path con Css."
     ],
     "themes": ["Animation", "GSAP", "ScrollTrigger", "UI", "Masks"],
@@ -255,11 +274,15 @@
   "simpsons": {
     "id": "simpsons",
     "order": 7,
+    "createdAt": "Log - Miércoles, Diciembre 03, 2025",
     "section": "/",
     "title": "The Simpsons - Animación Fortnite",
     "subTitle": "Animacion de Fortnite x Los Simpsons",
+    "emoji": "👀",
+    "logos": ["astro", "tailwind"],
     "image": {
       "src": "/imagenes/the-simpsons.webp",
+      "srcHero": "/imagenes/the-simpsons.webp",
       "alt": "Captura de pantalla de The Simpsons Animation"
     },
     "links": {
@@ -267,7 +290,7 @@
       "github": "https://github.com/AlanSan1195/the-simpsons"
     },
     "review": [
-      "<strong class='text-white'>The Simpsons Animation</strong> es una recreación de la animación de transición inspirada en el lanzamiento de la temporada de Fortnite x Los Simpsons. Al ver esa transición tan fluida y creativa, surgió la curiosidad de replicar y entender cómo funciona ese tipo de animación avanzada.",
+      "<strong class='text-[var(--color-text)]'>The Simpsons Animation</strong> es una recreación de la animación de transición inspirada en el lanzamiento de la temporada de Fortnite x Los Simpsons. Al ver esa transición tan fluida y creativa, surgió la curiosidad de replicar y entender cómo funciona ese tipo de animación avanzada.",
       "El proyecto es principalmente educativo y experimental, enfocado en entender cómo funcionan las animaciones complejas sincronizadas con scroll y cómo combinar múltiples transformaciones para crear efectos visuales impactantes. La elección de Los Simpsons es perfecta para practicar la integración de datos externos con animaciones frontend."
     ],
     "themes": ["Animation", "GSAP", "ScrollTrigger", "Learning", "API"],
@@ -288,9 +311,12 @@
   "rocketchat": {
     "id": "rocketchat",
     "order": 8,
+    "createdAt": "Log - Jueves, Enero 22, 2026",
     "section": "/",
-    "title": "RocketChat - Chat Simulation Stream",
-    "subTitle": "Plataforma para streamers que simula una audiencia interactiva en tiempo real con IA",
+    "title": "RocketChat - Simulador de audiencia",
+    "subTitle": "Simulación de chat interactivo para streamers con IA y SSE",
+      "emoji": "🚀",
+    "logos": ["astro", "react", "tailwind", "clerk"],
     "lately": {
       "description": "Creando una plataforma fullstack para streamers que genera chat interactivo con IA.",
       "highlight": "RocketChat",
@@ -306,7 +332,7 @@
       "github": "https://github.com/AlanSan1195/chat-simulation-stream"
     },
     "review": [
-      "<strong class='text-white'>RocketChat</strong> es una plataforma web diseñada para streamers principiantes que simula una audiencia interactiva en tiempo real. El proyecto genera mensajes de chat contextuales segun el videojuego seleccionado, utilizando inteligencia artificial para crear una experiencia de streaming mas dinamica.",
+      "<strong class='text-[var(--color-text)]'>RocketChat</strong> es una plataforma web diseñada para streamers principiantes que simula una audiencia interactiva en tiempo real. El proyecto genera mensajes de chat contextuales segun el videojuego seleccionado, utilizando inteligencia artificial para crear una experiencia de streaming mas dinamica.",
       "implementa autenticacion con Clerk, streaming en tiempo real con Server-Sent Events (SSE), y un sistema de fallback entre multiples proveedores de IA (Groq y Cerebras) para garantizar disponibilidad continua del servicio."
     ],
     "themes": ["IA", "SSE", "Auth", "Backend", "Fullstack"],
