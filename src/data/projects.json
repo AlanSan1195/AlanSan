@@ -1,12 +1,12 @@
 {
   "suitch": {
     "id": "suitch",
-    "order": 1,
+    "order": 5,
     "createdAt": "2023-03-15",
     "section": "/",
     "title": "Plataforma de Streaming - Suitch",
     "subTitle": "Simulación de Twitch desarrollada con React, y la API oficial de Twitch",
-    "logos": ["astro", "react", "tailwind"],
+    "logos": ["Astro", "React", "Tailwind"],
     "emoji": "🎮",
     "image": {
       "src": "/imagenes/suitchweb.webp",
@@ -54,7 +54,7 @@
     "title": "Landing page - La Matera",
     "subTitle": "🥩 Rediseño completo de la web de un restaurante argentino en la ciudad de Guadalajara",
     "emoji": "🥩",
-    "logos": ["astro", "tailwind", "threejs"],
+    "logos": ["Astro", "Tailwind", "Threejs"],
     "image": {
       "src": "/imagenes/matera3.webp",
       "alt": "Captura de pantalla de La Matera"
@@ -103,7 +103,7 @@
     "title": "Valmarí - Barra de Snacks",
     "subTitle": " Sitio web para emprendimiento local de barras de snacks en Guadalajara.",
     "emoji": "🍭",
-    "logos": ["astro", "tailwind", "netlify"],
+    "logos": ["Astro", "Tailwind", "Netlify"],
     "image": {
       "src": "/imagenes/valmari7.webp",
       "alt": "Captura de pantalla de Valmarí - Barra de Snacks Valmarí"
@@ -152,7 +152,7 @@
     "title": "GSAP Scroll Animation Demo",
     "subTitle": " Animación como la Web de Apple",
     "emoji": "✨",
-    "logos": ["javascript"],
+    "logos": ["JavaScript"],
     "image": {
       "src": "/imagenes/airpod-foto.webp",
       "alt": "Captura de pantalla de GSAP Scroll Animation"
@@ -195,13 +195,13 @@
   },
   "arkanoid": {
     "id": "arkanoid",
-    "order": 5,
+    "order": 1,
     "createdAt": "2024-04-18",
     "section": "/proyectos",
     "title": "Arkanoid Game",
     "subTitle": " Un clásico juego arcade construida con JavaScript vanilla y Canvas",
     "emoji": "🧩",
-    "logos": ["html", "css", "javascript"],
+    "logos": ["HTML", "CSS", "JavaScript"],
     "image": {
       "src": "/imagenes/arkanoid.webp",
       "alt": "Captura de pantalla de Arkanoid Game"
@@ -250,7 +250,7 @@
     "title": "GTA VI Landing Page",
     "subTitle": " Recreación del efecto scroll icónico del sitio oficial de Rockstar Games",
     "emoji": "🚨",
-    "logos": ["astro", "tailwind"],
+    "logos": ["Astro", "Tailwind"],
     "image": {
       "src": "/imagenes/gta-foto.webp",
       "alt": "Captura de pantalla de GTA VI Landing Page"
@@ -279,7 +279,7 @@
     "title": "The Simpsons - Animación Fortnite",
     "subTitle": "Animacion de Fortnite x Los Simpsons",
     "emoji": "👀",
-    "logos": ["astro", "tailwind"],
+    "logos": ["Astro", "Tailwind"],
     "image": {
       "src": "/imagenes/the-simpsons.webp",
       "srcHero": "/imagenes/the-simpsons.webp",
@@ -316,7 +316,7 @@
     "title": "RocketChat - Simulador de audiencia",
     "subTitle": "Simulación de chat interactivo para streamers con IA y SSE",
       "emoji": "🚀",
-    "logos": ["astro", "react", "tailwind", "clerk"],
+    "logos": ["Astro", "React", "Tailwind", "Clerk"],
     "lately": {
       "description": "Creando una plataforma fullstack para streamers que genera chat interactivo con IA.",
       "highlight": "RocketChat",
