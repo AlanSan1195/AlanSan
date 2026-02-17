@@ -5,7 +5,7 @@
     "createdAt": "2023-03-15",
     "section": "/",
     "title": "Plataforma de Streaming - Suitch",
-    "subTitle": "Simulación de Twitch desarrollada con React, y la API oficial de Twitch",
+    "subTitle": "Clon de Twitch desarrollado con React, y la API oficial de Twitch",
     "logos": ["Astro", "React", "Tailwind"],
     "emoji": "🎮",
     "image": {
@@ -18,7 +18,7 @@
       "github": "https://github.com/AlanSan1195/Suitch-Twitch-API"
     },
     "review": [
-      "<strong class='text-[var(--color-text)]'>Suitch</strong> es una simulación de la plataforma Twitch que desarrollé para practicar y perfeccionar mis habilidades en React. El proyecto permite buscar streamers reales y ver su contenido en vivo, replicando la experiencia de usuario de la plataforma original.",
+      "<strong class='text-[var(--color-text)]'>Suitch</strong> es un clon de la plataforma Twitch que desarrollé para practicar y perfeccionar mis habilidades en React. El proyecto permite buscar streamers reales y ver su contenido en vivo, replicando la experiencia de usuario de la plataforma original.",
       "Incluye características como iniciar sesión con Twitch, buscar a cualquier streamer que tenga un usuario en la plataforma de Twitch y sección de canales que están vivo."
     ],
     "themes": ["UI", "API`s", "Hooks", "Frontend", ".env"],
@@ -110,7 +110,8 @@
     },
     "links": {
       "website": "https://valmarisnack.netlify.app/",
-      "github": "https://github.com/AlanSan1195/valmari"
+      "github": "https://github.com/AlanSan1195/valmari",
+      "figma": "https://www.figma.com/design/Bu0EECBLEC2cIBfzQDrGAJ/Valmar%C3%AD-Web?m=auto&t=UDz2v1h8DIQiRwSY-1"
     },
     "review": [
       "<strong class='text-[var(--color-text)]'>Valmarí</strong> es un sitio web creado para posicionar localmente un emprendimiento de barras de snacks en Guadalajara. En un mercado saturado de sitios web genéricos, Valmarí se destaca con animaciones fluidas, transiciones interactivas únicas y un diseño personalizado que refleja la identidad de marca.",
@@ -287,7 +288,8 @@
     },
     "links": {
       "website": "https://aycaramba.netlify.app/",
-      "github": "https://github.com/AlanSan1195/the-simpsons"
+      "github": "https://github.com/AlanSan1195/the-simpsons",
+      "figma" : "https://www.figma.com/design/QRY65FDUo2WsPhQro1sTXN/The-Simpsons?m=auto&t=UDz2v1h8DIQiRwSY-1"
     },
     "review": [
       "<strong class='text-[var(--color-text)]'>The Simpsons Animation</strong> es una recreación de la animación de transición inspirada en el lanzamiento de la temporada de Fortnite x Los Simpsons. Al ver esa transición tan fluida y creativa, surgió la curiosidad de replicar y entender cómo funciona ese tipo de animación avanzada.",
@@ -314,7 +316,7 @@
     "createdAt": "Log - Jueves, Enero 22, 2026",
     "section": "/",
     "title": "RocketChat - Simulador de audiencia",
-    "subTitle": "Simulación de chat interactivo para streamers con IA y SSE",
+    "subTitle": "Simula una audiencia en el chat e iniciate en el mundo del streaming.",
       "emoji": "🚀",
     "logos": ["Astro", "React", "Tailwind", "Clerk"],
     "lately": {
@@ -329,10 +331,11 @@
     },
     "links": {
       "website": "https://www.rocketchat.online/",
-      "github": "https://github.com/AlanSan1195/chat-simulation-stream"
+      "github": "https://github.com/AlanSan1195/chat-simulation-stream",
+      "figma": " https://www.figma.com/design/1z7lIQnWKxjc4ewa1Raqkr/Chat-Simulator?m=auto&t=UDz2v1h8DIQiRwSY-1"
     },
     "review": [
-      "<strong class='text-[var(--color-text)]'>RocketChat</strong> es una plataforma web diseñada para streamers principiantes que simula una audiencia interactiva en tiempo real. El proyecto genera mensajes de chat contextuales segun el videojuego seleccionado, utilizando inteligencia artificial para crear una experiencia de streaming mas dinamica.",
+      "<strong class='text-[var(--color-text)]'>RocketChat</strong> es una plataforma web diseñada para streamers principiantes y quieren adentrarse en el mundo del streaming, esta herramienta simula una audiencia interactiva en tiempo real. El proyecto genera mensajes de chat contextuales segun el videojuego seleccionado, utilizando inteligencia artificial para crear una experiencia de streaming mas dinamica.",
       "implementa autenticacion con Clerk, streaming en tiempo real con Server-Sent Events (SSE), y un sistema de fallback entre multiples proveedores de IA (Groq y Cerebras) para garantizar disponibilidad continua del servicio."
     ],
     "themes": ["IA", "SSE", "Auth", "Backend", "Fullstack"],
