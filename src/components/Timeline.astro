@@ -6,64 +6,66 @@ import FigmaIcon from "../assets/figmapixel.svg";
 const latestProjects = Object.values(projectData)
   .sort((a, b) => b.order - a.order)
   .slice(0, 2);
-
-
 ---
 
-<ol class="items-center grid sm:grid-cols-2 gap-x-14 gap-y-8  sm:mx-0 px-0  w-auto">
-  {latestProjects.map((project) => (
-    <li class="relative mb-6 sm:mb-0 flex flex-col h-full">
-      <div class="flex items-center">
-        <div class="hidden sm:flex w-full bg-[var(--color-text-muted)] h-[0.5px]"></div>
-      </div>
-      
-      <div class="my-3 flex flex-col h-full ">
-        <div class="flex items-center gap-2 mb-3">
-          {project.links.figma ? (
-            <a 
-              href={project.links.figma}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Ver diseño de ${project.title} en Figma`}
-              class="text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:scale-110 transition-all duration-100"
-            >
-              <FigmaIcon class="w-4 h-4" />
-            </a>
-          ) : (
-            <FigmaIcon class="w-4 h-4 text-[var(--color-text-muted)]" />
-          )}
-          <time 
-            datetime={project.createdAt || ""} 
-            class="text-xs font-king ligero text-[var(--color-text-muted)]"
-          >
-            {project.createdAt}
-          </time>
+<ol
+  class="items-center grid sm:grid-cols-2 gap-x-14 gap-y-8 sm:mx-0 px-0 w-auto"
+>
+  {
+    latestProjects.map((project) => (
+      <li class="relative mb-6 sm:mb-0 flex flex-col h-full">
+        <div class="flex items-center">
+          <div class="hidden sm:flex w-full bg-[var(--color-text-muted)] h-[0.5px]" />
         </div>
 
-        <h3 class="text-lg md:text-2xl font-alpha text-[var(--color-text)] my-0 sm:mb-2 line-clamp-1">
-          {project.title}
-        </h3>
-        <p class="font-satoshi text-sm m-0 sm:mb-5 flex-1 text-[var(--color-text-secondary)]">
-          {project.subTitle}
-        </p>
+        <div class="my-3 flex flex-col h-full ">
+          <div class="flex items-center gap-2 mb-3">
+            {project.links.figma ? (
+              <a
+                href={project.links.figma}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Ver diseño de ${project.title} en Figma`}
+                class="text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:scale-110 transition-all duration-100"
+              >
+                <FigmaIcon class="w-4 h-4" />
+              </a>
+            ) : (
+              <FigmaIcon class="w-4 h-4 text-[var(--color-text-muted)]" />
+            )}
+            <time
+              datetime={project.createdAt || ""}
+              class="text-xs font-king ligero text-[var(--color-text-muted)]"
+            >
+              {project.createdAt}
+            </time>
+          </div>
 
-        <a 
-          class="aspect-video w-full overflow-hidden mt-0 border-[0.5px] border-[var(--color-border)] block hover:border-[var(--color-border-hover)] transition-colors" 
-          href={`/${project.id}`}
-        >
-          <img 
-            src={project.image.srcHero || project.image.src} 
-            alt={project.image.alt}
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </a>
-      </div>
-    </li>
-  ))}
+          <h3 class="text-lg md:text-2xl font-alpha text-[var(--color-text)] my-0 sm:mb-2 line-clamp-1">
+            {project.title}
+          </h3>
+          <p class="font-satoshi text-sm m-0 sm:mb-5 flex-1 text-[var(--color-text-secondary)]">
+            {project.subTitle}
+          </p>
+
+          <a
+            class="aspect-video w-full overflow-hidden mt-0 ] block "
+            href={`/${project.id}`}
+          >
+            <img
+              src={project.image.srcHero || project.image.src}
+              alt={project.image.alt}
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </li>
+    ))
+  }
 </ol>
- <style>
+<style>
   .ligero {
     font-weight: 100;
   }
- </style>
+</style>

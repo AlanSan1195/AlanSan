@@ -227,7 +227,7 @@ const combinedJsonLd = {
           transition:name={`transition-${project.id}`}
           src={project.image.srcHero ?? project.image.src}
           alt={project.image.alt}
-          class="w-full h-auto object-cover bg-[var(--color-bg-card)] border-[1.5px] border-[var(--color-border)] outline outline-offset-[1px] outline-[var(--color-bg)]"
+          class="w-full h-auto object-cover  outline outline-offset-[1px] outline-[var(--color-bg)]"
           loading="eager"
           itemprop="image"
           width="1200"
@@ -253,7 +253,7 @@ const combinedJsonLd = {
             <div class="flex flex-col" itemprop="description">
               {project.review.map((paragraph) => (
                 <p
-                  class="font-satoshi text-base md:text-xl text-pretty text-[var(--color-text-secondary)] mb-4"
+                  class="font-satoshi text-base md:text-xl text-pretty text-[var(--color-text-muted)]mb-4"
                   set:html={paragraph}
                 />
               ))}

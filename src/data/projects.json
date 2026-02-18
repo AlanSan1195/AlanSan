@@ -52,7 +52,7 @@
     "createdAt": "2023-06-20",
     "section": "/proyectos",
     "title": "Landing page - La Matera",
-    "subTitle": "🥩 Rediseño completo de la web de un restaurante argentino en la ciudad de Guadalajara",
+    "subTitle": "Rediseño completo de la web de un restaurante argentino en la ciudad de Guadalajara",
     "emoji": "🥩",
     "logos": ["Astro", "Tailwind", "Threejs"],
     "image": {

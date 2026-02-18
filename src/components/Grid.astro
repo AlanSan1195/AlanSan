@@ -114,7 +114,7 @@ const projects = Object.values(projectData)
               return LogoComponent ? (
                 <div class="flex items-center gap-x-2 bg-[var(--color-bg-secondary)] border-[0.5px] border-[var(--color-border)] px-2 py-1">
                   <LogoComponent class="w-4 h-4" />
-                  <span class="font-king text-xs text-[var(--color-text-muted)]">{logoKey}</span>
+                  <span class="font-king ligero text-xs text-[var(--color-text-muted)]">{logoKey}</span>
                 </div>
               ) : null;
             })}
@@ -217,5 +217,8 @@ const projects = Object.values(projectData)
     );
     opacity: var(--active);
     transition: opacity 280ms ease;
+  }
+  .ligero {
+    font-weight: 100;
   }
 </style>
