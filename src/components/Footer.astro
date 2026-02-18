@@ -12,51 +12,74 @@ import Cohete from "../assets/cohete.svg";
   <!-- Línea divisoria -->
   <div class="w-full h-[0.5px] bg-[var(--color-border)]"></div>
 
-  <div class="grid grid-cols-3 items-center gap-4 pt-6">
+  <div class="grid grid-cols-3 items-center pt-6">
     <!-- Izquierda: Créditos -->
-    <p class="font-king ligero text-xs sm:text-sm text-[var(--color-text-muted)] m-0 text-left">
+    <p
+      class="font-king ligero text-xs sm:text-sm text-[var(--color-text-muted)] m-0 text-left"
+    >
       Hecho por <a
         href="https://github.com/AlanSan1195"
         class="text-[var(--color-accent)] no-underline transition-colors"
         rel="author"
-        target="_blank"
-      >Alan San</a>
+        target="_blank">Alan San</a
+      >
     </p>
 
     <!-- Centro: Links sociales -->
-    <nav class="flex items-center justify-center gap-4" aria-label="Redes sociales">
-      <a
-        href="https://github.com/AlanSan1195"
-        target="_blank"
-        rel="noreferrer"
-        class="text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
-        aria-label="GitHub"
+    <div class="flex flex-col items-center">
+      <nav
+        class="flex items-center justify-center gap-2"
+        aria-label="Redes sociales"
       >
-        <GitHubIcon class="w-4 h-4" />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/devsan11/"
-        target="_blank"
-        rel="noreferrer"
-        class="text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
-        aria-label="LinkedIn"
+        <a
+          href="https://github.com/AlanSan1195"
+          target="_blank"
+          rel="noreferrer"
+          class="text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+          aria-label="GitHub"
+        >
+          <GitHubIcon class="w-4 h-4" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/devsan11/"
+          target="_blank"
+          rel="noreferrer"
+          class="text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+          aria-label="LinkedIn"
+        >
+          <LinkedInIcon class="w-4 h-4" />
+        </a>
+        <a
+          href="mailto:alansandovalt1@gmail.com"
+          rel="noreferrer"
+          class="text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+          aria-label="Email"
+        >
+          <Cohete class="w-4 h-4" />
+        </a>
+      </nav>
+       <p
+        class="font-king ligero text-xs sm:hidden sm:text-sm text-[var(--color-text-muted)] m-0 "
       >
-        <LinkedInIcon class="w-4 h-4" />
-      </a>
-      <a
-        href="mailto:alansandovalt1@gmail.com"
-        rel="noreferrer"
-        class="text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
-        aria-label="Email"
-      >
-        <Cohete class="w-4 h-4" />
-      </a>
-    </nav>
+        {new Date().getFullYear()}
+      </p>
+     
+    </div>
 
     <!-- Derecha: Año -->
-    <p class="font-king ligero text-sm text-[var(--color-text-muted)] m-0 text-right">
-      {new Date().getFullYear()}
-    </p>
+    <div class="w-full  flex justify-center sm:justify-end">
+       <p
+        class=" sm:hidden font-king ligero text-xs text-[var(--color-text-muted)] m-0"
+      >
+        Guadalajara, Méx.
+      </p>
+       <p
+        class="font-king hidden sm:block ligero text-xs sm:text-sm text-[var(--color-text-muted)] m-0 "
+      >
+        {new Date().getFullYear()}
+      </p>
+     
+    </div>
   </div>
 </footer>
 
