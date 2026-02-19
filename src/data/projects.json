@@ -3,7 +3,7 @@
     "id": "suitch",
     "order": 5,
     "createdAt": "2023-03-15",
-    "section": "/",
+    "section": "/proyectos",
     "title": "Plataforma de Streaming - Suitch",
     "subTitle": "Clon de Twitch desarrollado con React, y la API oficial de Twitch",
     "logos": ["Astro", "React", "Tailwind"],
@@ -18,7 +18,7 @@
       "github": "https://github.com/AlanSan1195/Suitch-Twitch-API"
     },
     "review": [
-      "<strong class='text-[var(--color-text)]'>Suitch</strong> es un clon de la plataforma Twitch que desarrollé para practicar y perfeccionar mis habilidades en React. El proyecto permite buscar streamers reales y ver su contenido en vivo, replicando la experiencia de usuario de la plataforma original.",
+      "<strong class='text-[var(--color-accent)]'>Suitch</strong> es un clon de la plataforma Twitch que desarrollé para practicar y perfeccionar mis habilidades en React. El proyecto permite buscar streamers reales y ver su contenido en vivo, replicando la experiencia de usuario de la plataforma original.",
       "Incluye características como iniciar sesión con Twitch, buscar a cualquier streamer que tenga un usuario en la plataforma de Twitch y sección de canales que están vivo."
     ],
     "themes": ["UI", "API`s", "Hooks", "Frontend", ".env"],
@@ -64,7 +64,7 @@
       "github": "https://github.com/AlanSan1195/matera-landing"
     },
     "review": [
-      "<strong class='text-[var(--color-text)]'>La Matera</strong> fue mi primer proyecto freelance real: un rediseño completo del sitio web para un restaurante argentino en Guadalajara con gran tradición en la ciudad. El objetivo principal era crear una experiencia web más atractiva y moderna que mejorara la comunicación de los platillos hacia los clientes, generando mayor engagement.",
+      "<strong class='text-[var(--color-accent)]'>La Matera</strong> fue mi primer proyecto freelance real: un rediseño completo del sitio web para un restaurante argentino en Guadalajara con gran tradición en la ciudad. El objetivo principal era crear una experiencia web más atractiva y moderna que mejorara la comunicación de los platillos hacia los clientes, generando mayor engagement.",
       "Un diseño para envolver la escencia del lugar, para esto usamos un video en todo el hero que se adapta bien con la idea de las particuylas del humo en la seccion que esta por debajo. menú digital organizado por categorías (empanadas, carnes, mariscos, postres), sección de eventos con carrusel informativo, y efectos visuales 3D con partículas de humo usando Three.js que dan profundidad y atmósfera al restaurante, cabe mencionar que este efecto fue adaptado de la comunidad de @Midudev."
     ],
     "themes": ["UI", "3D", "Three.js", "Frontend", "Freelance"],
@@ -114,8 +114,8 @@
       "figma": "https://www.figma.com/design/Bu0EECBLEC2cIBfzQDrGAJ/Valmar%C3%AD-Web?m=auto&t=UDz2v1h8DIQiRwSY-1"
     },
     "review": [
-      "<strong class='text-[var(--color-text)]'>Valmarí</strong> es un sitio web creado para posicionar localmente un emprendimiento de barras de snacks en Guadalajara. En un mercado saturado de sitios web genéricos, Valmarí se destaca con animaciones fluidas, transiciones interactivas únicas y un diseño personalizado que refleja la identidad de marca.",
-      "El proyecto se enfoca en tres pilares fundamentales: <strong class='text-[var(--color-text)]'>SEO local optimizado</strong> para búsquedas como 'barra de snacks gdl' y 'eventos guadalajara', <strong class='text-[var(--color-text)]'>diferenciación visual</strong> con animaciones personalizadas que crean una experiencia memorable, y <strong class='text-[var(--color-text)]'>conversión efectiva</strong> diseñada para captar la atención y generar interés en los servicios."
+      "<strong class='text-[var(--color-accent)]'>Valmarí</strong> es un sitio web creado para posicionar localmente un emprendimiento de barras de snacks en Guadalajara. En un mercado saturado de sitios web genéricos, Valmarí se destaca con animaciones fluidas, transiciones interactivas únicas y un diseño personalizado que refleja la identidad de marca.",
+      "El proyecto se enfoca en tres pilares fundamentales: <strong class='text-[var(--color-accent)]'>SEO local optimizado</strong> para búsquedas como 'barra de snacks gdl' y 'eventos guadalajara', <strong class='text-[var(--color-accent)]'>diferenciación visual</strong> con animaciones personalizadas que crean una experiencia memorable, y <strong class='text-[var(--color-accent)]'>conversión efectiva</strong> diseñada para captar la atención y generar interés en los servicios."
     ],
     "themes": ["UI", "Transitions", "SEO", "Frontend", "CSS"],
     "technologies": ["Astro", "TailwindCSS", "Netlify", "Schema.org"],
@@ -163,7 +163,7 @@
       "github": "https://github.com/AlanSan1195/GsapScroll"
     },
     "review": [
-      "<strong class='text-[var(--color-text)]'>GSAP Scroll Animation Demo</strong> es una demostración del uso de GSAP y ScrollTrigger para crear animaciones avanzadas basadas en el scroll. El objetivo principal fue animar la opacidad y escala de un título y renderizar una secuencia de imágenes sincronizadas con el desplazamiento de la página.",
+      "<strong class='text-[var(--color-accent)]'>GSAP Scroll Animation Demo</strong> es una demostración del uso de GSAP y ScrollTrigger para crear animaciones avanzadas basadas en el scroll. El objetivo principal fue animar la opacidad y escala de un título y renderizar una secuencia de imágenes sincronizadas con el desplazamiento de la página.",
       "El proyecto me permitió aprender a implementar esta biblioteca de Javascript que en verdad se me hace increíble, sin duda uno de los proyectos que más disfruté en aprender y descubrir."
     ],
     "themes": ["Animation", "GSAP", "ScrollTrigger", "Frontend", "Canvas"],
@@ -212,7 +212,7 @@
       "github": "https://github.com/AlanSan1195/JavaScript-Proyects?tab=readme-ov-file"
     },
     "review": [
-      "<strong class='text-[var(--color-text)]'>Arkanoid Game</strong> es una recreación del clásico juego arcade de rompe-bloques construida completamente con JavaScript vanilla y HTML5 Canvas. Este proyecto representa un verdadero homenaje a los juegos arcade de los 80s con física realista y gráficos retro.",
+      "<strong class='text-[var(--color-accent)]'>Arkanoid Game</strong> es una recreación del clásico juego arcade de rompe-bloques construida completamente con JavaScript vanilla y HTML5 Canvas. Este proyecto representa un verdadero homenaje a los juegos arcade de los 80s con física realista y gráficos retro.",
       "El juego incluye 13 bloques desafiantes, física de pelota realista con colisiones precisas y controles con teclado y sprites pixel art auténticos al estilo arcade."
     ],
     "themes": ["Game Dev", "Canvas", "JavaScript", "Physics", "Retro"],
@@ -261,7 +261,7 @@
       "github": "https://github.com/AlanSan1195/gta-6-web"
     },
     "review": [
-      "<strong class='text-[var(--color-text)]'>GTA VI Landing Page</strong> es una recreación del sitio oficial de GTA VI de Rockstar Games, replicando el icónico efecto de scroll animado. El proyecto utiliza GSAP (GreenSock Animation Platform) y ScrollTrigger para crear animaciones fluidas y sincronizadas con el scroll del usuario.",
+      "<strong class='text-[var(--color-accent)]'>GTA VI Landing Page</strong> es una recreación del sitio oficial de GTA VI de Rockstar Games, replicando el icónico efecto de scroll animado. El proyecto utiliza GSAP y ScrollTrigger para crear animaciones fluidas y sincronizadas con el scroll del usuario.",
       "El desafío principal fue implementar el efecto de máscara con el logo de GTA VI que actúa como una ventana revelando el contenido, junto con animaciones secuenciales de zoom, transiciones de tamaño y efectos de clip-path con Css."
     ],
     "themes": ["Animation", "GSAP", "ScrollTrigger", "UI", "Masks"],
@@ -292,7 +292,7 @@
       "figma" : "https://www.figma.com/design/QRY65FDUo2WsPhQro1sTXN/The-Simpsons?m=auto&t=UDz2v1h8DIQiRwSY-1"
     },
     "review": [
-      "<strong class='text-[var(--color-text)]'>The Simpsons Animation</strong> es una recreación de la animación de transición inspirada en el lanzamiento de la temporada de Fortnite x Los Simpsons. Al ver esa transición tan fluida y creativa, surgió la curiosidad de replicar y entender cómo funciona ese tipo de animación avanzada.",
+      "<strong class='text-[var(--color-accent)]'>The Simpsons Animation</strong> es una recreación de la animación de transición inspirada en el lanzamiento de la temporada de Fortnite x Los Simpsons. Al ver esa transición tan fluida y creativa, surgió la curiosidad de replicar y entender cómo funciona ese tipo de animación avanzada.",
       "El proyecto es principalmente educativo y experimental, enfocado en entender cómo funcionan las animaciones complejas sincronizadas con scroll y cómo combinar múltiples transformaciones para crear efectos visuales impactantes. La elección de Los Simpsons es perfecta para practicar la integración de datos externos con animaciones frontend."
     ],
     "themes": ["Animation", "GSAP", "ScrollTrigger", "Learning", "API"],
@@ -335,7 +335,7 @@
       "figma": " https://www.figma.com/design/1z7lIQnWKxjc4ewa1Raqkr/Chat-Simulator?m=auto&t=UDz2v1h8DIQiRwSY-1"
     },
     "review": [
-      "<strong class='text-[var(--color-text)]'>RocketChat</strong> es una plataforma web diseñada para streamers principiantes y quieren adentrarse en el mundo del streaming, esta herramienta simula una audiencia interactiva en tiempo real. El proyecto genera mensajes de chat contextuales segun el videojuego seleccionado, utilizando inteligencia artificial para crear una experiencia de streaming mas dinamica.",
+      "<strong class='text-[var(--color-accent)]'>RocketChat</strong> es una plataforma web diseñada para streamers principiantes y quieren adentrarse en el mundo del streaming, esta herramienta simula una audiencia interactiva en tiempo real. El proyecto genera mensajes de chat contextuales segun el videojuego seleccionado, utilizando inteligencia artificial para crear una experiencia de streaming mas dinamica.",
       "implementa autenticacion con Clerk, streaming en tiempo real con Server-Sent Events (SSE), y un sistema de fallback entre multiples proveedores de IA (Groq y Cerebras) para garantizar disponibilidad continua del servicio."
     ],
     "themes": ["IA", "SSE", "Auth", "Backend", "Fullstack"],

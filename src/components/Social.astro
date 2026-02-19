@@ -4,7 +4,7 @@ import TwitchIcon from "../assets/twitch.svg";
 import GitHubIcon from "../assets/gitHubpixel.svg";
 import Cohete from "../assets/cohete.svg";
 import LinkedInIcon from "../assets/linkPixel.svg";
-
+import ProjectIcon from "../assets/project.svg";
 ---
 
 <!-- social-media -->
@@ -20,10 +20,10 @@ import LinkedInIcon from "../assets/linkPixel.svg";
       rel="noreferrer"
     >
       <LinkedInIcon
-        class="w-3 h-3 group-hover:text-blue-300 opacity-60 group-hover:opacity-90"
+        class="w-3 h-3 group-hover:text-blue-400 opacity-60 group-hover:opacity-100"
       />
       <p
-        class="no-underline text-inherit font-king ligero text-xs opacity-60 group-hover:opacity-90"
+        class="no-underline text-inherit font-king ligero text-xs opacity-60 group-hover:opacity-100"
       >
         LinkedIn
       </p></a
@@ -36,10 +36,10 @@ import LinkedInIcon from "../assets/linkPixel.svg";
       rel="noreferrer"
     >
       <GitHubIcon
-        class="w-3 h-3 group-hover:text-[#C2FE0D] opacity-60 group-hover:opacity-90"
+        class="w-3 h-3 group-hover:text-[var(--color-accent)] opacity-60 group-hover:opacity-100"
       />
       <p
-        class="no-underline text-inherit font-king ligero text-xs opacity-60 group-hover:opacity-90"
+        class="no-underline text-inherit font-king ligero text-xs opacity-60 group-hover:opacity-100"
       >
         GitHub
       </p>
@@ -51,10 +51,10 @@ import LinkedInIcon from "../assets/linkPixel.svg";
       rel="noreferrer"
     >
       <Cohete
-        class="w-3 h-3 group-hover:text-[#e8701f] opacity-60 group-hover:opacity-90"
+        class="w-3 h-3 group-hover:text-[#e8701f] opacity-60 group-hover:opacity-100"
       />
       <p
-        class="no-underline text-inherit font-king ligero text-xs opacity-60 group-hover:opacity-90"
+        class="no-underline text-inherit font-king ligero text-xs opacity-60 group-hover:opacity-100"
       >
         Email
       </p>
@@ -66,12 +66,28 @@ import LinkedInIcon from "../assets/linkPixel.svg";
       rel="noreferrer"
     >
       <TwitchIcon
-        class="w-3 h-3 group-hover:text-purple-400 opacity-60 group-hover:opacity-90"
+        class="w-3 h-3 group-hover:text-purple-400 opacity-60 group-hover:opacity-100"
       />
       <p
-        class="no-underline text-inherit font-king ligero text-xs opacity-60 group-hover:opacity-90"
+        class="no-underline text-inherit font-king ligero text-xs opacity-60 group-hover:opacity-100"
       >
         Twitch
+      </p>
+    </a>
+    <a
+      id="cv-btn"
+      class="no-underline text-inherit flex items-center gap-x-1 group cursor-pointer"
+      href="/cv2026.pdf"
+      download="CV-Alan-Sandoval.pdf"
+      aria-label="Descargar CV"
+    >
+      <ProjectIcon
+        class="w-3 h-3 group-hover:text-emerald-500 opacity-60 group-hover:opacity-100"
+      />
+      <p
+        class="no-underline text-inherit font-king ligero text-xs opacity-60 group-hover:opacity-100"
+      >
+        CV
       </p>
     </a>
   </div>
@@ -81,8 +97,28 @@ import LinkedInIcon from "../assets/linkPixel.svg";
     </p>
   </div>
 </div>
- <style>
+
+<!-- Toast de confirmación de descarga -->
+
+<script>
+  const btn = document.getElementById("cv-btn") as HTMLAnchorElement;
+
+  btn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    const confirmed = window.confirm("¿Descargar el CV?");
+    if (confirmed) {
+      const a = document.createElement("a");
+      a.href = "/cv2026.pdf";
+      a.download = "CV-Alan-Sandoval.pdf";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  });
+</script>
+
+<style>
   .ligero {
     font-weight: 300;
   }
-  </style>
+</style>

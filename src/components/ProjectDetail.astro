@@ -246,14 +246,14 @@ const combinedJsonLd = {
           <div class="px-4">
             <h2
               id="project-overview"
-              class="text-2xl md:text-5xl font-alpha text-[var(--color-text)]"
+              class="text-2xl md:text-4xl font-alpha text-[var(--color-text)]"
             >
               {project.subTitle}
             </h2>
             <div class="flex flex-col" itemprop="description">
               {project.review.map((paragraph) => (
                 <p
-                  class="font-satoshi text-base md:text-xl text-pretty text-[var(--color-text-muted)]mb-4"
+                  class="font-satoshi text-xs md:text-xl text-pretty text-[var(--color-text-secondary)] mb-4"
                   set:html={paragraph}
                 />
               ))}
@@ -272,7 +272,7 @@ const combinedJsonLd = {
           <div class="px-4">
             <h2
               id="technologies-section"
-              class="text-2xl md:text-5xl font-alpha text-[var(--color-text)] mb-6"
+              class="text-2xl md:text-4xl font-alpha text-[var(--color-text)] mb-6"
             >
               Tecnologías Utilizadas
             </h2>
@@ -280,7 +280,7 @@ const combinedJsonLd = {
               {project.technologiesDetails.map((tech) => (
                 <li>
                   <p class="font-satoshi text-sm md:text-xl text-pretty text-[var(--color-text-secondary)]">
-                    <strong class="text-[var(--color-text)]" itemprop="programmingLanguage">
+                    <strong class="text-[var(--color-accent)] font-alpha" itemprop="programmingLanguage">
                       {tech.name}:
                     </strong>{" "}
                     <span>{tech.description}</span>
@@ -302,7 +302,7 @@ const combinedJsonLd = {
           <div class="px-4">
             <h2
               id="implementations-section"
-              class="text-2xl md:text-5xl font-alpha text-[var(--color-text)] mb-6"
+              class="text-2xl md:text-4xl font-alpha text-[var(--color-text)] mb-6"
             >
               Implementaciones
             </h2>
@@ -312,7 +312,7 @@ const combinedJsonLd = {
               itemprop="featureList"
             >
               {project.implementations.map((implementation) => (
-                <li class="flex font-satoshi m-0 text-[var(--color-text-secondary)] text-sm md:text-xl">
+                <li class="flex font-satoshi m-0 text-[var(--color-text-secondary)] text-sm md:text-lg">
                   <span
                     class="text-[var(--color-accent)] mr-2"
                     aria-hidden="true"
