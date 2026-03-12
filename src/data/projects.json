@@ -338,7 +338,7 @@
     "review": [
       "<strong class='text-[var(--color-accent)]'>Twick</strong> es una plataforma que estoy desarrollando desde 0 y básicamente es un dashboard donde configuras un chat simulado y esta pensado para streamers principiantes que quieren adentrarse en el mundo del streaming. lo veo como una herramienta interactiva en tiempo real con IA y algunas características especiales de costumización.",
       " La emepece a desarrollar por que descubrí que no tenía habilidades para hacer stream en vivo, y a mi me encanta jugar videojuegos y, ya que juego mucho (es un gran canal de inspiración para mí), he pensado en intentar sacarle más provecho a este pasatiempo haciendo streaming de mis partidas y Twick me está ayudando mucho a improvisar, desenvolverme más y darme cuenta del compromiso que es atender a tu futura audiencia.",
-      "El proyecto genera mensajes de chat contextuales según el videojuego seleccionado, utilizando inteligencia artificial para crear una experiencia de streaming en tiempo real simulando una audiencia activa, puedes probarlo iniciando sesión con tu cuenta de Google, Twich o GitHub ya que implementa autenticación con Clerk."
+      "El proyecto genera mensajes de chat contextuales según el videojuego seleccionado, utilizando inteligencia artificial para crear una experiencia de streaming en tiempo real simulando una audiencia activa, puedes probarlo iniciando sesión con tu cuenta de Google, Twitch o GitHub ya que implementa autenticación con Clerk."
     ],
     "themes": ["IA", "SSE", "Auth", "Backend", "Fullstack"],
     "technologies": [
