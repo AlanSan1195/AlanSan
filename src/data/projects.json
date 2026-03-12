@@ -310,32 +310,32 @@
       "GSAP: timeline, ScrollTrigger, animaciones simultáneas y parámetros clave como scale, x/y, opacity y duration."
     ]
   },
-  "rocketchat": {
-    "id": "rocketchat",
+  "twick": {
+    "id": "twick",
     "order": 8,
     "createdAt": "Log - Jueves, Febrero 5, 2026",
     "section": "/",
-    "title": "RocketChat - Simulador de audiencia",
+    "title": "Twick - Simulador de audiencia",
     "subTitle": "Simula una audiencia en el chat e iniciate en el mundo del streaming.",
       "emoji": "🚀",
     "logos": ["Astro", "React", "Tailwind", "Clerk"],
     "lately": {
       "description": "Creando una plataforma fullstack para streamers que genera chat interactivo con IA.",
-      "highlight": "RocketChat",
+      "highlight": "Twick",
       "extra": "Usa SSE para streaming en tiempo real y Clerk para autenticacion."
     },
     "image": {
-      "src": "/imagenes/rocketchat.svg",
-      "srcHero": "/imagenes/rocketchat.webp",
-      "alt": "Captura de pantalla de RocketChat - Chat Simulation Stream"
+      "src": "/imagenes/twick.svg",
+      "srcHero": "/imagenes/twick.webp",
+      "alt": "Captura de pantalla de Twick - Chat Simulation Stream"
     },
     "links": {
-      "website": "https://www.rocketchat.online/",
+      "website": "https://www.twick.dev/",
       "github": "https://github.com/AlanSan1195/chat-simulation-stream",
       "figma": " https://www.figma.com/design/1z7lIQnWKxjc4ewa1Raqkr/Chat-Simulator?m=auto&t=UDz2v1h8DIQiRwSY-1"
     },
     "review": [
-      "<strong class='text-[var(--color-accent)]'>RocketChat</strong> es una plataforma web diseñada para streamers principiantes y quieren adentrarse en el mundo del streaming, esta herramienta simula una audiencia interactiva en tiempo real. El proyecto genera mensajes de chat contextuales segun el videojuego seleccionado, utilizando inteligencia artificial para crear una experiencia de streaming mas dinamica.",
+      "<strong class='text-[var(--color-accent)]'>Twick</strong> es una plataforma web diseñada para streamers principiantes y quieren adentrarse en el mundo del streaming, esta herramienta simula una audiencia interactiva en tiempo real. El proyecto genera mensajes de chat contextuales segun el videojuego seleccionado, utilizando inteligencia artificial para crear una experiencia de streaming mas dinamica.",
       "implementa autenticacion con Clerk, streaming en tiempo real con Server-Sent Events (SSE), y un sistema de fallback entre multiples proveedores de IA (Groq y Cerebras) para garantizar disponibilidad continua del servicio."
     ],
     "themes": ["IA", "SSE", "Auth", "Backend", "Fullstack"],

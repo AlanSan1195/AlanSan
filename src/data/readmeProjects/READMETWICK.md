@@ -49,7 +49,7 @@ pnpm dev
 
 La app queda disponible en:
 - **Desarrollo**: `http://localhost:4321`
-- **Produccion**: `https://www.rocketchat.online/`
+- **Produccion**: `https://www.twick.dev/`
 
 ## Scripts Disponibles
 
@@ -628,7 +628,7 @@ Esta seccion documenta los problemas encontrados durante el desarrollo, las duda
 ## Problema 1: Clerk no funcionaba en produccion (CSP bloqueaba recursos)
 
 ### Contexto
-Despues de desplegar en Vercel con dominio personalizado `rocketchat.online`, Clerk dejaba de funcionar. Los componentes de autenticacion no cargaban.
+Despues de desplegar en Vercel con dominio personalizado `twick.dev`, Clerk dejaba de funcionar. Los componentes de autenticacion no cargaban.
 
 ### Sintomas
 - Consola del navegador mostraba errores de CSP (Content Security Policy)
@@ -658,10 +658,10 @@ const clerkDomains = isDev
       img: "https://*.clerk.com https://img.clerk.com",
     }
   : {
-      script: "https://*.rocketchat.online https://*.clerk.com",
-      connect: "https://*.rocketchat.online https://api.clerk.com https://clerk-telemetry.com wss://*.clerk.com",
-      frame: "https://*.rocketchat.online https://*.clerk.com",
-      img: "https://*.clerk.com https://img.clerk.com https://*.rocketchat.online",
+      script: "https://*.twick.dev https://*.clerk.com",
+      connect: "https://*.twick.dev https://api.clerk.com https://clerk-telemetry.com wss://*.clerk.com",
+      frame: "https://*.twick.dev https://*.clerk.com",
+      img: "https://*.clerk.com https://img.clerk.com https://*.twick.dev",
     };
 
 const csp = [
@@ -679,7 +679,7 @@ Siempre verificar en DevTools > Console los errores de CSP. Clerk tiene document
 
 ---
 ### Ademas
-tuvimos que configurar los dominos de clerk en mi provedor de dominio Dondomio para rocket.chat como: "A", "AAAA" y "CNAME" apuntando a Vercel tambien.
+tuvimos que configurar los dominos de clerk en mi provedor de dominio Dondomio para twick.dev como: "A", "AAAA" y "CNAME" apuntando a Vercel tambien.
 - en clerk despues de conseguir un Domino estable, dreas un entorno de produccion para conseguir las variables de entorno para produccion y asi no usar las de desarrollo.
 - en vercel, en la configuracion del proyecto, agregar las variables de entorno para produccion.
 - Dashborad de clerk teniamos que configurar los porveedores de inicio de session que hayamso escogido, como google, github, etc. ir a la conspola developers de cada proveedor y agregar el dominio personalizado en los campos de redireccion. y conseguir las clientId y secret para agregarlos en clerk.

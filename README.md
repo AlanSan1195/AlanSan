@@ -18,7 +18,7 @@ Se implemento una ruta dinamica `[id].astro` que genera automaticamente todas la
 
 ```
 src/pages/
-├── rocketchat.astro   # 9 lineas identicas
+├── twick.astro        # 9 lineas identicas
 ├── simpsons.astro     # 9 lineas identicas
 ├── gta.astro          # 9 lineas identicas
 ├── arkanoid.astro     # 9 lineas identicas
@@ -35,7 +35,7 @@ Cada archivo tenia el mismo patron:
 import ProjectDetail from "../components/ProjectDetail.astro";
 import projectsData from "../data/projects.json";
 
-const project = projectsData.rocketchat;
+const project = projectsData.twick;
 ---
 
 <ProjectDetail project={project} />
