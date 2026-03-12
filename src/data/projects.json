@@ -325,8 +325,8 @@
       "extra": "Usa SSE para streaming en tiempo real y Clerk para autenticacion."
     },
     "image": {
-      "src": "/imagenes/twick.svg",
-      "srcHero": "/imagenes/twick.webp",
+      "src": "/imagenes/twick.webp",
+      "srcHero": "/imagenes/twickheroimg.webp",
       "alt": "Captura de pantalla de Twick - Chat Simulation Stream"
     },
     "links": {
