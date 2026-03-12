@@ -9,8 +9,8 @@
     "logos": ["Astro", "React", "Tailwind"],
     "emoji": "🎮",
     "image": {
-      "src": "/imagenes/suitchweb.webp",
-      "srcHero": "/imagenes/suitch2ble.webp",
+      "src": "/imagenes/suitch.webp",
+      "srcHero": "/imagenes/suitch.webp",
       "alt": "Captura de pantalla de Suitch - Plataforma de streaming"
     },
     "links": {
@@ -56,7 +56,7 @@
     "emoji": "🥩",
     "logos": ["Astro", "Tailwind", "Threejs"],
     "image": {
-      "src": "/imagenes/matera3.webp",
+      "src": "/imagenes/matera.webp",
       "alt": "Captura de pantalla de La Matera"
     },
     "links": {
@@ -105,7 +105,7 @@
     "emoji": "🍭",
     "logos": ["Astro", "Tailwind", "Netlify"],
     "image": {
-      "src": "/imagenes/valmari7.webp",
+      "src": "/imagenes/valmari.webp",
       "alt": "Captura de pantalla de Valmarí - Barra de Snacks Valmarí"
     },
     "links": {
@@ -155,7 +155,8 @@
     "emoji": "✨",
     "logos": ["JavaScript"],
     "image": {
-      "src": "/imagenes/airpod-foto.webp",
+      "src": "/imagenes/aripods-scroll.webp",
+      "srcHero": "/imagenes/aripods-scroll.webp",
       "alt": "Captura de pantalla de GSAP Scroll Animation"
     },
     "links": {
@@ -282,8 +283,8 @@
     "emoji": "👀",
     "logos": ["Astro", "Tailwind"],
     "image": {
-      "src": "/imagenes/the-simpsons.webp",
-      "srcHero": "/imagenes/the-simpsons.webp",
+      "src": "/imagenes/simpsons.webp",
+      "srcHero": "/imagenes/simpsons.webp",
       "alt": "Captura de pantalla de The Simpsons Animation"
     },
     "links": {
@@ -313,7 +314,7 @@
   "twick": {
     "id": "twick",
     "order": 8,
-    "createdAt": "Log - Jueves, Febrero 5, 2026",
+    "createdAt": "Log - Jueves, Marzo 12, 2026",
     "section": "/",
     "title": "Twick - Simulador de audiencia",
     "subTitle": "Simula una audiencia en el chat e iniciate en el mundo del streaming.",
@@ -326,7 +327,7 @@
     },
     "image": {
       "src": "/imagenes/twick.webp",
-      "srcHero": "/imagenes/twickheroimg.webp",
+      "srcHero": "/imagenes/twickImg.webp",
       "alt": "Captura de pantalla de Twick - Chat Simulation Stream"
     },
     "links": {
@@ -335,8 +336,8 @@
       "figma": " https://www.figma.com/design/1z7lIQnWKxjc4ewa1Raqkr/Chat-Simulator?m=auto&t=UDz2v1h8DIQiRwSY-1"
     },
     "review": [
-      "<strong class='text-[var(--color-accent)]'>Twick</strong> es una plataforma web diseñada para streamers principiantes y quieren adentrarse en el mundo del streaming, esta herramienta simula una audiencia interactiva en tiempo real. El proyecto genera mensajes de chat contextuales segun el videojuego seleccionado, utilizando inteligencia artificial para crear una experiencia de streaming mas dinamica.",
-      "implementa autenticacion con Clerk, streaming en tiempo real con Server-Sent Events (SSE), y un sistema de fallback entre multiples proveedores de IA (Groq y Cerebras) para garantizar disponibilidad continua del servicio."
+      "<strong class='text-[var(--color-accent)]'>Twick</strong> es una plataforma web diseñada para streamers principiantes que quieren adentrarse en el mundo del streaming. Esta herramienta simula una audiencia interactiva en tiempo real. Creé esta plataforma por mi propia necesidad: me encanta jugar videojuegos y, ya que juego mucho (es un gran canal de inspiración para mí), he pensado en intentar sacarle más provecho a este pasatiempo haciendo streaming de mis partidas. Pero mientras lo intentaba, descubrí que no sé hablar o comentar mis partidas, entonces he estado preparando este proyecto para intentar ayudar a quien quiera a probar sus habilidades de streamer y usar Twick como herramienta en sus inicios. El proyecto genera mensajes de chat contextuales según el videojuego seleccionado, utilizando inteligencia artificial para crear una experiencia de streaming más dinámica.",
+      "Implementa autenticación con Clerk, streaming en tiempo real con Server-Sent Events (SSE), y un sistema de fallback entre múltiples proveedores de IA (Groq y Cerebras) para garantizar disponibilidad continua del servicio."
     ],
     "themes": ["IA", "SSE", "Auth", "Backend", "Fullstack"],
     "technologies": [
