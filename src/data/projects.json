@@ -114,7 +114,7 @@
       "figma": "https://www.figma.com/design/Bu0EECBLEC2cIBfzQDrGAJ/Valmar%C3%AD-Web?m=auto&t=UDz2v1h8DIQiRwSY-1"
     },
     "review": [
-      "<strong class='text-[var(--color-accent)]'>Valmarí</strong> es un sitio web creado para posicionar localmente un emprendimiento de barras de snacks en Guadalajara. En un mercado saturado de sitios web genéricos, Valmarí se destaca con animaciones fluidas, transiciones interactivas únicas y un diseño personalizado que refleja la identidad de marca.",
+      "<strong class='text-[var(--color-accent)]'>Valmarí</strong> es un sitio web creado para un emprendimiento de barras de snacks en Guadalajara. En un mercado saturado de sitios web genéricos, Valmarí se destaca con animaciones fluidas, transiciones interactivas únicas y un diseño personalizado que refleja la identidad de marca.",
       "El proyecto se enfoca en tres pilares fundamentales: <strong class='text-[var(--color-accent)]'>SEO local optimizado</strong> para búsquedas como 'barra de snacks gdl' y 'eventos guadalajara', <strong class='text-[var(--color-accent)]'>diferenciación visual</strong> con animaciones personalizadas que crean una experiencia memorable, y <strong class='text-[var(--color-accent)]'>conversión efectiva</strong> diseñada para captar la atención y generar interés en los servicios."
     ],
     "themes": ["UI", "Transitions", "SEO", "Frontend", "CSS"],
@@ -130,18 +130,11 @@
       },
       {
         "name": "Schema.org y SEO",
-        "description": "Implementación completa de datos estructurados (LocalBusiness, Organization, OfferCatalog, FAQPage), geo tags para Guadalajara, Twitter Cards y optimización para Core Web Vitals. Estrategia enfocada en posicionamiento local competitivo."
-      },
-      {
-        "name": "Cascade AI (Windsurf)",
-        "description": "Uso estratégico de IA como herramienta de desarrollo para el sistema de testimonios. La IA analizó el proyecto y propuso una estrategia escalable: testimonios estáticos que evolucionarán a integración con Google Reviews, evitando spam y maximizando credibilidad."
+        "description": "Implementación completa de datos estructurados (LocalBusiness, Organization, OfferCatalog, FAQPage), geo tags para Guadalajara, Twitter Cards y optimización para Core Web Vitals."
       }
     ],
     "implementations": [
       "Animación y efectos personalizados usando keyframes y utilidades de TailwindCSS para crear una experiencia visual única y atractiva.",
-      "Implementación completa de SEO local con datos estructurados Schema.org, meta tags optimizados para redes sociales, geo tags específicos de Guadalajara y estrategia de keywords locales competitivas.",
-      "Sistema de testimonios con estrategia progresiva: Fase 1 con gestión manual desde JSON, preparado para Fase 2 con integración automática de Google Reviews API, maximizando credibilidad y beneficios SEO.",
-      "Optimización para Core Web Vitals con lazy loading, headers de Netlify configurados para performance, y sitemap automático para mejor indexación en búsquedas locales de GDL.",
       "Arquitectura modular con componentes reutilizables (Hero, Packs, Testimonials, Production) que facilitan el mantenimiento y futuras iteraciones del proyecto."
     ]
   },
@@ -289,12 +282,11 @@
     },
     "links": {
       "website": "https://aycaramba.netlify.app/",
-      "github": "https://github.com/AlanSan1195/the-simpsons",
-      "figma" : "https://www.figma.com/design/QRY65FDUo2WsPhQro1sTXN/The-Simpsons?m=auto&t=UDz2v1h8DIQiRwSY-1"
+      "github": "https://github.com/AlanSan1195/the-simpsons"
     },
     "review": [
-      "<strong class='text-[var(--color-accent)]'>The Simpsons Animation</strong> es una recreación de la animación de transición inspirada en el lanzamiento de la temporada de Fortnite x Los Simpsons. Al ver esa transición tan fluida y creativa, surgió la curiosidad de replicar y entender cómo funciona ese tipo de animación avanzada.",
-      "El proyecto es principalmente educativo y experimental, enfocado en entender cómo funcionan las animaciones complejas sincronizadas con scroll y cómo combinar múltiples transformaciones para crear efectos visuales impactantes. La elección de Los Simpsons es perfecta para practicar la integración de datos externos con animaciones frontend."
+      "<strong class='text-[var(--color-accent)]'>The Simpsons Animation</strong> es una recreación de la animación de transición inspirada en el lanzamiento de la temporada de Fortnite x Los Simpsons. Al ver esa transición tan fluida y creativa, surgió la curiosidad de replicar y entender cómo funciona ese tipo de animación.",
+      "El proyecto es principalmente educativo y experimental, enfocado en entender cómo funcionan las animaciones sincronizadas con scroll y cómo combinar múltiples transformaciones para crear efectos visuales. La elección de Los Simpsons es perfecta para practicar la integración de datos externos con animaciones frontend."
     ],
     "themes": ["Animation", "GSAP", "ScrollTrigger", "Learning", "API"],
     "technologies": [
@@ -306,9 +298,10 @@
     ],
     "technologiesDetails": [],
     "implementations": [
-      "Animación de escala masiva del logo de Los Simpsons (scale: 1 a 100) sincronizada con el scroll usando ScrollTrigger. esa es una de las claves para estas animaciones tan grandes.",
+      "Animación del logo de Los Simpsons (scale: 1 a 100)  con el scroll usando ScrollTrigger de GSAP. esa es una de las claves para estas animaciones.",
 
-      "GSAP: timeline, ScrollTrigger, animaciones simultáneas y parámetros clave como scale, x/y, opacity y duration."
+      "GSAP: timeline, ScrollTrigger, animaciones simultáneas y parámetros clave como scale, x/y, opacity y duration.",
+      "Figma: Para crear los SVGs personalizados." 
     ]
   },
   "twick": {
@@ -332,8 +325,8 @@
     },
     "links": {
       "website": "https://www.twick.dev/",
-      "github": "https://github.com/AlanSan1195/chat-simulation-stream",
-      "figma": " https://www.figma.com/design/1z7lIQnWKxjc4ewa1Raqkr/Chat-Simulator?m=auto&t=UDz2v1h8DIQiRwSY-1"
+      "github": "https://github.com/AlanSan1195/chat-simulation-stream"
+     
     },
     "review": [
       "<strong class='text-[var(--color-accent)]'>Twick</strong> es una plataforma que estoy desarrollando desde 0 y básicamente es un dashboard donde configuras un chat simulado y esta pensado para streamers principiantes que quieren adentrarse en el mundo del streaming. lo veo como una herramienta interactiva en tiempo real con IA y algunas características especiales de costumización.",
