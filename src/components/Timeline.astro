@@ -20,7 +20,7 @@ const latestProjects = Object.values(projectData)
 
         <div class="my-3 flex flex-col h-full ">
           <div class="flex items-center gap-2 mb-3">
-            {project.links.figma ? (
+            {"figma" in project.links && project.links.figma ? (
               <a
                 href={project.links.figma}
                 target="_blank"
@@ -31,7 +31,7 @@ const latestProjects = Object.values(projectData)
                 <FigmaIcon class="w-4 h-4" />
               </a>
             ) : (
-              <FigmaIcon class="w-4 h-4 text-[var(--color-text-muted)]" />
+              <div class="h-1 w-1 rounded-full bg-[var(--color-accent)]"></div>
             )}
             <time
               datetime={project.createdAt || ""}
